@@ -2,7 +2,7 @@ html, body {
     font-size: 14px;
     height: 100%;
     width: 100%;
-    font-family: "Open Sans", arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     line-height: 144%;
     font-weight: bold;
 }
@@ -10,63 +10,6 @@ html, body {
 *{
     word-wrap:break-word
 }
-
-/* 
-.biggest{font-size: 145%;}
-.big{font-size: 120%;}
-.small{font-size: 80%;}
-.smalling{font-size: 55%;}
-*/
-
-/* header [START]*/
-
-.main-header {
-    height: 50px;
-    display: flex;
-    align-items: center;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    justify-content: space-between;
-}
-
-#setting {
-    cursor: pointer;
-}
-
-/* header [END]*/
-
-
-/* SECTION Shedule [START]*/
-
-.shedule {
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-}
-
-.shedule .shedule__sub-menu {
-    text-align: center;
-    height: 40px;
-    display: flex;
-    align-items: center;
-}
-.shedule__day .day {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    height: 40px;
-    cursor: pointer;
-    z-index: 10;
-}
-
-.shedule__content .content {
-    display: none;
-}
-.shedule__content .content > div {
-    padding: 5px 0;
-}
-
-
 
 .flex-1{width: 10%;}
 .flex-2{width: 20%;}
@@ -79,6 +22,61 @@ html, body {
 .flex-9{width: 90%;}
 .flex-10{width: 100%;}
 
+/* header [START]*/
+
+.main-header {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    justify-content: space-between;
+}
+
+/* header [END]*/
+
+
+/* SECTION Shedule [START]*/
+
+.shedule {
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+}
+
+.shedule .shedule__sub-menu {
+    text-align: center;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.shedule__day .day {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    height: 40px;
+    cursor: pointer;
+    z-index: 10;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.shedule__content .content {
+    display: none;
+}
+.shedule__content .content > div {
+    padding: 5px 0;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+
+
 
 /* SECTION Shedule [END]*/
 
@@ -89,7 +87,7 @@ html, body {
     flex: 1;
 }
 
-body[class='theme-light'] {
+body.theme-light {
     color: #231f20;
     background: rgb(33, 168, 244) url(../img/bg-light.jpg);
     background-position: center center;
@@ -98,42 +96,55 @@ body[class='theme-light'] {
     background-size: cover;
 }
 
-body[class='theme-light'] .main-header {
+body.theme-light .main-header {
     background-color: #a4b7d8;
 }
 
 
-body[class='theme-light'] .shedule__day {
+body.theme-light .shedule__day {
     background-color: rgba(255, 255, 255, 0.6);
 }
 
-body[class='theme-light'] .shedule .shedule__sub-menu {
-    background-color: #e2dbdb;
+body.theme-light .shedule .shedule__sub-menu {
+    background-color: #dbc8c8;
 }
 
-body[class='theme-light'] .shedule {
-    background-color: #c9c4c4;
+body.theme-light .shedule {
+    background-color: #a6c4cc;
 }
 
-.shedule__content .content > div:not(:first-child) {
+body.theme-light .shedule__content .content>div:not(:first-child) {
     border-top: 5px solid #ededed;
 }
 
 
-body[class='theme-light'] .shedule__day .day.active {
+body.theme-light .shedule__day .day.active {
     background-color: rgb(33, 168, 244);
 }
 
 
-.light-shadow-yellow {
-    text-shadow: 1px 0 8px #f7df1e, -1px 0 8px #f7df1e;
+body.effect .highlight{
+    display: inline;
 }
 
-.light-shadow-red {
-    text-shadow: 1px 0 8px #de3e44, -1px 0 8px #de3e44;
+.highlight {
+    background-color: #231f20;
+    padding: 2px 3px;
+    border-radius: 4px;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
+    display: none;
 }
 
-.light-shadow-blue {
-    text-shadow: 1px 0 8px #0275d8, -1px 0 8px #0275d8;
-}
+.highlight.primary{color: #0275d8 !important;}
+.highlight.success{color: #5cb85c !important;}
+.highlight.info{color: #008080 !important;}
+.highlight.warning{color: #f7df1e !important;}
+.highlight.danger{color: #de3e44 !important;}
+.highlight.secondary{color: #292b2c !important}
+.highlight.dark{color: #231f20 !important;}
+.highlight.light{color: #f5f5dc !important;}
+.highlight.black{color: #000 !important;}
 
