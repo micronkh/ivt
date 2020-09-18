@@ -3,7 +3,7 @@ html, body {
     font-size: 14px;
     height: 100%;
     width: 100%;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Helvetica, sans-serif;
     line-height: 144%;
     font-weight: bold;
 }
@@ -127,14 +127,14 @@ body[class='theme-light'] .shedule__day .day.active {
 
 
 .light-shadow-yellow {
-    text-shadow: 1px 0 8px #f7df1e, -1px 0 8px #f7df1e;
+    text-shadow: 1px 0 14px #f7df1e, -1px 0 8px #f7df1e;
 }
 
 .light-shadow-red {
-    text-shadow: 1px 0 8px #de3e44, -1px 0 8px #de3e44;
+    text-shadow: 1px 0 14px #de3e44, -1px 0 8px #de3e44;
 }
 
 .light-shadow-blue {
-    text-shadow: 1px 0 8px #0275d8, -1px 0 8px #0275d8;
+    text-shadow: 1px 0 14px #0275d8, -1px 0 8px #0275d8;
 }
 
