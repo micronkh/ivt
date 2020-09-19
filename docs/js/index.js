@@ -63,12 +63,13 @@ let week = document.getElementById("week");
         let numFromNumer = (days > numerator[i]) ? (days - numerator[i]) : numerator[i] - days;
 
         if (numFromDenom + numFromNumer == 7) {
-            console.log('index = ' + i);
 
             if (days >= denominator[i] && days < numerator[i]) {
                 week.innerText = "Числ"; //
                 break;
-            } else {
+            }
+            else
+            {
                 week.innerText = "Знам"; // 
                 break;
             }
@@ -76,6 +77,5 @@ let week = document.getElementById("week");
         }
         week.innerText = "Знам";
     }
-
 }());
 
