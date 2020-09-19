@@ -1,15 +1,14 @@
+/* По Умолчанию */
 html, body {
     font-size: 14px;
     height: 100%;
     width: 100%;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    line-height: 144%;
+    line-height: 140%;
     font-weight: bold;
 }
 
-*{
-    word-wrap:break-word
-}
+*{word-wrap:break-word}
 
 .flex-1{width: 10%;}
 .flex-2{width: 20%;}
@@ -22,8 +21,10 @@ html, body {
 .flex-9{width: 90%;}
 .flex-10{width: 100%;}
 
-/* header [START]*/
+/* По Умолчанию [END] */
 
+
+/* header [START] */
 .main-header {
     height: 50px;
     display: flex;
@@ -31,6 +32,17 @@ html, body {
     padding-left: 1rem;
     padding-right: 1rem;
     justify-content: space-between;
+}
+
+#week {
+    background-color: #231f20;
+    color: #21a8f4;
+    padding: 4px 6px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
 }
 
 /* header [END]*/
@@ -75,21 +87,15 @@ html, body {
     -o-border-radius: 20px;
 }
 
-
-
-
 /* SECTION Shedule [END]*/
 
 
-/* Стандартная Светлая Тема */
 
-.flex-1{
-    flex: 1;
-}
+/* Стандартная Светлая Тема  [START] */
 
 body.theme-light {
     color: #231f20;
-    background: rgb(33, 168, 244) url(../img/bg-light.jpg);
+    background: #21a8f4 url(../img/bg-light.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-position: center;
@@ -122,20 +128,18 @@ body.theme-light .shedule__day .day.active {
     background-color: rgb(33, 168, 244);
 }
 
+/* Стандартная Светлая Тема  [END] */
 
-body.effect .highlight{
-    display: inline;
-}
 
-.highlight {
+/* Эффекты Выделения текста  [START] */
+body.effect-on  .highlight {
     background-color: #231f20;
     padding: 2px 3px;
     border-radius: 4px;
-    -webkit-border-radius:;
-    -moz-border-radius:;
-    -ms-border-radius:;
-    -o-border-radius:;
-    display: none;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
 }
 
 .highlight.primary{color: #0275d8 !important;}
@@ -148,3 +152,12 @@ body.effect .highlight{
 .highlight.light{color: #f5f5dc !important;}
 .highlight.black{color: #000 !important;}
 
+body.effect-off .highlight {
+    color: inherit !important;
+    padding: 0;
+    background-color: none;
+    display: none;
+    font-weight: bold;
+}
+
+/* Эффекты Выделения текста  [END] */
