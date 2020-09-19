@@ -8,7 +8,10 @@ html, body {
     font-weight: bold;
 }
 
-*{word-wrap:break-word;}
+*{
+    word-wrap:break-word;
+}
+
 img{border: none;}
 
 .flex-1{width: 10%;}
@@ -35,15 +38,17 @@ img{border: none;}
     justify-content: space-between;
 }
 
+.header__title {user-select: none;}
+
 #week {
     background-color: #231f20;
-    color: #21a8f4;
+    color: #de3e44;
     padding: 4px 6px;
     border-radius: 4px;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -ms-border-radius: 4px;
-    -o-border-radius: 4px;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
 }
 
 /* header [END]*/
@@ -63,6 +68,7 @@ img{border: none;}
     align-items: center;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    user-select: none;
 }
 .shedule__day .day {
     display: flex;
@@ -74,11 +80,13 @@ img{border: none;}
     z-index: 10;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    user-select: none;
 }
 
 .shedule__content .content {
     display: none;
 }
+
 .shedule__content .content > div {
     padding: 5px 0;
     border-radius: 20px;
@@ -104,7 +112,8 @@ body.theme-light {
 }
 
 body.theme-light .main-header {
-    background-color: #a4b7d8;
+    background:linear-gradient(5deg, rgb(73, 221, 216) 0%, rgb(51, 105, 231) 100%);
+    color: #fff; 
 }
 
 
@@ -124,9 +133,8 @@ body.theme-light .shedule__content .content>div:not(:first-child) {
     border-top: 5px solid #ededed;
 }
 
-
 body.theme-light .shedule__day .day.active {
-    background-color: rgb(33, 168, 244);
+    background:linear-gradient(5deg, rgb(73, 221, 216) 0%, rgb(51, 105, 231) 100%);
 }
 
 /* Стандартная Светлая Тема  [END] */
@@ -157,7 +165,6 @@ body.effect-off .highlight {
     color: inherit !important;
     padding: 0;
     background-color: none;
-    display: none;
     font-weight: bold;
 }
 

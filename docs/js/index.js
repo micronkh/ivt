@@ -13,27 +13,30 @@ shedule.self.addEventListener('click', function (event) {
 
     let getIndex = getDay.getAttribute("data-index") || 0;
    
-    if (!getDay.classList.contains('active')) {
-
-        let days = shedule.allDays;
-        days.forEach(day => {
-             day.classList.remove('active');
-        }); 
-        days[getIndex].classList.add('active');
-
-         // запомнить высотку shedule content
-        let contents = shedule.allContents;
-        contents.forEach(content => {
-            content.classList.remove('show');
-        });
-        contents[getIndex].classList.add('show');
-
-    } else return;
+    if (!getDay.classList.contains('active'))
+        setToDay(getIndex);
+    else return;
 
 })
 
+function setToDay(day) {
+    let getIndex = day;
+    
+    let days = shedule.allDays;
+    days.forEach(day => {
+        day.classList.remove('active');
+    });
+    days[getIndex].classList.add('active');
+
+    let contents = shedule.allContents;
+    contents.forEach(content => {
+        content.classList.remove('show');
+    });
+    contents[getIndex].classList.add('show');
+}
+
 // Неделя - Числитель или Знаминатель?
-let week = document.getElementById("week");
+let weekMsg = document.getElementById("week");
 
 (function() {
      
@@ -65,17 +68,39 @@ let week = document.getElementById("week");
         if (numFromDenom + numFromNumer == 7) {
 
             if (days >= denominator[i] && days < numerator[i]) {
-                week.innerText = "Числ"; //
+                weekMsg.innerText = "Числ"; //
                 break;
             }
             else
             {
-                week.innerText = "Знам"; // 
+                weekMsg.innerText = "Знам"; // 
                 break;
             }
             
         }
-        week.innerText = "Знам";
+        weekMsg.innerText = "Знам";
     }
 }());
+
+
+/* Автоматически установить нынешний день в расписание */
+(function () {
+    let dayToday = new Date().getDay();
+
+    dayToday -= 1;
+    console.log(dayToday);
+
+    if (dayToday <= 0 || dayToday >= 5) {
+        setToDay(0);
+    } else {
+        setToDay(dayToday);
+    }
+
+}());
+
+let ficha = document.querySelector('.header__title').ondblclick = function() {
+    if (document.body.classList.contains("effect-on")) {
+        document.body.classList.replace("effect-on", "effect-off");
+    } else  document.body.classList.replace("effect-off", "effect-on");
+}
 
