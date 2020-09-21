@@ -10,9 +10,14 @@ html, body {
 
 *{
     word-wrap:break-word;
+    outline: none;
 }
 
-img{border: none;}
+a, img, a:active, a:hover{
+    border: none !important;
+    outline: none !important;
+}
+
 
 .flex-1{width: 10%;}
 .flex-2{width: 20%;}
