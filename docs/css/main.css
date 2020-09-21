@@ -36,9 +36,8 @@ img{border: none;}
     padding-left: 1rem;
     padding-right: 1rem;
     justify-content: space-between;
+    user-select: none !important;
 }
-
-.header__title {user-select: none;}
 
 #week {
     background-color: #231f20;
