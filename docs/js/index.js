@@ -116,7 +116,7 @@ shedule.sheduleDay.addEventListener('click', function (event) {
 
 let groupShowNames = {
     'ivt-1-18': 'ИВТ-1-18',
-    'vlad': 'Влад'
+    'vlad': 'Владислав'
 };
 
 let showToDOM = {

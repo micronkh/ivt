@@ -56,14 +56,9 @@ a, img, a:active, a:hover{
     -o-border-radius: 4px;
 }
 
-#choice-group {
-    position: relative;
-    top: 3px;
-}
-
 .dropdown.group {
     position: absolute;
-    top: 41px;
+    top: 42px;
     left: 115px;
     z-index: 101;
     display: none;
