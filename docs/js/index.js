@@ -1,45 +1,8 @@
-
-
-let shedule = {
-    self: document.querySelector(".shedule"),
-    allDays: document.querySelectorAll('.shedule__day .day'),
-    allContents: document.querySelectorAll('.shedule__content .content')
-}
-
-shedule.self.addEventListener('click', function (event) {
-    let getDay = event.target.closest('.day');
-
-    if (!getDay) return;
-
-    let getIndex = getDay.getAttribute("data-index") || 0;
-   
-    if (!getDay.classList.contains('active'))
-        setToDay(getIndex);
-    else return;
-
-})
-
-function setToDay(day) {
-    let getIndex = day;
-    
-    let days = shedule.allDays;
-    days.forEach(day => {
-        day.classList.remove('active');
-    });
-    days[getIndex].classList.add('active');
-
-    let contents = shedule.allContents;
-    contents.forEach(content => {
-        content.classList.remove('show');
-    });
-    contents[getIndex].classList.add('show');
-}
-
 // Неделя - Числитель или Знаминатель?
 let weekMsg = document.getElementById("week");
 
-(function() {
-     
+(function () {
+
     /* БЛОК 1 -> Формирование массив из дней недели Числитель или Знаминатель [START] */
     let denominator = [] // Знаминатель
     let numerator = [] // Числитель
@@ -71,36 +34,139 @@ let weekMsg = document.getElementById("week");
                 weekMsg.innerText = "Числ"; //
                 break;
             }
-            else
-            {
+            else {
                 weekMsg.innerText = "Знам"; // 
                 break;
             }
-            
+
         }
         weekMsg.innerText = "Знам";
     }
 }());
 
-
-/* Автоматически установить нынешний день в расписание */
-(function () {
+/* получиль какой сегодня день, вместо суббота и вокресенье возвращает понедельник*/
+function getPresentDay() {
     let dayToday = new Date().getDay();
-
     dayToday -= 1;
-    console.log(dayToday);
 
-    if (dayToday <= 0 || dayToday >= 5) {
-        setToDay(0);
-    } else {
-        setToDay(dayToday);
-    }
-
-}());
-
-let ficha = document.querySelector('.header__title').ondblclick = function() {
-    if (document.body.classList.contains("effect-on")) {
-        document.body.classList.replace("effect-on", "effect-off");
-    } else  document.body.classList.replace("effect-off", "effect-on");
+    if (dayToday <= 0 || dayToday >= 5) return 0;
+    else dayToday;
 }
 
+/* выделить переданый в параметр день недели */
+function setDay(day) {
+    let getIndex = day;
+
+    let days = shedule.allDays;
+    days.forEach(day => {
+        day.classList.remove('active');
+    });
+
+    days[getIndex].classList.add('active');
+}
+
+
+
+let shedule = {
+    self: document.querySelector(".shedule"), // главный блок график
+
+    sheduleDay: document.querySelector(".shedule__day"), // общий для всех
+    allDays: document.querySelectorAll('.shedule__day .day'), // общий для всех
+
+    content: document.querySelectorAll('.shedule__content'),
+};
+
+
+// функция для показа расписание для выбранной группы
+function setContent(day, groupName) {
+    let indexContent = groupName || 'ivt-1-18'; // если groupName пустой по умолчанию показать ИВТ-1-18
+    let contentWrap = document.querySelector('#' + indexContent); 
+    
+    let allContent = shedule.content;
+    allContent.forEach(element => {
+        element.classList.remove('show')
+    });
+    contentWrap.classList.add('show');
+ 
+    let content = contentWrap.querySelectorAll('.content');
+    content.forEach(element => {
+        element.classList.remove('show');
+    });
+
+    content[day].classList.add('show');
+}
+
+/* Не общая функция */
+shedule.sheduleDay.addEventListener('click', function (event) {
+    let getDay = event.target.closest('.day');
+
+    if (!getDay) return;
+
+    let getIndex = getDay.getAttribute("data-index") || 0;
+
+    if (!getDay.classList.contains('active'))
+        setDay(getIndex);
+    else return;
+
+    setContent(getIndex, getGroupName());
+})
+
+
+/* участок работы START */
+
+let groupShowNames = {
+    'ivt-1-18': 'ИВТ-1-18',
+    'vlad': 'Влад'
+};
+
+let showToDOM = {
+    choiceGroup: document.getElementById('choice-group'),
+    dropdown: document.querySelector('.dropdown.group'),
+    nameGroup: document.getElementById('name-group')
+}
+
+function getGroupName() {
+    return shedule.self.dataset.group;
+}
+
+function setGroupname(newValue) {
+    shedule.self.dataset.group = newValue;
+}
+
+function showGroupName(newValue) {
+    showToDOM.nameGroup.innerText = newValue;
+}
+
+showToDOM.choiceGroup.onclick = function() {
+    let dropdown = showToDOM.dropdown;
+
+    dropdown.classList.toggle('show');
+
+    dropdown.onclick = function(event) {
+        let getGroupName = event.target.dataset.group;
+        dropdown.classList.remove('show');
+
+        setGroupname(getGroupName);
+        showGroupName(groupShowNames[getGroupName]);
+        setContent(getPresentDay(), getGroupName);
+
+        localStorage.setItem('group-name', getGroupName);
+        localStorage.setItem('group-name-rus', groupShowNames[getGroupName]);
+    }
+}
+
+    
+/* участок работы END */
+
+window.onload = function main() {
+    
+    // для показа нынешнего дня
+    let presentDay = getPresentDay();
+    setDay(presentDay);
+
+    // для показа нужного контента
+    let groupNameId = localStorage.getItem('group-name') || getGroupName();
+    setGroupname(groupNameId);
+    showGroupName(groupShowNames[groupNameId]);
+    setContent(presentDay, groupNameId);
+}

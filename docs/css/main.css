@@ -42,6 +42,7 @@ a, img, a:active, a:hover{
     padding-right: 1rem;
     justify-content: space-between;
     user-select: none !important;
+    position: relative;
 }
 
 #week {
@@ -49,11 +50,30 @@ a, img, a:active, a:hover{
     color: #de3e44;
     padding: 4px 6px;
     border-radius: 4px;
-    -webkit-border-radius:;
-    -moz-border-radius:;
-    -ms-border-radius:;
-    -o-border-radius:;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
 }
+
+.dropdown.group {
+    position: absolute;
+    top: 35px;
+    left: 97px;
+    z-index: 101;
+    display: none;
+    background-color: #231f20;
+}
+
+.dropdown.group li {
+    padding: 5px;
+}
+
+
+.dropdown.group li:not(:last-child) {
+    border-bottom: 2px solid #f7df1e;
+}
+
 
 /* header [END]*/
 
@@ -87,7 +107,7 @@ a, img, a:active, a:hover{
     user-select: none;
 }
 
-.shedule__content .content {
+.shedule__content, .shedule__content .content {
     display: none;
 }
 

@@ -14,14 +14,23 @@
     <div class="container-app">
 
         <header class="main-header">
-            <h2 class="header__title">ИВТ-1-18</h2>
+            <h2 class="header__title">
+                <span id="name-group"></span> <!-- это -->
+                <i class="fas fa-caret-square-down text-dark" id="choice-group"></i>
+            </h2>
             
+            <ul class="dropdown big group">
+                <li data-group="ivt-1-18">ИВТ-1-18</li>
+                <li data-group="vlad">Влад</li>
+            </ul>
+
             <div class="big">
                 <span>Нед:</span> <span id="week"></span>
             </div>
         </header>
 
-        <div class="shedule">
+        <div class="shedule" data-group="ivt-1-18">
+
             <div class="shedule__day flex">
                 <div data-index="0" class="day active"><span>ПН</span></div>
                 <div data-index="1" class="day"><span>ВТ</span></div>
@@ -30,17 +39,46 @@
                 <div data-index="4" class="day"><span>ПТ</span></div>
             </div>
 
+            <div class="shedule__sub-menu">
+                <div class="flex-5"><span>Предмет</span></div>
+                <div class="flex-2"><span>Перейти</span></div>
+                <div class="flex-5"><span>Ссылка</div>
+            </div>
             
-            <div class="shedule__content">
-
-                <div class="shedule__sub-menu">
-                    <div class="flex-5"><span>Предмет</span></div>
-                    <div class="flex-2"><span>Перейти</span></div>
-                    <div class="flex-5"><span>Ссылка</div>
+            
+            <div class="shedule__content" data-group="vlad" id="vlad">
+                <div class="content show"> 
+                    <div class="flex justify-center">
+                        Влад
+                    </div>
                 </div>
+                <div class="content">
+                    <div class="flex justify-center">
+                        Выглядит
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="flex justify-center">
+                        Будет
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="flex justify-center">
+                        Примерно
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="flex justify-center">
+                        Так
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="shedule__content" data-group="ivt-1-18" id="ivt-1-18"> <!-- это -->
 
                 <!-- Понедельник [START]-->
-                <div class="content show">
+                <div class="content show"> 
                    
                     <!-- предмет 1 -->
                     <div class="flex">
@@ -127,7 +165,7 @@
                     <!-- предмет 1 -->
                     <div class="flex">
                         <div class="flex-5 flex-column align-center justify-center">
-                            <span class="d-block highlight light">Манас<span class="highlight warning">[Знам]</span></span>
+                            <span class="d-block highlight light">Манас<span class="text-warning">[Знам]</span></span>
                             <span class="d-block">8:00 - 9:20</span>
                             <span class="d-block highlight primary">Практика</span>
                 
@@ -267,7 +305,7 @@
                     <!-- предмет 4 -->
                     <div class="flex ">
                         <div class="flex-5  flex-column align-center justify-center">
-                            <span class="d-block highlight light">Манас<span class="highlight warning">[Числ]</span></span>
+                            <span class="d-block highlight light">Манас<span class="text-warning">[Числ]</span></span>
                             <span class="d-block">14:30 - 15:50</span>
                             <span class="d-block highlight primary">Лекция</span>
                         </div>
@@ -414,6 +452,7 @@
                 <!-- ПЯТНИЦА [END]-->
 
             </div>
+            
         </div>
     </div>
     
