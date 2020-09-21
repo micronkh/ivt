@@ -50,7 +50,7 @@ function getPresentDay() {
     dayToday -= 1;
 
     if (dayToday <= 0 || dayToday >= 5) return 0;
-    else dayToday;
+    else return dayToday;
 }
 
 /* выделить переданый в параметр день недели */
