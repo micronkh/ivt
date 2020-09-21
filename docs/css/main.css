@@ -56,10 +56,15 @@ a, img, a:active, a:hover{
     -o-border-radius: 4px;
 }
 
+#choice-group {
+    position: relative;
+    top: 2px;
+}
+
 .dropdown.group {
     position: absolute;
-    top: 35px;
-    left: 97px;
+    top: 40px;
+    left: 115px;
     z-index: 101;
     display: none;
     background-color: #231f20;
