@@ -58,16 +58,21 @@ a, img, a:active, a:hover{
 
 #choice-group {
     position: relative;
-    top: 2px;
+    top: 3px;
 }
 
 .dropdown.group {
     position: absolute;
-    top: 40px;
+    top: 41px;
     left: 115px;
     z-index: 101;
     display: none;
     background-color: #231f20;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
 }
 
 .dropdown.group li {
