@@ -196,8 +196,9 @@ showToDOM.choiceGroup.onclick = function() {
 
 window.onload = function main() {
     let groupNameId = localStorage.getItem('group-name') || getGroupName();
-    
-    setDay(getPresentDay());
+    let presentDay = getPresentDay();
+
+    setDay(presentDay);
     setGroupname(groupNameId);
     showGroupName(groupShowNames[groupNameId]);
     setContent(presentDay, groupNameId);
