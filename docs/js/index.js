@@ -44,6 +44,34 @@ let weekMsg = document.getElementById("week");
     }
 }());
 
+function createElement(tag, props, children = []) {
+  let element = document.createElement(tag);
+
+  for (let [key, value] of Object.entries(props))
+  element[key] = value;
+
+  children.forEach(function(item) {
+    if (typeof item === 'string') {
+        let textNode = document.createTextNode(item);
+        element.appendChild(textNode);
+    }
+    else element.appendChild(item);
+  });
+
+  return element;
+}
+
+
+// функция для показа уведомлений, который удалится через time секунд
+function alert(msg, time, style) {
+    let div = createElement('div', {'className': `alert ${style}`, 'id': 'alert'}, [msg]);
+
+    document.querySelector('.container-app').append(div);
+    setTimeout(() => {
+        document.getElementById('alert').remove();
+    }, time);
+}
+
 /* получиль какой сегодня день, вместо суббота и вокресенье возвращает понедельник*/
 function getPresentDay() {
     let dayToday = new Date().getDay();
@@ -116,7 +144,7 @@ shedule.sheduleDay.addEventListener('click', function (event) {
 
 let groupShowNames = {
     'ivt-1-18': 'ИВТ-1-18',
-    'vlad': 'Владислав'
+    'isop-1-18': 'ИСОП-1-18'
 };
 
 let showToDOM = {
@@ -146,6 +174,13 @@ showToDOM.choiceGroup.onclick = function() {
         let getGroupName = event.target.dataset.group;
         dropdown.classList.remove('show');
 
+        if (getGroupName == 'isop-1-18') {
+            alert('Предупреждение !!!', 1200, 'danger');
+            setTimeout(() => {
+                alert('Иформация можеть быть некорректна', 2000, 'warning');
+            }, 1300);
+        }
+
         setGroupname(getGroupName);
         showGroupName(groupShowNames[getGroupName]);
         setContent(getPresentDay(), getGroupName);
@@ -169,4 +204,6 @@ window.onload = function main() {
     setGroupname(groupNameId);
     showGroupName(groupShowNames[groupNameId]);
     setContent(presentDay, groupNameId);
+
+    alert('Добро Пожаловать !', 1500, 'black');
 }
