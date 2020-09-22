@@ -181,6 +181,7 @@ showToDOM.choiceGroup.onclick = function() {
             }, 1300);
         }
 
+        setDay(getPresentDay());
         setGroupname(getGroupName);
         showGroupName(groupShowNames[getGroupName]);
         setContent(getPresentDay(), getGroupName);
@@ -194,13 +195,9 @@ showToDOM.choiceGroup.onclick = function() {
 /* участок работы END */
 
 window.onload = function main() {
-    
-    // для показа нынешнего дня
-    let presentDay = getPresentDay();
-    setDay(presentDay);
-
-    // для показа нужного контента
     let groupNameId = localStorage.getItem('group-name') || getGroupName();
+    
+    setDay(getPresentDay());
     setGroupname(groupNameId);
     showGroupName(groupShowNames[groupNameId]);
     setContent(presentDay, groupNameId);
