@@ -264,15 +264,15 @@ body.effect-off .highlight {
     height: 100%;
     background: rgba(0, 0, 0, .7);
     display: none;
-    overflow: auto;
+    padding: 16px 0;
 }
 
 .modal-content {
-    width: 80%;
-    max-width: 550px;
-    position: absolute;
+    width: 90%;
     left: 50%;
-    top: 30px;
+    max-width: 550px;
+    height: 100%;
+    position: relative;
     transform: translateX(-50%);
     background-color: #fff;
     color: #000;
@@ -289,7 +289,7 @@ body.effect-off .highlight {
     -moz-animation: showTopCenter 0.65s 1;
     animation: showTopCenter 0.65s 1;
     padding: 12px;
-    margin-bottom: 30px;
+    overflow: auto;
 }
 
 @keyframes showTopCenter {
@@ -297,7 +297,7 @@ body.effect-off .highlight {
         top: -100%;
     }
     100% {
-        top: 30px;
+        top: 0;
         -webkit-transform: translateX(-50%);
         -moz-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
