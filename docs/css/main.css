@@ -2,12 +2,10 @@
 html, body {
     font-size: 14px;
     width: 100%;
-    min-height: 100%;
-    height: auto;
+    height: 100%;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     line-height: 140%;
     font-weight: bold;
-    overflow-y: auto;
 }
 
 *{
@@ -266,7 +264,7 @@ body.effect-off .highlight {
     height: 100%;
     background: rgba(0, 0, 0, .7);
     display: none;
-    overflow-y: auto;
+    overflow: auto;
 }
 
 .modal-content {
@@ -282,7 +280,6 @@ body.effect-off .highlight {
     -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     -o-transform: translateX(-50%);
-    padding: 12px;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -291,7 +288,7 @@ body.effect-off .highlight {
     -webkit-animation: showTopCenter 0.65s 1;
     -moz-animation: showTopCenter 0.65s 1;
     animation: showTopCenter 0.65s 1;
-    padding: 10px;
+    padding: 12px;
     margin-bottom: 30px;
 }
 
@@ -307,8 +304,9 @@ body.effect-off .highlight {
         -o-transform: translateX(-50%);
     }
 }
-
 /* Modal window [END]*/
+
+/* checkbox [START] */
 @keyframes click-wave {
     0% {
         height: 40px;
@@ -393,4 +391,4 @@ body label {
     display: block;
     line-height: 40px;
 }
-
+/* Checkbox */ 
