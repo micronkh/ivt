@@ -6,6 +6,7 @@ html, body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     line-height: 140%;
     font-weight: bold;
+    
 }
 
 *{
@@ -143,12 +144,11 @@ a img {
 /* Стандартная Светлая Тема  [START] */
 
 body.theme-light {
-    color: #231f20;
-    background: #21a8f4 url(../img/bg-light.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-position: center;
+    background-color: #a6c4cc;
+    background: url(../img/bg-light.jpg);
     background-size: cover;
+    background-position: center;
+    color: #231f20;
 }
 
 body.theme-light .main-header {
