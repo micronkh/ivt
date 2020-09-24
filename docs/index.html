@@ -8,20 +8,29 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="css/default.css">
     <link rel="stylesheet" href="css/main.css">
-    <title>Document</title>
+    <title>Расписание</title>
 </head>
 <body class="theme-light effect-on">
     <div class="container-app">
 
         <header class="main-header">
-            <h2 class="header__title">ИВТ-1-18</h2>
+            <h2 class="header__title flex align-center">
+                <span id="name-group">ИВТ-1-18</span> <!-- это -->
+                <i class="fas fa-caret-square-down text-dark big ml-1" id="choice-group"></i>
+            </h2>
             
+            <ul class="dropdown big group">
+                <li data-group="ivt-1-18">ИВТ-1-18</li>
+                <li data-group="isop-1-18">ИСОП-1-18</li>
+            </ul>
+
             <div class="big">
                 <span>Нед:</span> <span id="week"></span>
             </div>
         </header>
 
-        <div class="shedule">
+        <div class="shedule" data-group="ivt-1-18">
+
             <div class="shedule__day flex">
                 <div data-index="0" class="day active"><span>ПН</span></div>
                 <div data-index="1" class="day"><span>ВТ</span></div>
@@ -30,29 +39,28 @@
                 <div data-index="4" class="day"><span>ПТ</span></div>
             </div>
 
+            <div class="shedule__sub-menu">
+                <div class="flex-5"><span>Предмет</span></div>
+                <div class="flex-2"><span>Перейти</span></div>
+                <div class="flex-5"><span>Ссылка</span></div>
+            </div>
             
-            <div class="shedule__content">
-
-                <div class="shedule__sub-menu">
-                    <div class="flex-5"><span>Предмет</span></div>
-                    <div class="flex-2"><span>Перейти</span></div>
-                    <div class="flex-5"><span>Ссылка</div>
-                </div>
-
+            <!-- Для Группы ИВТ-ИСОП-1-18 [START] -->
+            <div class="shedule__content" data-group="isop-1-18" id="isop-1-18">
                 <!-- Понедельник [START]-->
                 <div class="content show">
-                   
+                
                     <!-- предмет 1 -->
                     <div class="flex">
                         <div class="flex-5 flex-column align-center justify-center">
                             <span class="d-block highlight light">ЛиФП</span>
                             <span class="d-block">8:00 - 9:20</span>
                             <span class="d-block highlight primary">ЛБ (2-Группа)</span>
-                             
+                
                         </div>
                         <div class="flex-2 flex align-center justify-center">
                             <a href="https://us04web.zoom.us/j/4290434800?pwd=SHZpRHNLOGFrWHpKUXQwTjlRZG1qQT09">
-                                <img src="img/zoom.png" alt="Zoom" width="40px" height="40px"></a>
+                                <img src="img/zoom.png" alt="Zoom"></a>
                         </div>
                         <div class="flex-5 flex-column justify-center pl-1">
                             <div><span class="mr-1">Id:</span><span>429 043 4800</span></div>
@@ -60,8 +68,8 @@
                             <div><span class="mr-1">Ссылка:</span><span class="highlight success">Const</span></div>
                         </div>
                     </div>
-                    <!-- предмет 1 -->     
-
+                    <!-- предмет 1 -->
+                
                     <!-- предмет 2 -->
                     <div class="flex">
                         <div class="flex-5 flex-column align-center justify-center">
@@ -71,7 +79,7 @@
                         </div>
                         <div class="flex-2  flex align-center justify-center">
                             <a href="https://us04web.zoom.us/j/74162579534?pwd=OTgvNXFZeWxnOEZQOHFBdEtWcTJMQT09">
-                                <img src="img/zoom.png" alt="Zoom" width="40px" height="40px"></a>
+                                <img src="img/zoom.png" alt="Zoom"></a>
                         </div>
                         <div class="flex-5  flex-column justify-center pl-1">
                             <div><span class="mr-1">Id:</span><span>741 6257 9534</span></div>
@@ -80,17 +88,17 @@
                         </div>
                     </div>
                     <!-- предмет 2 -->
-
+                
                     <!-- предмет 3 -->
                     <div class="flex ">
                         <div class="flex-5  flex-column align-center justify-center">
                             <span class="d-block highlight light">ЛиФП</span>
-                            <span class="d-block">9:30 - 10:50</span>
+                            <span class="d-block">11:00 - 12:20</span>
                             <span class="d-block highlight primary">ЛБ (1-Группа)</span>
                         </div>
                         <div class="flex-2  flex align-center justify-center">
                             <a href="https://us04web.zoom.us/j/4290434800?pwd=SHZpRHNLOGFrWHpKUXQwTjlRZG1qQT09">
-                                <img src="img/zoom.png" alt="Zoom" width="40px" height="40px"></a>
+                                <img src="img/zoom.png" alt="Zoom"></a>
                         </div>
                         <div class="flex-5  flex-column justify-center pl-1">
                             <div><span class="mr-1">Id:</span><span>429 043 4800</span></div>
@@ -99,7 +107,7 @@
                         </div>
                     </div>
                     <!-- предмет 3 -->
-
+                
                     <!-- предмет 4 -->
                     <div class="flex ">
                         <div class="flex-5  flex-column align-center justify-center">
@@ -109,7 +117,7 @@
                         </div>
                         <div class="flex-2  flex align-center justify-center">
                             <a href="https://us04web.zoom.us/j/75394791789?pwd=TUJaY3MyMWVFUGpQZGZLYThmK2lKdz09">
-                                <img src="img/zoom.png" alt="Zoom" width="40px" height="40px"></a>
+                                <img src="img/zoom.png" alt="Zoom"></a>
                         </div>
                         <div class="flex-5  flex-column justify-center pl-1">
                             <div><span class="mr-1">Id:</span><span>753 9479 1789</span></div>
@@ -119,70 +127,32 @@
                     </div>
                     <!-- предмет 4 -->
                 </div>
-                 <!-- Понедельник [END]-->
-
+                <!-- Понедельник [END]-->
+                
                 <!-- Вторник [START]-->
                 <div class="content">
                 
                     <!-- предмет 1 -->
                     <div class="flex">
                         <div class="flex-5 flex-column align-center justify-center">
-                            <span class="d-block highlight light">Манас<span class="highlight warning">[Знам]</span></span>
-                            <span class="d-block">8:00 - 9:20</span>
-                            <span class="d-block highlight primary">Практика</span>
-                
-                        </div>
-                        <div class="flex-2 flex align-center justify-center">
-                            <a href="#">
-                                <img src="img/unknown.png" alt="Zoom" width="40px" height="40px"></a>
-                        </div>
-                        <div class="flex-5 flex-column justify-center pl-1">
-                            <div><span class="mr-1">Id:</span><span>?</span></div>
-                            <div><span class="mr-1">Код:</span><span>?</span></div>
-                            <div><span class="mr-1">Ссылка:</span><span class="highlight danger">Unknown</span></div>
-                        </div>
-                    </div>
-                    <!-- предмет 1 -->
-                
-                    <!-- предмет 2 -->
-                    <div class="flex">
-                        <div class="flex-5 flex-column align-center justify-center">
                             <span class="d-block highlight light">Схемотехника</span>
-                            <span class="d-block">9:30 - 10:50</span>
-                            <span class="d-block highlight primary">Лабораторная</span>
-                        </div>
-                        <div class="flex-2  flex align-center justify-center">
-                            <a href="https://us04web.zoom.us/j/77034641151?pwd=SUNxRTZkS1B2R0hUYkxQU0h2RUp4dz09">
-                                <img src="img/zoom.png" alt="Zoom" width="40px" height="40px"></a>
-                        </div>
-                        <div class="flex-5  flex-column justify-center pl-1">
-                            <div><span class="mr-1">Id:</span><span>770 3464 1151</span></div>
-                            <div><span class="mr-1">Код:</span><span>9NWTjN</span></div>
-                            <div><span class="mr-1">Ссылка:</span><span class="highlight success">Const</span></div>
-                        </div>
-                    </div>
-                    <!-- предмет 2 -->
-                
-                    <!-- предмет 3 -->
-                    <div class="flex ">
-                        <div class="flex-5  flex-column align-center justify-center">
-                            <span class="d-block highlight light">Java</span>
                             <span class="d-block">11:00 - 12:20</span>
                             <span class="d-block highlight primary">Лабораторная</span>
                         </div>
                         <div class="flex-2  flex align-center justify-center">
-                            <a href="https://meet.google.com/vwa-ikbe-jeb">
-                                <img src="img/meet.png" alt="meet" width="40px" height="40px"></a>
+                            <a href="https://us04web.zoom.us/j/72946726061?pwd=WmNIdVI1M25QbTEvbGdFVGNNYTRndz09">
+                                <img src="img/zoom.png" alt="Zoom"></a>
                         </div>
                         <div class="flex-5  flex-column justify-center pl-1">
-                            <div><span class="mr-1">Id:</span>?<span></span></div>
-                            <div><span class="mr-1">Код:</span>?<span></span></div>
+                            <div><span class="mr-1">Id:</span><span>729 4672 6061</span></div>
+                            <div><span class="mr-1">Код:</span><span>5Ug690</span></div>
                             <div><span class="mr-1">Ссылка:</span><span class="highlight success">Const</span></div>
                         </div>
                     </div>
-                    <!-- предмет 3 -->
-
-                    <!-- предмет 5 -->
+                    <!-- предмет 1 -->
+             
+                
+                    <!-- предмет 2 -->
                     <div class="flex ">
                         <div class="flex-5  flex-column align-center justify-center">
                             <span class="d-block highlight light">Экономика</span>
@@ -191,7 +161,7 @@
                         </div>
                         <div class="flex-2  flex align-center justify-center">
                             <a href="#">
-                                <img src="img/unknown.png" alt="Zoom" width="40px" height="40px"></a>
+                                <img src="img/unknown.png" alt="unknown"></a>
                         </div>
                         <div class="flex-5  flex-column justify-center pl-1">
                             <div><span class="mr-1">Id:</span><span>?</span></div>
@@ -199,14 +169,34 @@
                             <div><span class="mr-1">Ссылка:</span><span class="highlight danger">Unknown</span></div>
                         </div>
                     </div>
-                    <!-- предмет 5 -->
+                    <!-- предмет 2 -->
                 </div>
                 <!-- Вторник [END]-->
-
+                
                 <!-- СРЕДА [START]-->
                 <div class="content">
-                
+                    
                     <!-- предмет 1 -->
+                    <div class="flex">
+                        <div class="flex-5 flex-column align-center justify-center">
+                            <span class="d-block highlight light">Манас <span class="text-warning">[Знам]</span></span>
+                            <span class="d-block">8:00 - 9:20</span>
+                            <span class="d-block highlight primary">Практика</span>
+                    
+                        </div>
+                        <div class="flex-2 flex align-center justify-center">
+                            <a href="https://us04web.zoom.us/j/6783149782?pwd=dVI3V0twNVNLNDhIb2Z5WnNjbWRBdz09">
+                                <img src="img/zoom.png" alt="Zoom"></a>
+                        </div>
+                        <div class="flex-5 flex-column justify-center pl-1">
+                            <div><span class="mr-1">Id:</span><span>678 314 9782</span></div>
+                            <div><span class="mr-1">Код:</span><span>621606</span></div>
+                            <div><span class="mr-1">Ссылка:</span><span class="highlight success">Const</span></div>
+                        </div>
+                    </div>
+                    <!-- предмет 1 -->
+
+                    <!-- предмет 2 -->
                     <div class="flex">
                         <div class="flex-5 flex-column align-center justify-center">
                             <span class="d-block highlight light">GPSS</span>
@@ -215,18 +205,18 @@
                 
                         </div>
                         <div class="flex-2  flex align-center justify-center">
-                            <a href="#">
-                                <img src="img/unknown.png" alt="unknown" width="40px" height="40px"></a>
+                            <a href="https://us02web.zoom.us/j/3260530013?pwd=SzdGNDI4TDQwRnBVM3pjREgvdFdWdz09">
+                                <img src="img/zoom.png" alt="Zoom"></a>
                         </div>
                         <div class="flex-5  flex-column justify-center pl-1">
-                            <div><span class="mr-1">Id:</span><span>?</span></div>
-                            <div><span class="mr-1">Код:</span><span>?</span></div>
-                            <div><span class="mr-1">Ссылка:</span><span class="highlight danger">Unknown</span></div>
+                            <div><span class="mr-1">Id:</span><span>326 053 0013</span></div>
+                            <div><span class="mr-1">Код:</span><span>1111</span></div>
+                            <div><span class="mr-1">Ссылка:</span><span class="highlight success">Const</span></div>
                         </div>
                     </div>
-                    <!-- предмет 1 -->
-                
                     <!-- предмет 2 -->
+                
+                    <!-- предмет 3 -->
                     <div class="flex">
                         <div class="flex-5 flex-column align-center justify-center">
                             <span class="d-block highlight light">Схемотехника</span>
@@ -234,32 +224,13 @@
                             <span class="d-block highlight primary">Лекция</span>
                         </div>
                         <div class="flex-2  flex align-center justify-center">
-                            <a href="https://us04web.zoom.us/j/77034641151?pwd=SUNxRTZkS1B2R0hUYkxQU0h2RUp4dz09">
-                                <img src="img/zoom.png" alt="Zoom" width="40px" height="40px"></a>
+                            <a href="https://us04web.zoom.us/j/72946726061?pwd=WmNIdVI1M25QbTEvbGdFVGNNYTRndz09">
+                                <img src="img/zoom.png" alt="Zoom"></a>
                         </div>
                         <div class="flex-5  flex-column justify-center pl-1">
-                            <div><span class="mr-1">Id:</span><span>770 3464 1151</span></div>
-                            <div><span class="mr-1">Код:</span><span>9NWTjN</span></div>
+                            <div><span class="mr-1">Id:</span><span>729 4672 6061</span></div>
+                            <div><span class="mr-1">Код:</span><span>5Ug690</span></div>
                             <div><span class="mr-1">Ссылка:</span><span class="highlight success">Const</span></div>
-                        </div>
-                    </div>
-                    <!-- предмет 2 -->
-                
-                    <!-- предмет 3 -->
-                    <div class="flex ">
-                        <div class="flex-5  flex-column align-center justify-center">
-                            <span class="d-block highlight light">GPSS</span>
-                            <span class="d-block">13:00 - 14:20</span>
-                            <span class="d-block highlight primary">Лабораторная</span>
-                        </div>
-                        <div class="flex-2  flex align-center justify-center">
-                            <a href="#">
-                                <img src="img/unknown.png" alt="unknown" width="40px" height="40px"></a>
-                        </div>
-                        <div class="flex-5  flex-column justify-center pl-1">
-                            <div><span class="mr-1">Id:</span><span>?</span></div>
-                            <div><span class="mr-1">Код:</span><span>?</span></div>
-                            <div><span class="mr-1">Ссылка:</span><span class="highlight danger">Unknown</span></div>
                         </div>
                     </div>
                     <!-- предмет 3 -->
@@ -267,13 +238,13 @@
                     <!-- предмет 4 -->
                     <div class="flex ">
                         <div class="flex-5  flex-column align-center justify-center">
-                            <span class="d-block highlight light">Манас<span class="highlight warning">[Числ]</span></span>
+                            <span class="d-block highlight light">Манас <span class="text-warning">[Числ]</span></span>
                             <span class="d-block">14:30 - 15:50</span>
                             <span class="d-block highlight primary">Лекция</span>
                         </div>
                         <div class="flex-2  flex align-center justify-center">
                             <a href="https://us04web.zoom.us/j/6783149782?pwd=dVI3V0twNVNLNDhIb2Z5WnNjbWRBdz09">
-                                <img src="img/zoom.png" alt="Zoom" width="40px" height="40px"></a>
+                                <img src="img/zoom.png" alt="Zoom"></a>
                         </div>
                         <div class="flex-5  flex-column justify-center pl-1">
                             <div><span class="mr-1">Id:</span><span>678 314 9782</span></div>
@@ -285,7 +256,7 @@
                 
                 </div>
                 <!-- СРЕДА [END]-->
-
+                
                 <!-- ЧЕТВЕРГ [START]-->
                 <div class="content">
                 
@@ -293,12 +264,12 @@
                     <div class="flex ">
                         <div class="flex-5  flex-column align-center justify-center">
                             <span class="d-block highlight light">Экономика</span>
-                            <span class="d-block">8:00 - 9:20</span>
+                            <span class="d-block">08:00 - 09:20</span>
                             <span class="d-block highlight primary">Практика</span>
                         </div>
                         <div class="flex-2  flex align-center justify-center">
                             <a href="#">
-                                <img src="img/unknown.png" alt="Zoom" width="40px" height="40px"></a>
+                                <img src="img/unknown.png" alt="unknown"></a>
                         </div>
                         <div class="flex-5  flex-column justify-center pl-1">
                             <div><span class="mr-1">Id:</span><span>?</span></div>
@@ -317,7 +288,426 @@
                         </div>
                         <div class="flex-2  flex align-center justify-center">
                             <a href="#">
-                                <img src="img/unknown.png" alt="Zoom" width="40px" height="40px"></a>
+                                <img src="img/unknown.png" alt="unknown"></a>
+                        </div>
+                        <div class="flex-5  flex-column justify-center pl-1">
+                            <div><span class="mr-1">Id:</span><span>?</span></div>
+                            <div><span class="mr-1">Код:</span><span>?</span></div>
+                            <div><span class="mr-1">Ссылка:</span><span class="highlight danger">Unknown</span></div>
+                        </div>
+                    </div>
+                    <!-- предмет 2 -->
+                    
+                    <!-- предмет 3 -->
+                    <div class="flex ">
+                        <div class="flex-5  flex-column align-center justify-center">
+                            <span class="d-block highlight light">Java</span>
+                            <span class="d-block">11:00 - 12:20</span>
+                            <span class="d-block highlight primary">Лабораторная</span>
+                        </div>
+                        <div class="flex-2  flex align-center justify-center">
+                            <a href="https://meet.google.com/yot-cqbp-jsq">
+                                <img src="img/meet.png" alt="Google Meet"></a>
+                        </div>
+                        <div class="flex-5  flex-column justify-center pl-1">
+                            <div><span class="mr-1">Id:</span>?<span></span></div>
+                            <div><span class="mr-1">Код:</span>?<span></span></div>
+                            <div><span class="mr-1">Ссылка:</span><span class="highlight success">Const</span></div>
+                        </div>
+                    </div>
+                    <!-- предмет 3 -->
+
+                    <!-- предмет 4 -->
+                    <div class="flex ">
+                        <div class="flex-5  flex-column align-center justify-center">
+                            <span class="d-block highlight light">Java</span>
+                            <span class="d-block">13:00 - 14:20</span>
+                            <span class="d-block highlight primary">Лекция</span>
+                        </div>
+                        <div class="flex-2  flex align-center justify-center">
+                            <a href="https://meet.google.com/cku-xieb-nea">
+                                <img src="img/meet.png" alt="Google Meet"></a>
+                        </div>
+                        <div class="flex-5  flex-column justify-center pl-1">
+                            <div><span class="mr-1">Id:</span>?<span></span></div>
+                            <div><span class="mr-1">Код:</span>?<span></span></div>
+                            <div><span class="mr-1">Ссылка:</span><span class="highlight success">Const</span></div>
+                        </div>
+                    </div>
+                    <!-- предмет 4 -->
+
+                    <!-- предмет 5 -->
+                    <div class="flex ">
+                        <div class="flex-5  flex-column align-center justify-center">
+                            <span class="d-block highlight light">GPSS</span>
+                            <span class="d-block">14:30 - 15:50</span>
+                            <span class="d-block highlight primary">Лабораторная</span>
+                        </div>
+                        <div class="flex-2  flex align-center justify-center">
+                            <a href="https://us04web.zoom.us/j/77365062369?pwd=bUE3NlhMZGRvTGRFSHNzT3BkVjdqUT09">
+                                <img src="img/zoom.png" alt="Zoom"></a>
+                        </div>
+                        <div class="flex-5  flex-column justify-center pl-1">
+                            <div><span class="mr-1">Id:</span><span>773 6506 2369</span></div>
+                            <div><span class="mr-1">Код:</span><span>9EVWec</span></div>
+                            <div><span class="mr-1">Ссылка:</span><span class="highlight success">Const</span></div>
+                        </div>
+                    </div>
+                    <!-- предмет 5 -->
+                
+                </div>
+                <!-- ЧЕТВЕРГ [END]-->
+                
+                <!-- ПЯТНИЦА [START]-->
+                <div class="content">
+                
+                    <!-- предмет 1 -->
+                    <div class="flex">
+                        <div class="flex-5 flex-column align-center justify-center">
+                            <span class="d-block highlight light">Ассемблеры</span>
+                            <span class="d-block">9:30 - 10:50</span>
+                            <span class="d-block highlight primary">Лекция</span>
+                
+                        </div>
+                        <div class="flex-2 flex align-center justify-center">
+                            <a href="https://us04web.zoom.us/j/74162579534?pwd=OTgvNXFZeWxnOEZQOHFBdEtWcTJMQT09">
+                                <img src="img/zoom.png" alt="Zoom"></a>
+                        </div>
+                        <div class="flex-5 flex-column justify-center pl-1">
+                            <div><span class="mr-1">Id:</span><span>741 6257 9534</span></div>
+                            <div><span class="mr-1">Код:</span>9ZV0kB<span></span></div>
+                            <div><span class="mr-1">Ссылка:</span><span class="highlight success">Const</span></div>
+                        </div>
+                    </div>
+                    <!-- предмет 1 -->
+                
+                    <!-- предмет 2 -->
+                    <div class="flex">
+                        <div class="flex-5 flex-column align-center justify-center">
+                            <span class="d-block highlight light">Ассемблеры</span>
+                            <span class="d-block">11:00 - 12:20</span>
+                            <span class="d-block highlight primary">ЛБ (1-Группа)</span>
+                        </div>
+                        <div class="flex-2  flex align-center justify-center">
+                            <a href="https://us04web.zoom.us/j/74162579534?pwd=OTgvNXFZeWxnOEZQOHFBdEtWcTJMQT09">
+                                <img src="img/zoom.png" alt="Zoom"></a>
+                        </div>
+                        <div class="flex-5 flex-column justify-center pl-1">
+                            <div><span class="mr-1">Id:</span><span>741 6257 9534</span></div>
+                            <div><span class="mr-1">Код:</span>9ZV0kB<span></span></div>
+                            <div><span class="mr-1">Ссылка:</span><span class="highlight success">Const</span></div>
+                        </div>
+                    </div>
+                    <!-- предмет 2 -->
+                
+                    <!-- предмет 3 -->
+                    <div class="flex ">
+                        <div class="flex-5  flex-column align-center justify-center">
+                            <span class="d-block highlight light">Метрология</span>
+                            <span class="d-block">13:00 - 14:20</span>
+                            <span class="d-block highlight primary">Практика</span>
+                        </div>
+                        <div class="flex-2  flex align-center justify-center">
+                            <a href="#">
+                                <img src="img/unknown.png" alt="unknown"></a>
+                        </div>
+                        <div class="flex-5  flex-column justify-center pl-1">
+                            <div><span class="mr-1">Id:</span><span>?</span></div>
+                            <div><span class="mr-1">Код:</span><span>?</span></div>
+                            <div><span class="mr-1">Ссылка:</span><span class="highlight danger">Unknown</span></div>
+                        </div>
+                    </div>
+                    <!-- предмет 3 -->
+
+                </div>
+                <!-- ПЯТНИЦА [END]-->
+
+            </div>
+            <!-- Для Группы ИВТ-ИСОП-1-18 [END] -->
+
+
+            <!-- Для Группы ИВТ-1-18 [START] -->
+            <div class="shedule__content" data-group="ivt-1-18" id="ivt-1-18"> <!-- это -->
+
+                <!-- Понедельник [START]-->
+                <div class="content show"> 
+                   
+                    <!-- предмет 1 -->
+                    <div class="flex">
+                        <div class="flex-5 flex-column align-center justify-center">
+                            <span class="d-block highlight light">ЛиФП</span>
+                            <span class="d-block">8:00 - 9:20</span>
+                            <span class="d-block highlight primary">ЛБ (2-Группа)</span>
+                             
+                        </div>
+                        <div class="flex-2 flex align-center justify-center">
+                            <a href="https://us04web.zoom.us/j/4290434800?pwd=SHZpRHNLOGFrWHpKUXQwTjlRZG1qQT09">
+                                <img src="img/zoom.png" alt="Zoom"></a>
+                        </div>
+                        <div class="flex-5 flex-column justify-center pl-1">
+                            <div><span class="mr-1">Id:</span><span>429 043 4800</span></div>
+                            <div><span class="mr-1">Код:</span><span>288269</span></div>
+                            <div><span class="mr-1">Ссылка:</span><span class="highlight success">Const</span></div>
+                        </div>
+                    </div>
+                    <!-- предмет 1 -->     
+
+                    <!-- предмет 2 -->
+                    <div class="flex">
+                        <div class="flex-5 flex-column align-center justify-center">
+                            <span class="d-block highlight light">Ассемблеры</span>
+                            <span class="d-block">9:30 - 10:50</span>
+                            <span class="d-block highlight primary">ЛБ (2-Группа)</span>
+                        </div>
+                        <div class="flex-2  flex align-center justify-center">
+                            <a href="https://us04web.zoom.us/j/74162579534?pwd=OTgvNXFZeWxnOEZQOHFBdEtWcTJMQT09">
+                                <img src="img/zoom.png" alt="Zoom"></a>
+                        </div>
+                        <div class="flex-5  flex-column justify-center pl-1">
+                            <div><span class="mr-1">Id:</span><span>741 6257 9534</span></div>
+                            <div><span class="mr-1">Код:</span><span>9ZV0kB</span></div>
+                            <div><span class="mr-1">Ссылка:</span><span class="highlight success">Const</span></div>
+                        </div>
+                    </div>
+                    <!-- предмет 2 -->
+
+                    <!-- предмет 3 -->
+                    <div class="flex ">
+                        <div class="flex-5  flex-column align-center justify-center">
+                            <span class="d-block highlight light">ЛиФП</span>
+                            <span class="d-block">9:30 - 10:50</span>
+                            <span class="d-block highlight primary">ЛБ (1-Группа)</span>
+                        </div>
+                        <div class="flex-2  flex align-center justify-center">
+                            <a href="https://us04web.zoom.us/j/4290434800?pwd=SHZpRHNLOGFrWHpKUXQwTjlRZG1qQT09">
+                                <img src="img/zoom.png" alt="Zoom"></a>
+                        </div>
+                        <div class="flex-5  flex-column justify-center pl-1">
+                            <div><span class="mr-1">Id:</span><span>429 043 4800</span></div>
+                            <div><span class="mr-1">Код:</span><span>288269</span></div>
+                            <div><span class="mr-1">Ссылка:</span><span class="highlight success">Const</span></div>
+                        </div>
+                    </div>
+                    <!-- предмет 3 -->
+
+                    <!-- предмет 4 -->
+                    <div class="flex ">
+                        <div class="flex-5  flex-column align-center justify-center">
+                            <span class="d-block highlight light">ЛиФП</span>
+                            <span class="d-block">11:00 - 12:20</span>
+                            <span class="d-block highlight primary">Лекция</span>
+                        </div>
+                        <div class="flex-2  flex align-center justify-center">
+                            <a href="https://us04web.zoom.us/j/75394791789?pwd=TUJaY3MyMWVFUGpQZGZLYThmK2lKdz09">
+                                <img src="img/zoom.png" alt="Zoom"></a>
+                        </div>
+                        <div class="flex-5  flex-column justify-center pl-1">
+                            <div><span class="mr-1">Id:</span><span>753 9479 1789</span></div>
+                            <div><span class="mr-1">Код:</span><span>F49mhE</span></div>
+                            <div><span class="mr-1">Ссылка:</span><span class="highlight success">Const</span></div>
+                        </div>
+                    </div>
+                    <!-- предмет 4 -->
+                </div>
+                 <!-- Понедельник [END]-->
+
+                <!-- Вторник [START]-->
+                <div class="content">
+                
+                    <!-- предмет 1 -->
+                    <div class="flex">
+                        <div class="flex-5 flex-column align-center justify-center">
+                            <span class="d-block highlight light">Схемотехника</span>
+                            <span class="d-block">9:30 - 10:50</span>
+                            <span class="d-block highlight primary">Лабораторная</span>
+                        </div>
+                        <div class="flex-2  flex align-center justify-center">
+                            <a href="https://us04web.zoom.us/j/72946726061?pwd=WmNIdVI1M25QbTEvbGdFVGNNYTRndz09">
+                                <img src="img/zoom.png" alt="Zoom"></a>
+                        </div>
+                        <div class="flex-5  flex-column justify-center pl-1">
+                            <div><span class="mr-1">Id:</span><span>729 4672 6061</span></div>
+                            <div><span class="mr-1">Код:</span><span>5Ug690</span></div>
+                            <div><span class="mr-1">Ссылка:</span><span class="highlight success">Const</span></div>
+                        </div>
+                    </div>
+                    <!-- предмет 1 -->
+                
+                    <!-- предмет 2 -->
+                    <div class="flex ">
+                        <div class="flex-5  flex-column align-center justify-center">
+                            <span class="d-block highlight light">Java</span>
+                            <span class="d-block">11:00 - 12:20</span>
+                            <span class="d-block highlight primary">Лабораторная</span>
+                        </div>
+                        <div class="flex-2  flex align-center justify-center">
+                            <a href="https://meet.google.com/vwa-ikbe-jeb">
+                            
+                                <img src="img/meet.png" alt="Google Meet"></a>
+                        </div>
+                        <div class="flex-5  flex-column justify-center pl-1">
+                            <div><span class="mr-1">Id:</span>?<span></span></div>
+                            <div><span class="mr-1">Код:</span>?<span></span></div>
+                            <div><span class="mr-1">Ссылка:</span><span class="highlight success">Const</span></div>
+                        </div>
+                    </div>
+                    <!-- предмет 2 -->
+
+                    <!-- предмет 3 -->
+                    <div class="flex ">
+                        <div class="flex-5  flex-column align-center justify-center">
+                            <span class="d-block highlight light">Экономика</span>
+                            <span class="d-block">13:00 - 14:20</span>
+                            <span class="d-block highlight primary">Лекция</span>
+                        </div>
+                        <div class="flex-2  flex align-center justify-center">
+                            <a href="#">
+                                <img src="img/unknown.png" alt="unknown"></a>
+                        </div>
+                        <div class="flex-5  flex-column justify-center pl-1">
+                            <div><span class="mr-1">Id:</span><span>?</span></div>
+                            <div><span class="mr-1">Код:</span><span>?</span></div>
+                            <div><span class="mr-1">Ссылка:</span><span class="highlight danger">Unknown</span></div>
+                        </div>
+                    </div>
+                    <!-- предмет 3 -->
+                </div>
+                <!-- Вторник [END]-->
+
+                <!-- СРЕДА [START]-->
+                <div class="content">
+                    
+                    <!-- предмет 1 -->
+                    <div class="flex">
+                        <div class="flex-5 flex-column align-center justify-center">
+                            <span class="d-block highlight light">Манас <span class="text-warning">[Знам]</span></span>
+                            <span class="d-block">8:00 - 9:20</span>
+                            <span class="d-block highlight primary">Практика</span>
+                    
+                        </div>
+                        <div class="flex-2 flex align-center justify-center">
+                            <a href="https://us04web.zoom.us/j/6783149782?pwd=dVI3V0twNVNLNDhIb2Z5WnNjbWRBdz09">
+                                <img src="img/zoom.png" alt="Zoom"></a>
+                        </div>
+                        <div class="flex-5 flex-column justify-center pl-1">
+                            <div><span class="mr-1">Id:</span><span>678 314 9782</span></div>
+                            <div><span class="mr-1">Код:</span><span>621606</span></div>
+                            <div><span class="mr-1">Ссылка:</span><span class="highlight success">Const</span></div>
+                        </div>
+                    </div>
+                    <!-- предмет 1 -->
+
+                    <!-- предмет 2 -->
+                    <div class="flex ">
+                        <div class="flex-5  flex-column align-center justify-center">
+                            <span class="d-block highlight light">GPSS</span>
+                            <span class="d-block">9:30 - 10:50</span>
+                            <span class="d-block highlight primary">Лекция</span>
+                        </div>
+                        <div class="flex-2  flex align-center justify-center">
+                            <a href="https://us02web.zoom.us/j/3260530013?pwd=SzdGNDI4TDQwRnBVM3pjREgvdFdWdz09">
+                                <img src="img/zoom.png" alt="Zoom"></a>
+                        </div>
+                        <div class="flex-5  flex-column justify-center pl-1">
+                            <div><span class="mr-1">Id:</span><span>326 053 0013</span></div>
+                            <div><span class="mr-1">Код:</span><span>1111</span></div>
+                            <div><span class="mr-1">Ссылка:</span><span class="highlight success">Const</span></div>
+                        </div>
+                    </div>
+                    <!-- предмет 2 -->
+                
+                    <!-- предмет 3 -->
+                    <div class="flex">
+                        <div class="flex-5 flex-column align-center justify-center">
+                            <span class="d-block highlight light">Схемотехника</span>
+                            <span class="d-block">11:00 - 12:20</span>
+                            <span class="d-block highlight primary">Лекция</span>
+                        </div>
+                        <div class="flex-2  flex align-center justify-center">
+                            <a href="https://us04web.zoom.us/j/72946726061?pwd=WmNIdVI1M25QbTEvbGdFVGNNYTRndz09">
+                                <img src="img/zoom.png" alt="Zoom"></a>
+                        </div>
+                        <div class="flex-5  flex-column justify-center pl-1">
+                            <div><span class="mr-1">Id:</span><span>729 4672 6061</span></div>
+                            <div><span class="mr-1">Код:</span><span>5Ug690</span></div>
+                            <div><span class="mr-1">Ссылка:</span><span class="highlight success">Const</span></div>
+                        </div>
+                    </div>
+                    <!-- предмет 3 -->
+                
+                    <!-- предмет 4 -->
+                    <div class="flex ">
+                        <div class="flex-5  flex-column align-center justify-center">
+                            <span class="d-block highlight light">GPSS</span>
+                            <span class="d-block">13:00 - 14:20</span>
+                            <span class="d-block highlight primary">Лабораторная</span>
+                        </div>
+                        <div class="flex-2  flex align-center justify-center">
+                            <a href="https://us04web.zoom.us/j/77365062369?pwd=bUE3NlhMZGRvTGRFSHNzT3BkVjdqUT09">
+                                <img src="img/zoom.png" alt="Zoom"></a>
+                        </div>
+                        <div class="flex-5  flex-column justify-center pl-1">
+                            <div><span class="mr-1">Id:</span><span>773 6506 2369</span></div>
+                            <div><span class="mr-1">Код:</span><span>9EVWec</span></div>
+                            <div><span class="mr-1">Ссылка:</span><span class="highlight success">Const</span></div>
+                        </div>
+                    </div>
+                    <!-- предмет 4 -->
+                    
+                    <!-- предмет 5 -->
+                    <div class="flex ">
+                        <div class="flex-5  flex-column align-center justify-center">
+                            <span class="d-block highlight light">Манас <span class="text-warning">[Числ]</span></span>
+                            <span class="d-block">14:30 - 15:50</span>
+                            <span class="d-block highlight primary">Лекция</span>
+                        </div>
+                        <div class="flex-2  flex align-center justify-center">
+                            <a href="https://us04web.zoom.us/j/6783149782?pwd=dVI3V0twNVNLNDhIb2Z5WnNjbWRBdz09">
+                                <img src="img/zoom.png" alt="Zoom"></a>
+                        </div>
+                        <div class="flex-5  flex-column justify-center pl-1">
+                            <div><span class="mr-1">Id:</span><span>678 314 9782</span></div>
+                            <div><span class="mr-1">Код:</span><span>621606</span></div>
+                            <div><span class="mr-1">Ссылка:</span><span class="highlight success">Const</span></div>
+                        </div>
+                    </div>
+                    <!-- предмет 5 -->
+                
+                </div>
+                <!-- СРЕДА [END]-->
+
+                <!-- ЧЕТВЕРГ [START]-->
+                <div class="content">
+                
+                    <!-- предмет 1 -->
+                    <div class="flex ">
+                        <div class="flex-5  flex-column align-center justify-center">
+                            <span class="d-block highlight light">Экономика</span>
+                            <span class="d-block">13:00 - 14:20</span>
+                            <span class="d-block highlight primary">Лекция</span>
+                        </div>
+                        <div class="flex-2  flex align-center justify-center">
+                            <a href="#">
+                                <img src="img/unknown.png" alt="unknown"></a>
+                        </div>
+                        <div class="flex-5  flex-column justify-center pl-1">
+                            <div><span class="mr-1">Id:</span><span>?</span></div>
+                            <div><span class="mr-1">Код:</span><span>?</span></div>
+                            <div><span class="mr-1">Ссылка:</span><span class="highlight danger">Unknown</span></div>
+                        </div>
+                    </div>
+                    <!-- предмет 1 -->
+                
+                    <!-- предмет 2 -->
+                    <div class="flex">
+                        <div class="flex-5 flex-column align-center justify-center">
+                            <span class="d-block highlight light">Метрология</span>
+                            <span class="d-block">9:30 - 10:50</span>
+                            <span class="d-block highlight primary">Лекция</span>
+                        </div>
+                        <div class="flex-2  flex align-center justify-center">
+                            <a href="#">
+                                <img src="img/unknown.png" alt="unknown"></a>
                         </div>
                         <div class="flex-5  flex-column justify-center pl-1">
                             <div><span class="mr-1">Id:</span><span>?</span></div>
@@ -336,7 +726,7 @@
                         </div>
                         <div class="flex-2  flex align-center justify-center">
                             <a href="https://meet.google.com/cku-xieb-nea">
-                                <img src="img/meet.png" alt="Zoom" width="40px" height="40px"></a>
+                                <img src="img/meet.png" alt="Google Meet"></a>
                         </div>
                         <div class="flex-5  flex-column justify-center pl-1">
                             <div><span class="mr-1">Id:</span>?<span></span></div>
@@ -356,13 +746,13 @@
                     <div class="flex">
                         <div class="flex-5 flex-column align-center justify-center">
                             <span class="d-block highlight light">Ассемблеры</span>
-                            <span class="d-block">9:00 - 10:50</span>
+                            <span class="d-block">9:30 - 10:50</span>
                             <span class="d-block highlight primary">Лекция</span>
                 
                         </div>
                         <div class="flex-2 flex align-center justify-center">
                             <a href="https://us04web.zoom.us/j/74162579534?pwd=OTgvNXFZeWxnOEZQOHFBdEtWcTJMQT09">
-                                <img src="img/zoom.png" alt="Zoom" width="40px" height="40px"></a>
+                                <img src="img/zoom.png" alt="Zoom"></a>
                         </div>
                         <div class="flex-5 flex-column justify-center pl-1">
                             <div><span class="mr-1">Id:</span><span>741 6257 9534</span></div>
@@ -376,12 +766,12 @@
                     <div class="flex">
                         <div class="flex-5 flex-column align-center justify-center">
                             <span class="d-block highlight light">Ассемблеры</span>
-                            <span class="d-block">9:30 - 10:50</span>
+                            <span class="d-block">11:00 - 12:20</span>
                             <span class="d-block highlight primary">ЛБ (1-Группа)</span>
                         </div>
                         <div class="flex-2  flex align-center justify-center">
                             <a href="https://us04web.zoom.us/j/74162579534?pwd=OTgvNXFZeWxnOEZQOHFBdEtWcTJMQT09">
-                                <img src="img/zoom.png" alt="Zoom" width="40px" height="40px"></a>
+                                <img src="img/zoom.png" alt="Zoom"></a>
                         </div>
                         <div class="flex-5 flex-column justify-center pl-1">
                             <div><span class="mr-1">Id:</span><span>741 6257 9534</span></div>
@@ -400,7 +790,7 @@
                         </div>
                         <div class="flex-2  flex align-center justify-center">
                             <a href="#">
-                                <img src="img/unknown.png" alt="Zoom" width="40px" height="40px"></a>
+                                <img src="img/unknown.png" alt="unknown"></a>
                         </div>
                         <div class="flex-5  flex-column justify-center pl-1">
                             <div><span class="mr-1">Id:</span><span>?</span></div>
@@ -414,6 +804,8 @@
                 <!-- ПЯТНИЦА [END]-->
 
             </div>
+            <!-- Для Группы ИВТ-1-18 [END] -->
+            
         </div>
     </div>
     
