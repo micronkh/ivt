@@ -73,6 +73,7 @@ function alert(msg, time, style) {
 }
 
 function helpMsg() {
+
     let aware = localStorage.getItem('aware');
     let modal = document.querySelector('.modal');
 

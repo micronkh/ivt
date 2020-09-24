@@ -2,9 +2,12 @@
 html, body {
     font-size: 14px;
     width: 100%;
+    min-height: 100%;
+    height: auto;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     line-height: 140%;
     font-weight: bold;
+    overflow-y: auto;
 }
 
 *{
@@ -263,24 +266,22 @@ body.effect-off .highlight {
     height: 100%;
     background: rgba(0, 0, 0, .7);
     display: none;
+    overflow-y: auto;
 }
 
-.modal-body {
-    position: relative;
-}
 .modal-content {
     width: 80%;
     max-width: 550px;
     position: absolute;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    top: 30px;
+    transform: translateX(-50%);
     background-color: #fff;
     color: #000;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
     padding: 12px;
     border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -290,6 +291,8 @@ body.effect-off .highlight {
     -webkit-animation: showTopCenter 0.65s 1;
     -moz-animation: showTopCenter 0.65s 1;
     animation: showTopCenter 0.65s 1;
+    padding: 10px;
+    margin-bottom: 30px;
 }
 
 @keyframes showTopCenter {
@@ -297,10 +300,11 @@ body.effect-off .highlight {
         top: -100%;
     }
     100% {
-        -webkit-transform: translate(-50%, -50%);
-        -moz-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        -o-transform: translate(-50%, -50%);
+        top: 30px;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
     }
 }
 
