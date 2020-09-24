@@ -72,6 +72,26 @@ function alert(msg, time, style) {
     }, time);
 }
 
+function helpMsg() {
+    let aware = localStorage.getItem('aware');
+    let modal = document.querySelector('.modal');
+
+    if (!aware) {
+        modal.classList.add('show');
+        
+        let checkBtn = modal.querySelector('#instruction');
+        checkBtn.onclick = function() {
+            let check = modal.querySelector('.option-input').checked;
+            if (check) {
+                localStorage.setItem('aware', true);
+            }
+            modal.remove();
+        }
+    }
+
+    else modal.remove();
+}
+
 /* получиль какой сегодня день, вместо суббота и вокресенье возвращает понедельник*/
 function getPresentDay() {
     let dayToday = new Date().getDay();
@@ -203,5 +223,5 @@ window.onload = function main() {
     showGroupName(groupShowNames[groupNameId]);
     setContent(presentDay, groupNameId);
 
-    alert('Добро Пожаловать !', 1500, 'black');
+    helpMsg();
 }

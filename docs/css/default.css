@@ -456,9 +456,18 @@ ul {list-style: none;}
     cursor: pointer;
     font-weight: 600;
     background: none;
+    height: 30px;
+    background-color: #000;
 }
 .btn-default:hover{
   background: lightgray;
   transition: all .25s ease;
   opacity: 1;
 }
+.btn-default.primary{color: #0275d8 !important;}
+.btn-default.success{color: #5cb85c !important;}
+.btn-default.info{color: #008080 !important;}
+.btn-default.warning{color: #f7df1e !important;}
+.btn-default.danger{color: #de3e44 !important;}
+.btn-default.light{color: #f5f5dc !important;}
+.btn-default.black{color: #000 !important; background-color: #fff;}
