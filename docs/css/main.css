@@ -220,7 +220,7 @@ body.effect-off .highlight {
 .alert{
     position: absolute;
     width: 80%;
-    top: 10%;
+    top: 15%;
     left: 10%;
     padding: 14px 10px;
     z-index: 500;
@@ -239,7 +239,7 @@ body.effect-off .highlight {
 
 @keyframes showTop {
     0% {top: -100%;}
-    100% {top: 10%;}
+    100% {top: 15%;}
 }
 
 

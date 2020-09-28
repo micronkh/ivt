@@ -196,10 +196,7 @@ showToDOM.choiceGroup.onclick = function() {
         dropdown.classList.remove('show');
 
         if (getGroupName == 'isop-1-18') {
-            alert('Предупреждение !!!', 1200, 'danger');
-            setTimeout(() => {
-                alert('Иформация можеть быть некорректна', 2000, 'warning');
-            }, 1300);
+            alert('Расписание для этой группы может быть некорректна', 2000, 'primary');
         }
 
         setDay(getPresentDay());
