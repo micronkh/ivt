@@ -6,7 +6,6 @@ html, body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     line-height: 140%;
     font-weight: bold;
-    
 }
 
 *{
@@ -206,6 +205,11 @@ body.effect-off .highlight {
     padding: 0;
     background-color: none;
     font-weight: bold;
+}
+
+.text-warning,
+.text-success {
+    font-weight: normal;
 }
 
 /* Эффекты Выделения текста  [END] */
