@@ -1,9 +1,10 @@
-// Неделя - Числитель или Знаминатель?
-let weekMsg = document.getElementById("week");
 
+let weekMsg = document.getElementById("week"); 
+
+// Неделя - Числитель или Знаминатель?
 (function () {
 
-    /* БЛОК 1 -> Формирование массив из дней недели Числитель или Знаминатель [START] */
+    /* Формирование массива из дней недели числитель или знаминатель */
     let denominator = [] // Знаминатель
     let numerator = [] // Числитель
 
@@ -18,11 +19,10 @@ let weekMsg = document.getElementById("week");
             flag = true;
         }
     }
-    /* БЛОК 1 -> Формирование массив из дней недели Числитель или Знаминатель [END] */
 
     const date = new Date('January 1, 2020 00:00:00'); // 1-январь 2020-года
     let currentDate = Date.parse(new Date());           // текущая дата
-    let days = (currentDate - Date.parse(date)) / 86400000;  // деление  1 сутка = 86 400 000 миллисекунд 
+    let days = (currentDate - Date.parse(date)) / 86400000;  // 1 сутка = 86 400 000 миллисекунд 
 
     for (let i = 0; i < denominator.length; i++) {
         let numFromDenom = (days > denominator[i]) ? (days - denominator[i]) : denominator[i] - days;
@@ -44,6 +44,7 @@ let weekMsg = document.getElementById("week");
     }
 }());
 
+// функция для более удобной и быстрой создание элементов 
 function createElement(tag, props, children = []) {
   let element = document.createElement(tag);
 
@@ -72,6 +73,7 @@ function alert(msg, time, style) {
     }, time);
 }
 
+// сообщение для отсталых
 function helpMsg() {
 
     let aware = localStorage.getItem('aware');
@@ -115,14 +117,13 @@ function setDay(day) {
 }
 
 
-
 let shedule = {
     self: document.querySelector(".shedule"), // главный блок график
 
-    sheduleDay: document.querySelector(".shedule__day"), // общий для всех
-    allDays: document.querySelectorAll('.shedule__day .day'), // общий для всех
+    sheduleDay: document.querySelector(".shedule__day"), // вкладка дни [родитель-объертка]
+    allDays: document.querySelectorAll('.shedule__day .day'), // вкладки дни [5 элементов]
 
-    content: document.querySelectorAll('.shedule__content'),
+    content: document.querySelectorAll('.shedule__content')  // тело расписании
 };
 
 
@@ -145,7 +146,8 @@ function setContent(day, groupName) {
     content[day].classList.add('show');
 }
 
-/* Не общая функция */
+
+// добавление возможности выборки дней 
 shedule.sheduleDay.addEventListener('click', function (event) {
     let getDay = event.target.closest('.day');
 
@@ -161,31 +163,23 @@ shedule.sheduleDay.addEventListener('click', function (event) {
 })
 
 
-/* участок работы START */
-
 let groupShowNames = {
     'ivt-1-18': 'ИВТ-1-18',
     'isop-1-18': 'ИСОП-1-18'
 };
 
+// показать расписанию в зависимости от выбранной группы
 let showToDOM = {
     choiceGroup: document.getElementById('choice-group'),
     dropdown: document.querySelector('.dropdown.group'),
     nameGroup: document.getElementById('name-group')
 }
 
-function getGroupName() {
-    return shedule.self.dataset.group;
-}
+function getGroupName() {return shedule.self.dataset.group;}
+function setGroupname(newValue) {shedule.self.dataset.group = newValue;}
+function showGroupName(newValue) {showToDOM.nameGroup.innerText = newValue;}
 
-function setGroupname(newValue) {
-    shedule.self.dataset.group = newValue;
-}
-
-function showGroupName(newValue) {
-    showToDOM.nameGroup.innerText = newValue;
-}
-
+// показать расписанию в зависимости от выбранной группы
 showToDOM.choiceGroup.onclick = function() {
     let dropdown = showToDOM.dropdown;
 
@@ -194,10 +188,6 @@ showToDOM.choiceGroup.onclick = function() {
     dropdown.onclick = function(event) {
         let getGroupName = event.target.dataset.group;
         dropdown.classList.remove('show');
-
-        if (getGroupName == 'isop-1-18') {
-            alert('Расписание для этой группы может быть некорректна', 2000, 'primary');
-        }
 
         setDay(getPresentDay());
         setGroupname(getGroupName);
@@ -209,9 +199,8 @@ showToDOM.choiceGroup.onclick = function() {
     }
 }
 
-    
-/* участок работы END */
 
+// при загрузке страницы показать расписанию
 window.onload = function main() {
     let groupNameId = localStorage.getItem('group-name') || getGroupName();
     let presentDay = getPresentDay();
@@ -222,4 +211,5 @@ window.onload = function main() {
     setContent(presentDay, groupNameId);
 
     helpMsg();
+    //alert("Добро Пожаловать", 1000, "success bold");
 }

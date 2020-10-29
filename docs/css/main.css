@@ -8,6 +8,7 @@ html, body {
     font-weight: bold;
 }
 
+
 *{
     word-wrap:break-word;
     outline: none;
@@ -136,6 +137,10 @@ a img {
     -o-border-radius: 20px;
 }
 
+.flex div:last-child div:nth-child(2)  {
+    margin-bottom: 4px;
+}
+
 /* SECTION Shedule [END]*/
 
 
@@ -190,8 +195,15 @@ body.effect-on  .highlight {
     -o-border-radius: 4px;
 }
 
+@media (max-width: 333px) {
+    body.effect-on  .highlight {
+        font-weight: normal;
+    }
+}
+
 .highlight.primary{color: #0275d8 !important;}
 .highlight.success{color: #5cb85c !important;}
+.highlight.lime{color: #00ff00 !important;}
 .highlight.info{color: #008080 !important;}
 .highlight.warning{color: #f7df1e !important;}
 .highlight.danger{color: #de3e44 !important;}
@@ -207,10 +219,6 @@ body.effect-off .highlight {
     font-weight: bold;
 }
 
-.text-warning,
-.text-success {
-    font-weight: normal;
-}
 
 /* Эффекты Выделения текста  [END] */
 
@@ -253,7 +261,7 @@ body.effect-off .highlight {
 .alert.warning{color: #f7df1e !important;}
 .alert.danger{color: #de3e44 !important;}
 .alert.light{color: #f5f5dc !important;}
-.alert.black{color: #000 !important; background-color: #fff;}
+.alert.dark{color: #000 !important; background-color: #fff;}
 
 /* Alert [END]
 
@@ -396,3 +404,5 @@ body label {
     line-height: 40px;
 }
 /* Checkbox */ 
+
+
