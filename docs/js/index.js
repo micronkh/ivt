@@ -213,3 +213,6 @@ window.onload = function main() {
     helpMsg();
     //alert("Добро Пожаловать", 1000, "success bold");
 }
+
+
+//alert("Менин атым пинокио, сенин атын тонкулдак", 40000000000, "highlight lime py-1 px-2");
