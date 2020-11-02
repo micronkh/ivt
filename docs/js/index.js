@@ -65,12 +65,18 @@ function createElement(tag, props, children = []) {
 
 // функция для показа уведомлений, который удалится через time секунд
 function alert(msg, time, style) {
-    let div = createElement('div', {'className': `alert ${style}`, 'id': 'alert'}, [msg]);
+    let div = createElement(
+        "div",
+        { className: `alert ${style}`, id: "alert" },
+        [msg]
+    );
 
-    document.querySelector('.container-app').append(div);
+    document.querySelector(".container-app").append(div);
     setTimeout(() => {
-        document.getElementById('alert').remove();
+        document.getElementById("alert").remove();
     }, time);
+
+    // Пример: alert("Добро Пожаловать", 1000, "success bold");
 }
 
 // сообщение для отсталых
@@ -199,20 +205,52 @@ showToDOM.choiceGroup.onclick = function() {
     }
 }
 
+let colours = [
+    "sea-blue",
+    "skyline",
+    "lawrencuium",
+    "dark-ocean",
+    "amin",
+    "seleniuim",
+    "ocean",
+    "celestial",
+    "orca",
+    "frost",
+    "royal",
+    "dark-sky",
+    "virgin",
+    "turquoise",
+    "twitch",
+    "ash",
+];
+
+// [min; max)
+function rand(min, max) {
+    return Math.floor((Math.random() * (max - min) + min));
+}
+
+/* установить какой то случайный цвет на фон */
+function setRandomColor() {
+  let length = colours.length;
+  let colorName = colours[rand(0, length)];
+  document.body.classList.add(colorName); 
+}
+
 
 // при загрузке страницы показать расписанию
 window.onload = function main() {
-    let groupNameId = localStorage.getItem('group-name') || getGroupName();
+
+    setRandomColor(); // установить рандонмый цвет фона
+
+    /* Показать расписанию по выбранное группе за текущий день [START] */
+    let groupNameId = localStorage.getItem("group-name") || getGroupName();
     let presentDay = getPresentDay();
 
     setDay(presentDay);
     setGroupname(groupNameId);
     showGroupName(groupShowNames[groupNameId]);
     setContent(presentDay, groupNameId);
+    /* Показать расписанию по выбранное группе за текущий день [END] */
 
-    helpMsg();
-    //alert("Добро Пожаловать", 1000, "success bold");
+    helpMsg(); // инструкция
 }
-
-
-//alert("Менин атым пинокио, сенин атын тонкулдак", 40000000000, "highlight lime py-1 px-2");

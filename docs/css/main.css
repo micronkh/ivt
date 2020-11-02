@@ -148,12 +148,11 @@ a img {
 /* Стандартная Светлая Тема  [START] */
 
 body.theme-light {
-    background-color: #a6c4cc;
-    background: url(../img/bg-light.jpg);
-    background-size: cover;
-    background-position: center;
-    color: #231f20;
+    background: #16222A;
+    background: -webkit-linear-gradient(to right, #3A6073, #16222A); 
+    background: linear-gradient(to right, #3A6073, #16222A);
 }
+
 
 body.theme-light .main-header {
     background:linear-gradient(5deg, rgb(73, 221, 216) 0%, rgb(51, 105, 231) 100%);
@@ -183,6 +182,100 @@ body.theme-light .shedule__day .day.active {
 
 /* Стандартная Светлая Тема  [END] */
 
+
+/* Линейные градиенты для фона [START] */ 
+body.sea-blue {
+    background: #2b5876;  
+    background: -webkit-linear-gradient(to top, #4e4376, #2b5876); 
+    background: linear-gradient(to top, #4e4376, #2b5876);
+}
+
+body.skyline {
+    background: #2b5876;  
+    background: -webkit-linear-gradient(to top, #4e4376, #2b5876); 
+    background: linear-gradient(to top, #4e4376, #2b5876);
+}
+
+body.lawrencuium {
+    background: #0f0c29; 
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29); 
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); 
+}
+
+body.dark-ocean {
+    background: #373B44; 
+    background: -webkit-linear-gradient(to right, #4286f4, #373B44); 
+    background: linear-gradient(to right, #4286f4, #373B44);
+}
+
+body.amin {
+    background: #8E2DE2; 
+    background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  
+    background: linear-gradient(to right, #4A00E0, #8E2DE2); 
+}
+
+body.ocean {
+    background: #000046; 
+    background: -webkit-linear-gradient(to top, #1CB5E0, #000046);  
+    background: linear-gradient(to top, #1CB5E0, #000046); 
+}
+
+body.celestial {
+    background: #C33764; 
+    background: -webkit-linear-gradient(to bottom, #1D2671, #C33764);  
+    background: linear-gradient(to bottom, #1D2671, #C33764);
+}
+
+body.orca {
+    background: #44A08D; 
+    background: -webkit-linear-gradient(to bottom, #093637, #44A08D);  
+    background: linear-gradient(to bottom, #093637, #44A08D);
+}
+
+body.frost {
+    background: #000428;  
+    background: -webkit-linear-gradient(to top, #004e92, #000428);  
+    background: linear-gradient(to top, #004e92, #000428);
+}
+
+body.royal {
+    background: #141E30; 
+    background: -webkit-linear-gradient(to right, #243B55, #141E30);  
+    background: linear-gradient(to right, #243B55, #141E30); 
+}
+
+body.dark-sky {
+    background: #4B79A1;  
+    background: -webkit-linear-gradient(to right, #283E51, #4B79A1); 
+    background: linear-gradient(to right, #283E51, #4B79A1); 
+}
+
+body.virgin {
+    background: #7b4397;  
+    background: -webkit-linear-gradient(to bottom, #dc2430, #7b4397); 
+    background: linear-gradient(to bottom, #dc2430, #7b4397); 
+}
+
+body.turquoise {
+    background: #136a8a;  
+    background: -webkit-linear-gradient(to bottom, #267871, #136a8a);  
+    background: linear-gradient(to bottom, #267871, #136a8a); 
+}
+
+body.twitch {
+    background: #6441A5;  
+    background: -webkit-linear-gradient(to bottom, #2a0845, #6441A5);  
+    background: linear-gradient(to bottom, #2a0845, #6441A5);
+
+}
+
+body.ash {
+    background: #606c88;  
+    background: -webkit-linear-gradient(to bottom, #3f4c6b, #606c88);  
+    background: linear-gradient(to bottom, #3f4c6b, #606c88);
+}
+
+/* Линейные градиенты  [END] */ 
 
 /* Эффекты Выделения текста  [START] */
 body.effect-on  .highlight {
@@ -404,3 +497,7 @@ body label {
 /* Checkbox */ 
 
 
+/* Scroll Bar */ 
+::-webkit-scrollbar {
+    display: none;
+}
