@@ -210,19 +210,15 @@ let colours = [
     "skyline",
     "lawrencuium",
     "dark-ocean",
-    "amin",
     "seleniuim",
     "ocean",
-    "celestial",
-    "orca",
     "frost",
     "royal",
     "dark-sky",
-    "virgin",
     "turquoise",
-    "twitch",
-    "ash",
+    "ash"
 ];
+
 
 // [min; max)
 function rand(min, max) {
