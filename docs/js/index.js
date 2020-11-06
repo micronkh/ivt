@@ -210,7 +210,6 @@ let colours = [
     "skyline",
     "lawrencuium",
     "dark-ocean",
-    "seleniuim",
     "ocean",
     "frost",
     "royal",
