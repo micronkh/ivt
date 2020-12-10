@@ -366,6 +366,9 @@ body.effect-off .highlight {
     overflow: auto;
 }
 
+.w-auto {width: auto;}
+.h-auto {height: auto;}
+
 @keyframes showTopCenter {
     0% {
         top: -100%;
@@ -472,3 +475,15 @@ body label {
 ::-webkit-scrollbar {
     display: none;
 }
+
+.opacity-1{opacity: 10%;}
+.opacity-2{opacity: 20%;}
+.opacity-3{opacity: 30%;}
+.opacity-4{opacity: 40%;}
+.opacity-5{opacity: 50%;}
+.opacity-6{opacity: 60%;}
+.opacity-7{opacity: 70%;}
+.opacity-8{opacity: 80%;}
+.opacity-9{opacity: 90%;}
+
+.line-through {text-decoration: line-through;}

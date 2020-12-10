@@ -79,18 +79,18 @@ function alert(msg, time, style) {
     // Пример: alert("Добро Пожаловать", 1000, "success bold");
 }
 
-// сообщение для отсталых
+// Дополнительная информация
 function helpMsg() {
 
     let aware = localStorage.getItem('aware');
-    let modal = document.querySelector('.modal');
+    let modal = document.querySelector('.modal.modal-1');
 
     if (!aware) {
         modal.classList.add('show');
         
         let checkBtn = modal.querySelector('#instruction');
         checkBtn.onclick = function() {
-            let check = modal.querySelector('.option-input').checked;
+            let check = modal.querySelector(".input-1").checked;
             if (check) {
                 localStorage.setItem('aware', true);
             }
@@ -101,12 +101,31 @@ function helpMsg() {
     else modal.remove();
 }
 
+// Дополнительная информация
+function helpMsg2() {
+    let aware = localStorage.getItem("aware2");
+    let modal = document.querySelector(".modal.modal-2");
+
+    if (!aware) {
+        modal.classList.add("show");
+
+        let checkBtn = modal.querySelector("#instruction2");
+        checkBtn.onclick = function () {
+            let check = modal.querySelector(".input-2").checked;
+            if (check) {
+                localStorage.setItem("aware2", true);
+            }
+            modal.remove();
+        };
+    } else modal.remove();
+}
+
 /* получиль какой сегодня день, вместо суббота и вокресенье возвращает понедельник*/
 function getPresentDay() {
     let dayToday = new Date().getDay();
     dayToday -= 1;
 
-    if (dayToday <= 0 || dayToday >= 5) return 0;
+    if (dayToday <= 0 || dayToday >= 6) return 0;
     else return dayToday;
 }
 
@@ -247,5 +266,7 @@ window.onload = function main() {
     setContent(presentDay, groupNameId);
     /* Показать расписанию по выбранное группе за текущий день [END] */
 
-    helpMsg(); // инструкция
+  
+    helpMsg();
+    helpMsg2();
 }
