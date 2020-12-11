@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+        <link rel="stylesheet" href="css/def.css" />
+        <link rel="stylesheet" href="css/plate.css" />
+        <title>Main</title>
+    </head>
+
+    <body>
+       
+        <div class="wrapper show">
+            <div class="watch-case">
+                <div class="watch-tips">
+                    <span class="hours"></span>
+                    <span class="minutes"></span>
+                    <span class="seconds"></span>
+                </div>
+                      <div class="watch-date">
+                          <div class="mb-1"><span class="date highlight info"></span> - ДЕКАБРЬ <br></div>
+                      </div>
+
+                <div class="watch-alert">
+                        Экзамены <br /> через
+                        <span class="day highlight warning"></span> дней
+                </div>
+                <div class="watch-week">
+                    <span class="week-arrow"></span>
+                    <ul>
+                        <div><span class="text-dark big fas fa-smile-wink"></span></div>
+                        <div><span class="text-dark big fas fa-smile-beam"></span></div>
+                        <div><span class="text-dark big fas fa-smile-beam"></span></div>
+                        <div><span class="text-dark big fas fa-meh"></span></div>
+                        <div><span class="text-dark big fas fa-meh-blank"></span></div>
+                        <div><span class="text-dark big fas fa-sad-cry"></span></div>
+                    </ul>
+                </div>
+                <div class="watch-day">
+                    <div class="sun">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-app content">
+            <div class="header flex space-between">
+                 <h2 class="highlight px-1 btn-back">
+                    <a href="main.html" class="highlight primary"> &crarr;</a>
+                </h2>
+                 <h2 class="title">Экзамены ИВТ</h2>
+            </div>
+           
+
+            <ul id="todo">
+
+                <li class="todo__item silver w-100">
+                    <div class="row align-center w-100">
+                        <input type="checkbox" class="option-input" data-index="0">
+                        <div class="flex align-self-center align-center w-100 space-between">
+                            <label class="todo-label highlight primary">Экономика</label>
+                            <span class="highlight light">22-декабрь <span class="highlight warning">13:00</span></span>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="todo__item silver w-100">
+                    <div class="row align-center w-100">
+                        <input type="checkbox" class="option-input" data-index="1">
+                        <div class="flex align-self-center align-center w-100 space-between">
+                            <label class="todo-label highlight primary">Схема</label>
+                            <span class="highlight light">23-декабрь <span class="highlight warning">11:00</span></span>
+                            
+                        </div>
+                    </div>
+                </li>
+
+                 <li class="todo__item silver w-100">
+                    <div class="row align-center w-100">
+                        <input type="checkbox" class="option-input" data-index="2">
+                        <div class="flex align-self-center align-center w-100 space-between">
+                            <label class="todo-label highlight primary">ЛиФП</label>
+                            <span class="highlight light">24-декабрь <span class="highlight warning">11:00</span></span>
+                            
+                        </div>
+                    </div>
+                </li>
+
+                <li class="todo__item silver w-100">
+                    <div class="row align-center w-100">
+                        <input type="checkbox" class="option-input" data-index="3">
+                        <div class="flex align-self-center align-center w-100 space-between">
+                            <label class="todo-label highlight primary">JAVA</label>
+                            <span class="highlight light">24-декабрь <span class="highlight warning">13:00</span></span>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="todo__item silver w-100">
+                    <div class="row align-center w-100">
+                        <input type="checkbox" class="option-input" data-index="4">
+                        <div class="flex align-self-center align-center w-100 space-between">
+                            <label class="todo-label highlight primary">Манас</label>
+                            <span class="highlight light">25-декабрь <span class="highlight warning">11:00</span></span>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="todo__item silver w-100">
+                    <div class="row align-center w-100">
+                        <input type="checkbox" class="option-input" data-index="5">
+                        <div class="flex align-self-center align-center w-100 space-between">
+                            <label class="todo-label highlight primary">GPSS</label>
+                            <span class="highlight light">xx-декабрь <span class="highlight warning">xx:xx</span></span>
+                        </div>
+                    </div>
+                </li>
+
+
+                <li class="todo__item silver w-100">
+                    <div class="row align-center w-100">
+                        <input type="checkbox" class="option-input" data-index="6">
+                        <div class="flex align-self-center align-center w-100 space-between">
+                            <label class="todo-label highlight primary">Метрология</label>
+                            <span class="highlight light">xx-декабрь <span class="highlight warning">xx:xx</span></span>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="todo__item silver w-100">
+                    <div class="row align-center w-100">
+                        <input type="checkbox" class="option-input" data-index="7">
+                        <div class="flex align-self-center align-center w-100 space-between">
+                            <label class="todo-label highlight primary">Ассемблеры</label>
+                            <span class="highlight light">29-декабрь <span class="highlight warning">09:30</span></span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+
+       
+        <audio id="bg" autoplay loop src="bg.mp3" type="audio/mp3"> </audio>
+
+        <!-- End -->
+        <script src="js/plate.js"></script>
+    </body>
+</html>
