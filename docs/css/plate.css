@@ -1105,7 +1105,6 @@ i:nth-child(60) {
 /* content */
 
 .header .btn-back {
-	font-size: 25px;
 	animation: switchColor 3s ease-in infinite;
 }
 
