@@ -507,8 +507,6 @@ body label {
     background: linear-gradient(to top, #1CB5E0, #000046);
     z-index: 100;
     padding: 8px;
-    border-top-left-radius: 16px;
-    border-top-right-radius: 16px;
 }
 
 .check-btn,  .check-btn span{
