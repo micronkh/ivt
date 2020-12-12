@@ -102,18 +102,18 @@ function helpMsg() {
 }
 
 // Дополнительная информация
-function helpMsg2() {
-    let aware = localStorage.getItem("aware2");
-    let modal = document.querySelector(".modal.modal-2");
+function helpMsg3() {
+    let aware = localStorage.getItem("aware3");
+    let modal = document.querySelector(".modal.modal-3");
 
     if (!aware) {
         modal.classList.add("show");
 
-        let checkBtn = modal.querySelector("#instruction2");
+        let checkBtn = modal.querySelector("#instruction3");
         checkBtn.onclick = function () {
-            let check = modal.querySelector(".input-2").checked;
+            let check = modal.querySelector(".input-3").checked;
             if (check) {
-                localStorage.setItem("aware2", true);
+                localStorage.setItem("aware3", true);
             }
             modal.remove();
         };
@@ -268,5 +268,5 @@ window.onload = function main() {
 
   
     helpMsg();
-    helpMsg2();
+    helpMsg3();
 }
