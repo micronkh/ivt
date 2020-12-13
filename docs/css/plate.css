@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
 
 body {
-	background-color: #111;
+	background-color: #000000;
+	background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
 	min-height: 100vh;
 	display: flex;
 	align-items: center;
@@ -16,11 +17,12 @@ body::after {
 	width: 100%;
 	height: 100%;
 	position: fixed;
-	background-image: url(../img/skull.png);
+	background-image: url(../img/bg.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: contain;
+	background-size: 600px;
 	z-index: -1;
+	opacity: 0.4;
 }
 
 .wrapper {
@@ -36,9 +38,12 @@ body::after {
 	height: 320px;
 	width: 320px;
 	overflow: hidden;
-	background-image: linear-gradient(-45deg, #fdfdfd, #ceced6, #fdfdfd);
 	border-radius: 50%;
 	box-shadow: 0 0 1px 2px rgba(180,177,193,0.7);
+	background: #005AA7;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #FFFDE4, #005AA7);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #FFFDE4, #005AA7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 i:nth-child(1) {
@@ -641,7 +646,6 @@ i:nth-child(60) {
 	animation: 8s day-bg infinite;
 	border-radius: 50%;
 	overflow: hidden;
-	box-shadow: inset 0 -1px 1px 1px #f6f6f6
 }
 
 .sun {
@@ -1084,7 +1088,6 @@ i:nth-child(60) {
 	}
 }
 
-@keyframes day-bg {
 	0% {
 		background-color: #2b7edc;
 	}
@@ -1115,9 +1118,9 @@ i:nth-child(60) {
 }
 
 .title {
-	color: #42d4e4;
+	color: #de3e44 !important;
 	font-weight: bold;
-	text-shadow: 1px 0 15px #42d4e4, -1px 0 15px #42d4e4;
+	text-shadow: 1px 0 15px #de3e44, -1px 0 15px #de3e44;
 }
 
     
