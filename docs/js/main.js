@@ -101,25 +101,6 @@ function helpMsg() {
     else modal.remove();
 }
 
-// Дополнительная информация
-function helpMsg3() {
-    let aware = localStorage.getItem("aware3");
-    let modal = document.querySelector(".modal.modal-3");
-
-    if (!aware) {
-        modal.classList.add("show");
-
-        let checkBtn = modal.querySelector("#instruction3");
-        checkBtn.onclick = function () {
-            let check = modal.querySelector(".input-3").checked;
-            if (check) {
-                localStorage.setItem("aware3", true);
-            }
-            modal.remove();
-        };
-    } else modal.remove();
-}
-
 /* получиль какой сегодня день, вместо суббота и вокресенье возвращает понедельник*/
 function getPresentDay() {
     let dayToday = new Date().getDay();
@@ -268,5 +249,4 @@ window.onload = function main() {
 
   
     helpMsg();
-    helpMsg3();
 }

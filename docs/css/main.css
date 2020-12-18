@@ -502,22 +502,25 @@ body label {
     justify-content: space-between;
     align-items: center;
     
-    background: #000046;
-    background: -webkit-linear-gradient(to top, #1CB5E0, #000046);
-    background: linear-gradient(to top, #1CB5E0, #000046);
+    background: #008080;
+    background: -webkit-linear-gradient(to top, #000046, #008080);
+    background: linear-gradient(to top, #000046, #008080);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
     z-index: 100;
     padding: 8px;
 }
 
 .check-btn,  .check-btn span{
-    animation: switchColor 3s ease-in infinite;
-    color: #008080;
+    animation: switchColor 2s ease-in infinite;
+    color: #f7df1e ;
 }
 
 
 
 @keyframes switchColor {
     0% {opacity: 1;}
-    50% {opacity: 0.63;}
+    50% {opacity: 0.3;}
     100% {opacity: 1;}
 }
