@@ -1130,7 +1130,7 @@ i:nth-child(60) {
   background-color: #fff;
 }
 
-.todo__item.yellowm {border-left-color: #f7df1e;}
+.todo__item.yellow {border-left-color: #f7df1e;}
 .todo__item.green {border-left-color: green;}
 .todo__item.red {border-left-color: #de3e44;}
 .todo__item.blue {border-left-color: #0275d8;}
