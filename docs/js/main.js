@@ -99,6 +99,9 @@ function helpMsg() {
     }
 
     else modal.remove();
+
+    let groupName = localStorage.getItem('group-name');
+    if (groupName === "isop-1-18") alert('расписание экзаменов может быть некорректным', 2000, 'light');
 }
 
 /* получиль какой сегодня день, вместо суббота и вокресенье возвращает понедельник*/
