@@ -4,7 +4,7 @@ function showCurrentTime() {
         let date = new Date();
 
         document.querySelector(".watch-date .date").textContent = date.getDate();
-        document.querySelector(".watch-alert .day").textContent = 21 - date.getDate();
+        document.querySelector(".watch-alert .day").textContent = 0;
 
         let scale = - 100 - (15 * (11 - date.getDate()));
         scale = (scale > 50) ? 50 : scale;
