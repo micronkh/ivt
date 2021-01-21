@@ -238,6 +238,8 @@ function setRandomColor() {
 // при загрузке страницы показать расписанию
 window.onload = function main() {
 
+    localStorage.clear();
+
     setRandomColor(); // установить рандонмый цвет фона
 
     /* Показать расписанию по выбранное группе за текущий день [START] */
