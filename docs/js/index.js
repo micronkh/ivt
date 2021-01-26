@@ -680,7 +680,7 @@ let IVT_1_18 = {
 
         'Четверг': [
             new BriefSubject({ // Урок №1
-                subject: { name: "Системное Программирование", type: "ЛБ", week: 'Знам' }, time: { start: { h: 9, m: 30 }, end: { h: 10, m: 50 } },
+                subject: { name: "Системное Программирование", type: "ЛБ", week: '' }, time: { start: { h: 9, m: 30 }, end: { h: 10, m: 50 } },
                 teacher: { names: "Бакасова П.С", url: KSTU.FIT.IVT['Бакасова П.С'].img() }, day: 'Четверг', groupId: 'ivt-1-18',
                 conference: { link: KSTU.FIT.IVT['Бакасова П.С'].conference.link, platform: KSTU.FIT.IVT['Бакасова П.С'].conference.platform },
             }),
