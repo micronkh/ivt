@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Расписание</title>
+</head>
+<body class="theme-light effect-on">
+    
+    <div class="wrapper">
+        <div class="container-app pb-2">
+
+            <header class="main-header">
+                <h2 class="header__title flex align-center">
+                    <span id="name-group">ИВТ-1-18</span> <!-- это -->
+                    <i class="fas fa-caret-square-down text-dark big ml-1" id="choice-group"></i>
+                </h2>
+                
+                <ul class="dropdown group big">
+                    <li data-group="ИВТ-1-18">ИВТ-1-18</li>
+                    <li data-group="ИСОП-1-18">ИСОП-1-18</li>
+                </ul>
+
+                <div class="big">
+                    <span>Нед:</span> <span id="week" class="highlight warning py-s px-m"></span>
+                </div>
+            </header>
+
+            <div class="shedule brief">  <!-- brief, full -->
+
+                <div class="shedule__day flex">
+                    <div data-index="0" class="day"><span>ПН</span></div>
+                    <div data-index="1" class="day"><span>ВТ</span></div>
+                    <div data-index="2" class="day"><span>СР</span></div>
+                    <div data-index="3" class="day"><span>ЧТ</span></div>
+                    <div data-index="4" class="day"><span>ПТ</span></div>
+                </div>
+
+                
+                <div class="shedule__sub-menu">
+                    <div class="flex-5"><span>Предмет</span></div>
+                    <div class="flex-2"><span>Перейти</span></div>
+                    <div class="flex-5"><span>Ссылка</span></div>
+                </div>
+
+                <!-- Для Группы ИВТ-ИСОП-1-18 [START] -->
+                <div class="shedule__content" data-group="ИСОП-1-18" id="isop-1-18">
+                    <div class="content"></div>  <!-- ПОНЕДЕЛЬНИК [START] -->
+                    <div class="content"></div> <!-- ВТОРНИК [START] -->
+                    <div class="content"></div> <!-- СРЕДА [START]-->
+                    <div class="content"></div> <!-- ЧЕТВЕРГ [START]-->
+                    <div class="content"></div> <!-- ПЯТНИЦА [START]-->
+                </div>
+
+
+                <!-- Для Группы ИВТ-1-18 [START] -->
+                <div class="shedule__content" data-group="ИВТ-1-18" id="ivt-1-18">
+                    <div class="content"></div> <!-- ПОНЕДЕЛЬНИК [START] -->
+                    <div class="content"></div> <!-- ВТОРНИК [START] -->
+                    <div class="content"></div> <!-- СРЕДА [START]  -->
+                    <div class="content"></div> <!-- ЧЕТВЕРГ [START]-->
+                    <div class="content"></div> <!-- ПЯТНИЦА [START]-->
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="js/clear.js" defer></script>    
+    <script src="js/index.js" defer></script>
+</body>
+</html>
+
