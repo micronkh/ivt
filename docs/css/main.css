@@ -68,9 +68,6 @@ img[class*='staff'] {
 }
 
 #week {
-    background-color: #231f20;
-    color: #f7df1e;
-    padding: 4px 6px;
     border-radius: 4px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;

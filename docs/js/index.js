@@ -247,7 +247,7 @@ class BriefSubject {
         let end = new Date().setHours(this.time.end.hEnd, this.time.end.mEnd);
 
         let now = new Date().setHours(new Date().getHours(), new Date().getMinutes());
-        if (type === 'NEXT') now += (90 * 60 * 1000); // текущее время + 1.5 часа в миллисекундах
+        if (type === 'NEXT') now += (80 * 60 * 1000); // текущее время + 80 минут в миллисекундах
 
         if (now >= start && now <= end) return true;
 
@@ -716,12 +716,12 @@ let IVT_1_18 = {
                 conference: { link: KSTU.FIT.IVT['Мананников Н.А'].conference.link, platform: KSTU.FIT.IVT['Мананников Н.А'].conference.platform },
             }),
             new BriefSubject({ // Урок №4
-                subject: { name: "Человек-Машинное Взаимодействие", type: "Лабораторная" }, time: { start: { h: 13, m: 0 }, end: { h: 14, m: 20 } },
+                subject: { name: "Человеко-Машинное Взаимодействие", type: "Лабораторная" }, time: { start: { h: 13, m: 0 }, end: { h: 14, m: 20 } },
                 teacher: { names: "Момуналиева Н.Т", url: KSTU.FIT.IVT['Момуналиева Н.Т'].img() }, day: 'Пятница', groupId: 'ivt-1-18',
                 conference: { link: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.link, platform: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.platform },
             }),
             new BriefSubject({ // Урок №5
-                subject: { name: "Человек-Машинное Взаимодействие", type: "Лабораторная" }, time: { start: { h: 14, m: 30 }, end: { h: 15, m: 50 } },
+                subject: { name: "Человеко-Машинное Взаимодействие", type: "Лабораторная" }, time: { start: { h: 14, m: 30 }, end: { h: 15, m: 50 } },
                 teacher: { names: "Момуналиева Н.Т", url: KSTU.FIT.IVT['Момуналиева Н.Т'].img() }, day: 'Пятница', groupId: 'ivt-1-18',
                 conference: { link: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.link, platform: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.platform },
             }),
