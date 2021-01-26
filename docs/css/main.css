@@ -20,8 +20,14 @@ a, img, a:active, a:hover{
 }
 
 a img {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
+}
+
+img[class*='staff'] {
+    border-radius: 40%;
+    height: 50px;
+    max-width: auto;
 }
 
 .ml-auto {margin-left: auto;}
@@ -30,6 +36,8 @@ a img {
     margin-left: auto;
     margin-right: auto;
 }
+
+
 
 .flex-1{width: 10%;}
 .flex-2{width: 20%;}
@@ -43,6 +51,8 @@ a img {
 .flex-10{width: 100%;}
 
 /* По Умолчанию [END] */
+
+
 
 
 /* header [START] */
@@ -91,26 +101,56 @@ a img {
     border-bottom: 2px solid #f7df1e;
 }
 
-
 /* header [END]*/
+
+
+
 
 
 /* SECTION Shedule [START]*/
 
-.shedule {
-    border-bottom-left-radius: 18px;
-    border-bottom-right-radius: 18px;
+.shedule.brief {
+    border-radius: 0 0 20px 20px;
 }
 
 .shedule .shedule__sub-menu {
+    display: none;
     text-align: center;
     height: 40px;
-    display: flex;
     align-items: center;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     user-select: none;
 }
+
+.shedule.full .shedule__sub-menu {
+    display: flex;
+}
+
+.shedule .shedule__content .subject-time{
+    position: relative;
+    text-align: center;
+    margin-right: 18px;
+    border-radius: 12px;
+    padding: 12px 10px !important;
+    align-self: center;
+}
+
+.shedule .shedule__content .subject-time::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    top: -0;
+    right: -12px;
+
+    background-color:teal;
+    border-radius: 6px;
+}
+
+
+
 .shedule__day .day {
     display: flex;
     justify-content: center;
@@ -118,9 +158,6 @@ a img {
     flex: 1;
     height: 40px;
     cursor: pointer;
-    z-index: 10;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
     user-select: none;
 }
 
@@ -128,7 +165,7 @@ a img {
     display: none;
 }
 
-.shedule__content .content > div {
+.shedule.full .shedule__content .content > div {
     padding: 5px 0;
     border-radius: 20px;
     -webkit-border-radius: 20px;
@@ -137,11 +174,13 @@ a img {
     -o-border-radius: 20px;
 }
 
-.flex div:last-child div:nth-child(2)  {
+.shedule.full .flex div:last-child div:nth-child(2)  {
     margin-bottom: 4px;
 }
 
 /* SECTION Shedule [END]*/
+
+
 
 
 
@@ -150,34 +189,42 @@ a img {
 body.theme-light {
     background: #16222A;
     background: -webkit-linear-gradient(to right, #3A6073, #16222A); 
-    background: linear-gradient(to right, #3A6073, #16222A);
+    background: linear-gradient(to right, rgb(58, 96, 115), #16222A);
 }
-
 
 body.theme-light .main-header {
     background:linear-gradient(5deg, rgb(73, 221, 216) 0%, rgb(51, 105, 231) 100%);
     color: #fff; 
 }
 
+body.theme-light .shedule {
+    background-color: #a6c4cc;
+}
 
 body.theme-light .shedule__day {
     background-color: rgba(255, 255, 255, 0.6);
 }
 
 body.theme-light .shedule .shedule__sub-menu {
-    background-color: #dbc8c8;
+    background-color: rgb(219, 200, 200);
 }
 
-body.theme-light .shedule {
-    background-color: #a6c4cc;
-}
-
-body.theme-light .shedule__content .content>div:not(:first-child) {
+body.theme-light .shedule.full .content > div:not(:first-child) {
     border-top: 5px solid #ededed;
 }
 
-body.theme-light .shedule__day .day.active {
-    background:linear-gradient(5deg, rgb(73, 221, 216) 0%, rgb(51, 105, 231) 100%);
+ 
+body.theme-light .shedule__day .day.active span{
+    display: block;
+    padding: 16px 18px;
+    border-radius: 45%;
+    background:linear-gradient(to right top, rgb(214, 62, 110) 50%, rgb(254, 108, 95) 100%);
+    color: #fff;
+    transform: translateY(-1.5px);
+    font-size: 110%;
+    transition: all .33s;
+    position: relative;
+    z-index: 1;
 }
 
 /* Стандартная Светлая Тема  [END] */
@@ -186,14 +233,14 @@ body.theme-light .shedule__day .day.active {
 /* Линейные градиенты для фона [START] */ 
 body.sea-blue {
     background: #2b5876;  
-    background: -webkit-linear-gradient(to top, #4e4376, #2b5876); 
+    background: -webkit-linear-gradient(to top, #4e4376, rgb(43, 88, 118)); 
     background: linear-gradient(to top, #4e4376, #2b5876);
 }
 
 body.skyline {
     background: #2b5876;  
     background: -webkit-linear-gradient(to top, #4e4376, #2b5876); 
-    background: linear-gradient(to top, #4e4376, #2b5876);
+    background: linear-gradient(to top, rgb(78, 67, 118), #2b5876);
 }
 
 body.lawrencuium {
@@ -249,9 +296,9 @@ body.ash {
 /* Линейные градиенты  [END] */ 
 
 /* Эффекты Выделения текста  [START] */
-body.effect-on  .highlight {
-    background-color: #231f20;
-    padding: 2px 3px;
+body.effect-on .highlight {
+    background-color: #000;
+    
     border-radius: 4px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -259,10 +306,20 @@ body.effect-on  .highlight {
     -o-border-radius: 4px;
 }
 
+body.effect-on  .highlight:not(:empty) {
+    padding: 3px 4px;
+}
+
+
+
 @media (max-width: 333px) {
     body.effect-on  .highlight {
         font-weight: normal;
     }
+    body .shedule{
+        font-size: 12px;
+    }
+    
 }
 
 .highlight.primary{color: #0275d8 !important;}
@@ -327,6 +384,7 @@ body.effect-off .highlight {
 
 /* Alert [END]
 
+
 /* Modal window [START] */
 
 .modal {
@@ -366,9 +424,6 @@ body.effect-off .highlight {
     overflow: auto;
 }
 
-.w-auto {width: auto;}
-.h-auto {height: auto;}
-
 @keyframes showTopCenter {
     0% {
         top: -100%;
@@ -383,144 +438,55 @@ body.effect-off .highlight {
 }
 /* Modal window [END]*/
 
-/* checkbox [START] */
-@keyframes click-wave {
-    0% {
-        height: 40px;
-        width: 40px;
-        opacity: 0.35;
-        position: relative;
-    }
 
-    100% {
-        height: 200px;
-        width: 200px;
-        margin-left: -80px;
-        margin-top: -80px;
-        opacity: 0;
-    }
+
+/* brief subject */
+
+
+.shedule.brief .shedule__content .content {
+    padding: 12px 8px;
 }
 
-.option-input {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    -o-appearance: none;
-    appearance: none;
-    position: relative;
-    top: 5.33333px;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    height: 20px;
-    width: 20px;
-    transition: all 0.15s ease-out 0s;
-    background: #cbd1d8;
-    border: none;
+.shedule.brief .shedule__content .content > .flex {
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+   
+}
+
+.shedule.brief .shedule__content .content > .flex:not(:first-child) {
+    margin-top: 10px;
+}
+
+.live-subject {
+    background: #de3e44;
     color: #fff;
-    cursor: pointer;
-    display: inline-block;
-    margin-right: 0.5rem;
-    outline: none;
-    position: relative;
-    z-index: 1000;
-}
-
-.option-input:hover {
-    background: #9faab7;
-}
-
-.option-input:checked {
-    background: #40e0d0;
-}
-
-.option-input:checked::before {
-    height: 20px;
-    width: 20px;
-    position: absolute;
-    content: '✔';
-    display: inline-block;
-    font-size: 16.66667px;
+    font-weight: normal;
+    letter-spacing: 0.75px;
+    display: block;
+    margin-top: 2px;
     text-align: center;
-    line-height: 20px;
+    border-radius: 6px;
+    font-size: 11px;
+    text-transform: uppercase;
 }
 
-.option-input:checked::after {
-    -webkit-animation: click-wave 0.65s;
-    -moz-animation: click-wave 0.65s;
-    animation: click-wave 0.65s;
-    background: #40e0d0;
-    content: '';
+.live-subject:not(:empty) {
+    padding: 1px 1px 0;
+}
+
+.next-subject {
+    background: #ebcf02;
+    color: #f5f5dc;
+    font-weight: normal;
+    letter-spacing: 0.75px;
     display: block;
-    position: relative;
-    z-index: 100;
+    margin-top: 5px;
+    text-align: center;
+    border-radius: 6px;
+    font-size: 12px;
+    text-transform: uppercase;
 }
 
-.option-input.radio {
-    border-radius: 50%;
-}
-
-.option-input.radio::after {
-    border-radius: 50%;
-}
-
-body label {
-    display: block;
-    line-height: 40px;
-}
-/* Checkbox */ 
-
-/* Scroll Bar */ 
-::-webkit-scrollbar {
-    display: none;
-}
-
-.opacity-1{opacity: 10%;}
-.opacity-2{opacity: 20%;}
-.opacity-3{opacity: 30%;}
-.opacity-4{opacity: 40%;}
-.opacity-5{opacity: 50%;}
-.opacity-6{opacity: 60%;}
-.opacity-7{opacity: 70%;}
-.opacity-8{opacity: 80%;}
-.opacity-9{opacity: 90%;}
-
-.line-through {text-decoration: line-through;}
-
-
-/* footer */ 
-.footer {
-    position: fixed;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-
-    width: 100%;
-    height: 40px;
-    max-width: 600px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-    background: #008080;
-    background: -webkit-linear-gradient(to top, #000046, #008080);
-    background: linear-gradient(to top, #000046, #008080);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-
-    z-index: 100;
-    padding: 8px;
-}
-
-.check-btn,  .check-btn span{
-    animation: switchColor 2s ease-in infinite;
-    color: #f7df1e ;
-}
-
-
-
-@keyframes switchColor {
-    0% {opacity: 1;}
-    50% {opacity: 0.3;}
-    100% {opacity: 1;}
+.next-subject:not(:empty) {
+    padding: 1px 3px 0;
 }
