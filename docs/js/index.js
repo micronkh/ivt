@@ -695,7 +695,7 @@ let IVT_1_18 = {
                 conference: { link: KSTU.EF.TB['Мурзаканов А.Н'].conference.link, platform: KSTU.EF.TB['Мурзаканов А.Н'].conference.platform },
             }),
             new BriefSubject({ // Урок №4
-                subject: { name: "Экология", type: "ЛБ", week: 'Знам' }, time: { start: { h: 14, m: 30 }, end: { h: 15, m: 50 }},
+                subject: { name: "Экология", type: "ЛК", week: 'Знам' }, time: { start: { h: 14, m: 30 }, end: { h: 15, m: 50 }},
                 teacher: { names: "Исагалиева А.К", url: KSTU.EF.TB['Исагалиева А.К'].img() }, day: 'Четверг', groupId: 'ivt-1-18',
                 conference: { link: KSTU.EF.TB['Исагалиева А.К'].conference.link, platform: KSTU.EF.TB['Исагалиева А.К'].conference.platform },
             }),
@@ -708,12 +708,12 @@ let IVT_1_18 = {
                 conference: { link: KSTU.FIT.IVT['Мананников Н.А'].conference.link, platform: KSTU.FIT.IVT['Мананников Н.А'].conference.platform },
             }),
             new BriefSubject({ // Урок №2
-                subject: { name: "ЭВМ и Периферийные Устройства", type: "Практика" }, time: { start: { h: 11, m: 0 }, end: { h: 12, m: 20 } },
+                subject: { name: "ЭВМ и Периферийные Устройства", type: "Лекция" }, time: { start: { h: 11, m: 0 }, end: { h: 12, m: 20 } },
                 teacher: { names: "Шабданов М.А", url: KSTU.FIT.IVT['Шабданов М.А'].img() }, day: 'Пятница', groupId: 'ivt-1-18',
                 conference: { link: KSTU.FIT.IVT['Шабданов М.А'].conference.link, platform: KSTU.FIT.IVT['Шабданов М.А'].conference.platform },
             }),
             new BriefSubject({ // Урок №3
-                subject: { name: "ЭВМ и Периферийные Устройства", type: "Практика" }, time: { start: { h: 13, m: 0 }, end: { h: 14, m: 20 } },
+                subject: { name: "ЭВМ и Периферийные Устройства", type: "Лабораторная" }, time: { start: { h: 13, m: 0 }, end: { h: 14, m: 20 } },
                 teacher: { names: "Мананников Н.А", url: KSTU.FIT.IVT['Мананников Н.А'].img() }, day: 'Пятница', groupId: 'ivt-1-18',
                 conference: { link: KSTU.FIT.IVT['Мананников Н.А'].conference.link, platform: KSTU.FIT.IVT['Мананников Н.А'].conference.platform },
             }),
@@ -828,7 +828,7 @@ let IVT_1_18 = {
 
         'Пятница': [
             new FullSubject({ // Урок №1
-                subject: { name: 'ЭВМ', type: 'ПР', week: "Знам", subGroup: '1-группа'}, time: { start: '9:30', end: '10:50' },
+                subject: { name: 'ЭВМ', type: 'ПР', week: "Знам"}, time: { start: '9:30', end: '10:50' },
                 teacher: 'Мананников Н.А', conference: { link: KSTU.FIT.IVT['Мананников Н.А'].conference.link,
                 platform: KSTU.FIT.IVT['Мананников Н.А'].conference.platform, id: KSTU.FIT.IVT['Мананников Н.А'].conference.id,
                 password: KSTU.FIT.IVT['Мананников Н.А'].conference.password }
