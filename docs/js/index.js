@@ -585,10 +585,10 @@ let KSTU = {
                 },
                 gender: "woman",
                 conference: {
-                    platform: "unknown",
-                    link: undefined,
-                    id: "?",
-                    password: "?",
+                    platform: "zoom",
+                    link: 'https://us04web.zoom.us/j/2734483986?pwd=VGRyd0VJQXVOZFFCcDF3MXUveml4UT09',
+                    id: "273 448 3986",
+                    password: "0000",
                 }
             },
 
