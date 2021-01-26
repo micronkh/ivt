@@ -1,5 +1,7 @@
 'use strict' // ES 6 ON
 
+localStorage.clear();
+
 // глубокая клонирования объекта
 function cloneObject(obj) {
     let clone = {};
@@ -934,6 +936,8 @@ setIndicate(ISOP_1_18, getPresentDay()); // ПЕРЕДЕЛАТЬ !!! ***
 
 // главная функция для запуска
 window.onload = function main() {
+    localStorage.clear();
+
     localStorage.setItem("group-name", "ИВТ-1-18");
     localStorage.setItem("subject", "brief");
 
