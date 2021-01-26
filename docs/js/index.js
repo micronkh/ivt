@@ -1,7 +1,5 @@
 'use strict' // ES 6 ON
 
-localStorage.clear();
-
 // глубокая клонирования объекта
 function cloneObject(obj) {
     let clone = {};
@@ -392,10 +390,11 @@ class FullSubject{
 
     static amount = 0;
 
-    constructor({subject: {name, type, week='', subGroup=''}, time: {start, end}, teacher,
-                 conference: {link="#", platform="unknown", id="?", password="?"}}) {
-        this.subject = {name, type, week, subGroup}
-        this.time = {start, end}
+    constructor({subject: {name, type, week='', subGroup=''}, time: {start, end}, day,
+                teacher, conference: {link="#", platform="unknown", id="?", password="?"}}) {
+        this.subject = {name, type, week, subGroup};
+        this.time = {start, end};
+        this.day = day;
         this.teacher = teacher;
         this.conference = {link, platform, id, password};
         
@@ -476,11 +475,11 @@ class FullSubject{
         `;
     }
 
-    append(node) {node.append(this.html)} // добавить в конец node
-    prepend(node) {node.prepend(this.html)} // добавить в начало node
-    before(node) {node.before(this.html)} // добавить перед node
-    after(node) {node.after(this.html)}  // добавить после node
-    reaplceWith(node) {node.reaplceWith(this.html)} // заменить node
+    append(node) { node.append(this.html) } // добавить в конец node
+    prepend(node) { node.prepend(this.html) } // добавить в начало node
+    before(node) { node.before(this.html) } // добавить перед node
+    after(node) { node.after(this.html) }  // добавить после node
+    reaplceWith(node) { node.reaplceWith(this.html) } // заменить node
     
 }
 
@@ -743,21 +742,21 @@ let IVT_1_18 = {
 
         'Вторник': [
             new FullSubject({ // Урок №1
-                subject: { name: 'БЖД', type: 'Лекция', week: ""}, time: {start: '9:30', end: '10:50'},
+                subject: { name: 'БЖД', type: 'Лекция', week: ""}, time: {start: '9:30', end: '10:50'}, day: 'Вторник', groupId: 'ivt-1-18',
                 teacher: 'Жапакова Б.С', conference: { link: KSTU.EF.TB['Жапакова Б.С'].conference.link,
                 platform: KSTU.EF.TB['Жапакова Б.С'].conference.platform, id: KSTU.EF.TB['Жапакова Б.С'].conference.id,
                 password: KSTU.EF.TB['Жапакова Б.С'].conference.password }
             }),
             
             new FullSubject({ // Урок №2
-                subject: { name: 'КС', type: 'Лекция', week: ""}, time: { start: '11:00', end: '12:20' },
+                subject: { name: 'КС', type: 'Лекция', week: ""}, time: { start: '11:00', end: '12:20' }, day: 'Вторник', groupId: 'ivt-1-18',
                 teacher: 'Момуналиева Н.Т', conference: { link: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.link,
                 platform: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.platform, id: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.id,
                 password: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.password }
             }),
 
             new FullSubject({ // Урок №3
-                subject: { name: 'СП', type: 'Лекция', week: "" }, time: { start: '13:00', end: '14:20' },
+                subject: { name: 'СП', type: 'Лекция', week: "" }, time: { start: '13:00', end: '14:20' }, day: 'Вторник', groupId: 'ivt-1-18',
                 teacher: 'Исраилова Н.А', conference: { link: KSTU.FIT.IVT['Исраилова Н.А'].conference.link,
                 platform: KSTU.FIT.IVT['Исраилова Н.А'].conference.platform, id: KSTU.FIT.IVT['Исраилова Н.А'].conference.id,
                 password: KSTU.FIT.IVT['Исраилова Н.А'].conference.password }
@@ -767,28 +766,28 @@ let IVT_1_18 = {
 
         'Среда': [
             new FullSubject({ // Урок №1
-                subject: { name: 'ЧМВ', type: 'Лекция', week: "" }, time: { start: '9:30', end: '10:50' },
+                subject: { name: 'ЧМВ', type: 'Лекция', week: "" }, time: { start: '9:30', end: '10:50' }, day: 'Среда', groupId: 'ivt-1-18',
                 teacher: 'Момуналиева Н.Т', conference: { link: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.link,
                 platform: KSTU.FIT.IVT['Момуналиева Н.Т'].platform, id: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.id,
                 password: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.password }
             }),
 
             new FullSubject({ // Урок №2
-                subject: { name: 'КГ', type: 'Лабораторная', week: "" }, time: { start: '11:00', end: '12:20' },
+                subject: { name: 'КГ', type: 'Лабораторная', week: "" }, time: { start: '11:00', end: '12:20' }, day: 'Среда', groupId: 'ivt-1-18',
                 teacher: 'Момуналиева Н.Т', conference: { link: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.link,
                 platform: KSTU.FIT.IVT['Момуналиева Н.Т'].platform, id: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.id,
                 password: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.password }
             }),
 
             new FullSubject({ // Урок №3
-                subject: { name: 'КГ', type: 'Лабораторная', week: "" }, time: { start: '13:00', end: '14:20' },
+                subject: { name: 'КГ', type: 'Лабораторная', week: "" }, time: { start: '13:00', end: '14:20' }, day: 'Среда', groupId: 'ivt-1-18',
                 teacher: 'Момуналиева Н.Т', conference: { link: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.link,
                 platform: KSTU.FIT.IVT['Момуналиева Н.Т'].platform, id: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.id,
                 password: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.password }
             }),
 
             new FullSubject({ // Урок №4
-                subject: { name: 'Экология', type: 'Лабораторная', week: "" }, time: { start: '14:30', end: '15:50' },
+                subject: { name: 'Экология', type: 'Лабораторная', week: "" }, time: { start: '14:30', end: '15:50' }, day: 'Среда', groupId: 'ivt-1-18',
                 teacher: 'Исагалиева А.К', conference: { link: KSTU.EF.TB['Исагалиева А.К'].conference.link,
                 platform: KSTU.EF.TB['Исагалиева А.К'].platform, id: KSTU.EF.TB['Исагалиева А.К'].conference.id,
                 password: KSTU.EF.TB['Исагалиева А.К'].conference.password }
@@ -798,28 +797,28 @@ let IVT_1_18 = {
         'Четверг': [
 
             new FullSubject({ // Урок №1
-                subject: { name: 'СП', type: 'Лабораторная', week: "" }, time: { start: '9:30', end: '10:50' },
+                subject: { name: 'СП', type: 'Лабораторная', week: "" }, time: { start: '9:30', end: '10:50' }, day: 'Четверг', groupId: 'ivt-1-18',
                 teacher: 'Бакасова П.С', conference: { link: KSTU.FIT.IVT['Бакасова П.С'].conference.link,
                 platform: KSTU.FIT.IVT['Бакасова П.С'].conference.platform, id: KSTU.FIT.IVT['Бакасова П.С'].conference.id,
                 password: KSTU.FIT.IVT['Бакасова П.С'].conference.password }
             }),
 
             new FullSubject({ // Урок №2
-                subject: { name: 'СП', type: 'Лабораторная', week: "" }, time: { start: '11:00', end: '12:20' },
+                subject: { name: 'СП', type: 'Лабораторная', week: "" }, time: { start: '11:00', end: '12:20' }, day: 'Четверг', groupId: 'ivt-1-18',
                 teacher: 'Бакасова П.С', conference: { link: KSTU.FIT.IVT['Бакасова П.С'].conference.link,
                 platform: KSTU.FIT.IVT['Бакасова П.С'].conference.platform, id: KSTU.FIT.IVT['Бакасова П.С'].conference.id,
                 password: KSTU.FIT.IVT['Бакасова П.С'].conference.password }
             }),
 
             new FullSubject({ // Урок №3
-                subject: { name: 'БЖД', type: 'Практика', week: "Знам" }, time: { start: '13:00', end: '14:20' },
+                subject: { name: 'БЖД', type: 'Практика', week: "Знам" }, time: { start: '13:00', end: '14:20' }, day: 'Четверг', groupId: 'ivt-1-18',
                 teacher: 'Мурзаканов А.Н', conference: { link: KSTU.EF.TB['Мурзаканов А.Н'].conference.link,
                 platform: KSTU.EF.TB['Мурзаканов А.Н'].conference.platform, id: KSTU.EF.TB['Мурзаканов А.Н'].conference.id,
                 password: KSTU.EF.TB['Мурзаканов А.Н'].conference.password }
             }),
 
             new FullSubject({ // Урок №4
-                subject: { name: 'Экология', type: 'Лекция', week: "Знам" }, time: { start: '14:30', end: '15:50' },
+                subject: { name: 'Экология', type: 'Лекция', week: "Знам" }, time: { start: '14:30', end: '15:50' }, day: 'Четверг', groupId: 'ivt-1-18',
                 teacher: 'Исагалиева А.К', conference: { link: KSTU.EF.TB['Исагалиева А.К'].conference.link,
                 platform: KSTU.EF.TB['Исагалиева А.К'].platform, id: KSTU.EF.TB['Исагалиева А.К'].conference.id,
                 password: KSTU.EF.TB['Исагалиева А.К'].conference.password }
@@ -828,42 +827,42 @@ let IVT_1_18 = {
 
         'Пятница': [
             new FullSubject({ // Урок №1
-                subject: { name: 'ЭВМ', type: 'ПР', week: "Знам"}, time: { start: '9:30', end: '10:50' },
+                subject: { name: 'ЭВМ', type: 'ПР', week: "Знам"}, time: { start: '9:30', end: '10:50' }, day: 'Пятница', groupId: 'ivt-1-18',
                 teacher: 'Мананников Н.А', conference: { link: KSTU.FIT.IVT['Мананников Н.А'].conference.link,
                 platform: KSTU.FIT.IVT['Мананников Н.А'].conference.platform, id: KSTU.FIT.IVT['Мананников Н.А'].conference.id,
                 password: KSTU.FIT.IVT['Мананников Н.А'].conference.password }
             }),
 
             new FullSubject({ // Урок №2
-                subject: { name: 'ЭВМ', type: 'Лекция', week: "" }, time: { start: '11:00', end: '12:20' },
+                subject: { name: 'ЭВМ', type: 'Лекция', week: "" }, time: { start: '11:00', end: '12:20' }, day: 'Пятница', groupId: 'ivt-1-18',
                 teacher: 'Шабданов М.А', conference: { link: KSTU.FIT.IVT['Шабданов М.А'].conference.link,
                 platform: KSTU.FIT.IVT['Шабданов М.А'].conference.platform, id: KSTU.FIT.IVT['Шабданов М.А'].conference.id,
                 password: KSTU.FIT.IVT['Шабданов М.А'].conference.password }
             }),
 
             new FullSubject({ // Урок №3
-                subject: { name: 'ЭВМ', type: 'Лабораторная', week: "" }, time: { start: '13:00', end: '14:20' },
+                subject: { name: 'ЭВМ', type: 'Лабораторная', week: "" }, time: { start: '13:00', end: '14:20' }, day: 'Пятница', groupId: 'ivt-1-18',
                 teacher: 'Мананников Н.А', conference: { link: KSTU.FIT.IVT['Мананников Н.А'].conference.link,
                 platform: KSTU.FIT.IVT['Мананников Н.А'].conference.platform, id: KSTU.FIT.IVT['Мананников Н.А'].conference.id,
                 password: KSTU.FIT.IVT['Мананников Н.А'].conference.password }
             }),
 
             new FullSubject({ // Урок №4
-                subject: { name: 'ЧМВ', type: 'Лабораторная', week: "" }, time: { start: '13:00', end: '14:20' },
+                subject: { name: 'ЧМВ', type: 'Лабораторная', week: "" }, time: { start: '13:00', end: '14:20' }, day: 'Пятница', groupId: 'ivt-1-18',
                 teacher: 'Момуналиева Н.Т', conference: { link: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.link,
                 platform: KSTU.FIT.IVT['Момуналиева Н.Т'].platform, id: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.id,
                 password: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.password }
             }),
 
             new FullSubject({ // Урок №5
-                subject: { name: 'ЧМВ', type: 'Лабораторная', week: "" }, time: { start: '14:30', end: '15:50' },
+                subject: { name: 'ЧМВ', type: 'Лабораторная', week: "" }, time: { start: '14:30', end: '15:50' }, day: 'Пятница', groupId: 'ivt-1-18',
                 teacher: 'Момуналиева Н.Т', conference: { link: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.link,
                 platform: KSTU.FIT.IVT['Момуналиева Н.Т'].platform, id: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.id,
                 password: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.password }
             }),
 
             new FullSubject({ // Урок №6
-                subject: { name: 'ЭВМ', type: 'Лабораторная', week: "" }, time: { start: '14:30', end: '15:50' },
+                subject: { name: 'ЭВМ', type: 'Лабораторная', week: "" }, time: { start: '14:30', end: '15:50' }, day: 'Пятница', groupId: 'ivt-1-18',
                 teacher: 'Мананников Н.А', conference: { link: KSTU.FIT.IVT['Мананников Н.А'].conference.link,
                 platform: KSTU.FIT.IVT['Мананников Н.А'].conference.platform, id: KSTU.FIT.IVT['Мананников Н.А'].conference.id,
                 password: KSTU.FIT.IVT['Мананников Н.А'].conference.password }
@@ -903,10 +902,10 @@ function addAll(group, type) {
     let id = document.getElementById(group.groupId);
     
     for (let item in group[type]) {
-
+        
         let AllDicpilineInDay = group[type][item];
-        let days = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница']
-
+        let days = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница'];
+        
         for (let elem in AllDicpilineInDay) {
             let indexDay = days.indexOf(AllDicpilineInDay[elem].day);
             AllDicpilineInDay[elem].append(id.querySelectorAll('.content')[indexDay])
@@ -928,16 +927,19 @@ function setIndicate(group, day) {
     }
 }
 
-addAll(IVT_1_18, 'brief'); // ПЕРЕДЕЛАТЬ !!! ***
+
+localStorage.setItem("group-name", "ИВТ-1-18");
+localStorage.setItem("subject", "brief");
+
+addAll(IVT_1_18, localStorage.getItem('subject')); // ПЕРЕДЕЛАТЬ !!! ***
 setIndicate(IVT_1_18, getPresentDay()); // ПЕРЕДЕЛАТЬ !!! ***
 
-addAll(ISOP_1_18, 'brief'); // ПЕРЕДЕЛАТЬ !!! ***
-setIndicate(ISOP_1_18, getPresentDay()); // ПЕРЕДЕЛАТЬ !!! ***
+addAll(ISOP_1_18, localStorage.getItem('subject')); // ПЕРЕДЕЛАТЬ !!! ***
+setIndicate(ISOP_1_18, getPresentDay()); // ПЕРЕДЕЛАТЬ !!! ****/
 
 // главная функция для запуска
 window.onload = function main() {
-    localStorage.clear();
-
+    
     localStorage.setItem("group-name", "ИВТ-1-18");
     localStorage.setItem("subject", "brief");
 
