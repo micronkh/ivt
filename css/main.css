@@ -468,7 +468,7 @@ body.effect-off .highlight {
 }
 
 .live-subject:not(:empty) {
-    padding: 1px 1px 0;
+    padding: 1px 3px 0;
 }
 
 .next-subject {
