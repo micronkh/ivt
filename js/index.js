@@ -335,7 +335,7 @@ class BriefSubject {
         let indicator = createElement('span', {});
 
         this.indicator = indicator; // сохранению ссылки для индикация элемента [LIVE || NEXT]
-        let teacherWrap = createElement('div', {className: 'flex-column justify-center ml-m'}, teacherImg, indicator);
+        let teacherWrap = createElement('div', {className: 'flex-column align-center justify-center ml-m'}, teacherImg, indicator);
 
         let partRight = createElement('div', {className: 'flex align-center justify-between w-100'}, blockSubject, teacherWrap);
 
