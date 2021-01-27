@@ -679,22 +679,24 @@ let IVT_1_18 = {
 
         'Четверг': [
             new BriefSubject({ // Урок №1
+                subject: { name: "Безопасность Жизнедеятельности", type: "Пр", week: 'Знам' }, time: { start: { h: 8, m: 0 }, end: { h: 9, m: 20 } },
+                teacher: { names: "Мурзаканов А.Н", url: KSTU.EF.TB['Мурзаканов А.Н'].img() }, day: 'Четверг', groupId: 'ivt-1-18',
+                conference: { link: KSTU.EF.TB['Мурзаканов А.Н'].conference.link, platform: KSTU.EF.TB['Мурзаканов А.Н'].conference.platform },
+            }),
+            
+            new BriefSubject({ // Урок №2
                 subject: { name: "Системное Программирование", type: "Лабораторная", week: '' }, time: { start: { h: 9, m: 30 }, end: { h: 10, m: 50 } },
                 teacher: { names: "Бакасова П.С", url: KSTU.FIT.IVT['Бакасова П.С'].img() }, day: 'Четверг', groupId: 'ivt-1-18',
                 conference: { link: KSTU.FIT.IVT['Бакасова П.С'].conference.link, platform: KSTU.FIT.IVT['Бакасова П.С'].conference.platform },
             }),
-            new BriefSubject({ // Урок №2
+            new BriefSubject({ // Урок №3
                 subject: { name: "Системное Программирование", type: "Лабораторная" }, time: { start: { h: 11, m: 0 }, end: { h: 12, m: 20 } },
                 teacher: { names: "Бакасова П.С", url: KSTU.FIT.IVT['Бакасова П.С'].img() }, day: 'Четверг', groupId: 'ivt-1-18',
                 conference: { link: KSTU.FIT.IVT['Бакасова П.С'].conference.link, platform: KSTU.FIT.IVT['Бакасова П.С'].conference.platform },
             }),
-            new BriefSubject({ // Урок №3
-                subject: { name: "Безопасность Жизнедеятельности", type: "ПР", week: 'Знам' }, time: { start: { h: 13, m: 0 }, end: { h: 14, m: 20 } },
-                teacher: { names: "Мурзаканов А.Н", url: KSTU.EF.TB['Мурзаканов А.Н'].img() }, day: 'Четверг', groupId: 'ivt-1-18',
-                conference: { link: KSTU.EF.TB['Мурзаканов А.Н'].conference.link, platform: KSTU.EF.TB['Мурзаканов А.Н'].conference.platform },
-            }),
+            
             new BriefSubject({ // Урок №4
-                subject: { name: "Экология", type: "ЛК", week: 'Знам' }, time: { start: { h: 14, m: 30 }, end: { h: 15, m: 50 }},
+                subject: { name: "Экология", type: "Лк", week: 'Знам' }, time: { start: { h: 14, m: 30 }, end: { h: 15, m: 50 }},
                 teacher: { names: "Исагалиева А.К", url: KSTU.EF.TB['Исагалиева А.К'].img() }, day: 'Четверг', groupId: 'ivt-1-18',
                 conference: { link: KSTU.EF.TB['Исагалиева А.К'].conference.link, platform: KSTU.EF.TB['Исагалиева А.К'].conference.platform },
             }),
@@ -702,7 +704,7 @@ let IVT_1_18 = {
 
         'Пятница': [
             new BriefSubject({ // Урок №1
-                subject: { name: "ЭВМ и Периферийные Устройства", type: "ПР", week: 'Знам' }, time: { start: { h: 9, m: 30 }, end: { h: 10, m: 50 } },
+                subject: { name: "ЭВМ и Периферийные Устройства", type: "Пр", week: 'Знам' }, time: { start: { h: 9, m: 30 }, end: { h: 10, m: 50 } },
                 teacher: { names: "Мананников Н.А", url: KSTU.FIT.IVT['Мананников Н.А'].img() }, day: 'Пятница', groupId: 'ivt-1-18',
                 conference: { link: KSTU.FIT.IVT['Мананников Н.А'].conference.link, platform: KSTU.FIT.IVT['Мананников Н.А'].conference.platform },
             }),
@@ -795,7 +797,14 @@ let IVT_1_18 = {
         ],
 
         'Четверг': [
-
+            
+            new FullSubject({ // Урок №3
+                subject: { name: 'БЖД', type: 'Практика', week: "Знам" }, time: { start: '8:00', end: '9:20' }, day: 'Четверг', groupId: 'ivt-1-18',
+                teacher: 'Мурзаканов А.Н', conference: { link: KSTU.EF.TB['Мурзаканов А.Н'].conference.link,
+                platform: KSTU.EF.TB['Мурзаканов А.Н'].conference.platform, id: KSTU.EF.TB['Мурзаканов А.Н'].conference.id,
+                password: KSTU.EF.TB['Мурзаканов А.Н'].conference.password }
+            }),
+            
             new FullSubject({ // Урок №1
                 subject: { name: 'СП', type: 'Лабораторная', week: "" }, time: { start: '9:30', end: '10:50' }, day: 'Четверг', groupId: 'ivt-1-18',
                 teacher: 'Бакасова П.С', conference: { link: KSTU.FIT.IVT['Бакасова П.С'].conference.link,
@@ -809,14 +818,7 @@ let IVT_1_18 = {
                 platform: KSTU.FIT.IVT['Бакасова П.С'].conference.platform, id: KSTU.FIT.IVT['Бакасова П.С'].conference.id,
                 password: KSTU.FIT.IVT['Бакасова П.С'].conference.password }
             }),
-
-            new FullSubject({ // Урок №3
-                subject: { name: 'БЖД', type: 'Практика', week: "Знам" }, time: { start: '13:00', end: '14:20' }, day: 'Четверг', groupId: 'ivt-1-18',
-                teacher: 'Мурзаканов А.Н', conference: { link: KSTU.EF.TB['Мурзаканов А.Н'].conference.link,
-                platform: KSTU.EF.TB['Мурзаканов А.Н'].conference.platform, id: KSTU.EF.TB['Мурзаканов А.Н'].conference.id,
-                password: KSTU.EF.TB['Мурзаканов А.Н'].conference.password }
-            }),
-
+            
             new FullSubject({ // Урок №4
                 subject: { name: 'Экология', type: 'Лекция', week: "Знам" }, time: { start: '14:30', end: '15:50' }, day: 'Четверг', groupId: 'ivt-1-18',
                 teacher: 'Исагалиева А.К', conference: { link: KSTU.EF.TB['Исагалиева А.К'].conference.link,
