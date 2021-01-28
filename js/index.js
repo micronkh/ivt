@@ -247,7 +247,7 @@ class BriefSubject {
         let end = new Date().setHours(this.time.end.hEnd, this.time.end.mEnd);
 
         let now = new Date().setHours(new Date().getHours(), new Date().getMinutes());
-        if (type === 'NEXT') now += (79 * 60 * 1000); // текущее время + 79 минут в миллисекундах
+        if (type === 'NEXT') now += (80 * 60 * 1000); // текущее время + 79 минут в миллисекундах
 
         if (now >= start && now <= end) return true;
 
