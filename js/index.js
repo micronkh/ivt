@@ -400,30 +400,36 @@ class Subject {
         let days = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница'];
         let dayIndex = days.indexOf(this.day); // возвращает индекс того дня в котором находится дисциплина
 
-        function clearIndicators() {
+        function clearIndicator(type) {
 
-            let allLiveSubjects = content.querySelectorAll('.content')[dayIndex].querySelectorAll('.live-subject');
-            allLiveSubjects.forEach(function (item) {
-                item.innerText = '';
-                item.classList.remove('live-subject');
-            })
-
-            let allNextSubject = content.querySelectorAll('.content')[dayIndex].querySelectorAll('.next-subject');
-            allNextSubject.forEach(function (item) {
-                item.innerText = '';
-                item.classList.remove('next-subject');
-            })
-
+            if (type === 'LIVE') {
+                let allLiveSubjects = content.querySelectorAll('.content')[dayIndex].querySelectorAll('.live-subject');
+                allLiveSubjects.forEach(function (item) {
+                    item.innerText = '';
+                    item.classList.remove('live-subject');
+                    item.classList.remove('next-subject');
+                })
+            }
+            
+            if (type === 'NEXT') {
+                let allNextSubject = content.querySelectorAll('.content')[dayIndex].querySelectorAll('.next-subject');
+                allNextSubject.forEach(function (item) {
+                    item.innerText = '';
+                    item.classList.remove('next-subject');
+                    item.classList.remove('live-subject');
+                })
+            }
+    
         }
 
         if (type === 'LIVE') {
-            clearIndicators()
+            clearIndicator(type);
             this.indicator.innerText = 'LIVE';
             this.indicator.classList.add('live-subject');
         }
 
         if (type === 'NEXT') {
-            clearIndicators()
+            clearIndicator(type);
             this.indicator.innerText = 'NEXT';
             this.indicator.classList.add('next-subject');
         }
