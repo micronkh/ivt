@@ -576,8 +576,8 @@ let KSTU = {
                 },
                 gender: "man",
                 conference: {
-                    platform: "zoom",
-                    link: 'https://us04web.zoom.us/j/74161143035?pwd=N2liNkdJTjZWZmV5VlpoaDlKVm44Zz09',
+                    platform: "unknown",
+                    link: undefined,
                     id: "?",
                     password: "?",
                 },
