@@ -801,9 +801,15 @@ class SubjectController {
     
     }
 
+    clearContentBlocks() {
+        let contentBlocks = this.container.querySelectorAll('.content');
+        contentBlocks.forEach(item => item.innerHTML = "");
+    }
 
     addAll() {
         
+       this.clearContentBlocks() // перед доавбленеим очищать
+
         let shedule = document.querySelector('.shedule');
         
         SubjectController.subjectTypes.forEach(item => shedule.classList.remove(item))
@@ -828,7 +834,10 @@ class SubjectController {
             
         }
 
-        if (this.type === "brief") this.timer = setInterval(() => this.setIndicate(), this.delay);
+        if (this.type === "brief")  {
+            this.setIndicate();
+            this.timer = setInterval(() => this.setIndicate(), this.delay);
+        }
 
     }
     
