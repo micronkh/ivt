@@ -460,7 +460,7 @@ body.effect-off .highlight {
     font-weight: normal;
     letter-spacing: 0.75px;
     display: block;
-    margin-top: 4px;
+    margin-top: 3px;
     text-align: center;
     border-radius: 6px;
     font-size: 12px;
@@ -468,7 +468,7 @@ body.effect-off .highlight {
 }
 
 .live-subject:not(:empty) {
-    padding: 1px 3px 0;
+    padding: 1px 1px 0;
 }
 
 .next-subject {
@@ -477,7 +477,7 @@ body.effect-off .highlight {
     font-weight: normal;
     letter-spacing: 0.75px;
     display: block;
-    margin-top: 4px;
+    margin-top: 3px;
     text-align: center;
     border-radius: 6px;
     font-size: 12px;
