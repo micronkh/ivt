@@ -400,7 +400,7 @@ class Subject {
         let days = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница'];
         let dayIndex = days.indexOf(this.day); // возвращает индекс того дня в котором находится дисциплина
 
-        if (type === 'LIVE') {
+        function clearIndicators() {
 
             let allLiveSubjects = content.querySelectorAll('.content')[dayIndex].querySelectorAll('.live-subject');
             allLiveSubjects.forEach(function (item) {
@@ -408,18 +408,22 @@ class Subject {
                 item.classList.remove('live-subject');
             })
 
-            this.indicator.innerText = 'LIVE';
-            this.indicator.classList.add('live-subject');
-        }
-
-        if (type === 'NEXT') {
-
             let allNextSubject = content.querySelectorAll('.content')[dayIndex].querySelectorAll('.next-subject');
             allNextSubject.forEach(function (item) {
                 item.innerText = '';
                 item.classList.remove('next-subject');
             })
 
+        }
+
+        if (type === 'LIVE') {
+            clearIndicators()
+            this.indicator.innerText = 'LIVE';
+            this.indicator.classList.add('live-subject');
+        }
+
+        if (type === 'NEXT') {
+            clearIndicators()
             this.indicator.innerText = 'NEXT';
             this.indicator.classList.add('next-subject');
         }
