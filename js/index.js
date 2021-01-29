@@ -294,7 +294,7 @@ class Subject {
         let subSubject = {
             name: createElement('span', { className: 'highlight light d-block mb-s' }, this.subject.name),
             type: createElement('span', { className: 'highlight primary mr-s' }, this.subject.type),
-            week: createElement('span', { className: 'highlight warning mr-s text-center' }, this.subject.week),
+            week: createElement('span', { className: 'highlight warning text-center' }, this.subject.week),
             subGroup: createElement('span', { className: 'highlight success' }, this.subject.subGroup),
         }
         let subjectWrap = createElement('div', {}, subSubject.name, subSubject.type, subSubject.week, subSubject.subGroup);
