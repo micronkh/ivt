@@ -510,10 +510,10 @@ let KSTU = {
                 },
                 gender: "woman",
                 conference: {
-                    platform: "meet",
-                    link: 'https://meet.google.com/gvw-hfev-sgf',
-                    id: "?",
-                    password: "?",
+                    platform: "zoom",
+                    link: 'https://us02web.zoom.us/j/82470313329?pwd=VCtCSGYrMzVodVc0ZUV5aXVSUEE3QT09',
+                    id: "824 7031 3329",
+                    password: "1111",
                 },
             },
 
