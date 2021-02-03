@@ -787,7 +787,12 @@ class SubjectController {
             let dicpiline = this.group[dayName][item];
 
             if (dicpiline.__proto__ === Subject.prototype) {
-               
+                
+                if (dicpiline.subject.week.length > 0) {
+                    if (dicpiline.subject.week != document.getElementById('week').innerText) 
+                       return;
+                }
+
                 if (dicpiline.checkLesson('LIVE')) { dicpiline.setIndicate('LIVE')}
                 if (dicpiline.checkLesson('NEXT')) { dicpiline.setIndicate('NEXT')}
             }
