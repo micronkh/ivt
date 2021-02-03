@@ -649,7 +649,7 @@ let IVT_1_18 = {
 
     'Среда': [
         new Subject({ // Урок №1
-            groupId: 'ivt-1-18', day: 'Среда', subject: { name: "Человеко-Машинное Взаимодействие", type: "Лк" },
+            groupId: 'ivt-1-18', day: 'Среда', subject: { name: "Человеко-Машинное Взаимодействие", type: "Лекция" },
             time: {start: {h:9, m:30}, end:{h:10, m:50}}, teacher: { surname: "Момуналиева Н.Т", img: KSTU.FIT.IVT['Момуналиева Н.Т'].img() },
             conference: { link: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.link, platform: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.platform, 
                           id: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.link, password: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.password}
