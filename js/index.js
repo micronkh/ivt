@@ -655,13 +655,13 @@ let IVT_1_18 = {
                           id: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.link, password: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.password}
         }),
         new Subject({ // Урок №2
-            groupId: 'ivt-1-18', day: 'Среда', subject: { name: "Компьютерная Графика", type: "Лабораторная" },
+            groupId: 'ivt-1-18', day: 'Среда', subject: { name: "Компьютерная Графика", type: "Лабораторная", subGroup: "группа I" },
             time: {start:{h: 11, m:0}, end:{h:12, m:20}}, teacher: {surname: "Момуналиева Н.Т", img: KSTU.FIT.IVT['Момуналиева Н.Т'].img() },
             conference: { link: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.link, platform: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.platform,
                           id: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.id, password: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.password }
         }),
         new Subject({ // Урок №3
-            groupId: 'ivt-1-18', day: 'Среда', subject: { name: "Компьютерная Графика", type: "Лабораторная" },
+            groupId: 'ivt-1-18', day: 'Среда', subject: { name: "Компьютерная Графика", type: "Лабораторная", subGroup: "группа II" },
             time: {start:{h: 13, m:0}, end: {h:14, m:20} }, teacher: { surname: "Момуналиева Н.Т", img: KSTU.FIT.IVT['Момуналиева Н.Т'].img() },
             conference: { link: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.link, platform: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.platform,
                           id: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.id, password: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.password}
