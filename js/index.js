@@ -694,13 +694,25 @@ let IVT_1_18 = {
         }),
 
         new Subject({ // Урок №2
-            groupId: 'ivt-1-18', day: 'Четверг', subject: { name: "Системное Программирование", type: "Лабораторная", week: '' },
+            groupId: 'ivt-1-18', day: 'Четверг', subject: { name: "Системное Программирование", type: "Лабораторная", week: "Числ", subGroup: "группа I" },
             time: {start:{ h:9, m:30}, end:{h:10, m:50}}, teacher: { surname: "Бакасова П.С", img: KSTU.FIT.IVT['Бакасова П.С'].img() },
             conference: { link: KSTU.FIT.IVT['Бакасова П.С'].conference.link, platform: KSTU.FIT.IVT['Бакасова П.С'].conference.platform,
                           id: KSTU.FIT.IVT['Бакасова П.С'].conference.id, password: KSTU.FIT.IVT['Бакасова П.С'].conference.password}
         }),
         new Subject({ // Урок №3
-            groupId: 'ivt-1-18', day: 'Четверг', subject: { name: "Системное Программирование", type: "Лабораторная" },
+            groupId: 'ivt-1-18', day: 'Четверг', subject: { name: "Системное Программирование", type: "Лабораторная", week: "Числ", subGroup: "группа I"},            
+            time: {start:{h:11, m:0}, end:{h:12, m:20}}, teacher: { surname: "Бакасова П.С", img: KSTU.FIT.IVT['Бакасова П.С'].img() },
+            conference: { link: KSTU.FIT.IVT['Бакасова П.С'].conference.link, platform: KSTU.FIT.IVT['Бакасова П.С'].conference.platform,
+                          id: KSTU.FIT.IVT['Бакасова П.С'].conference.id, password: KSTU.FIT.IVT['Бакасова П.С'].conference.password}
+        }),
+        new Subject({ // Урок №2
+            groupId: 'ivt-1-18', day: 'Четверг', subject: { name: "Системное Программирование", type: "Лабораторная", week: "Знам", subGroup: "группа II" },
+            time: {start:{ h:9, m:30}, end:{h:10, m:50}}, teacher: { surname: "Бакасова П.С", img: KSTU.FIT.IVT['Бакасова П.С'].img() },
+            conference: { link: KSTU.FIT.IVT['Бакасова П.С'].conference.link, platform: KSTU.FIT.IVT['Бакасова П.С'].conference.platform,
+                          id: KSTU.FIT.IVT['Бакасова П.С'].conference.id, password: KSTU.FIT.IVT['Бакасова П.С'].conference.password}
+        }),
+        new Subject({ // Урок №3
+            groupId: 'ivt-1-18', day: 'Четверг', subject: { name: "Системное Программирование", type: "Лабораторная", week: "Знам", subGroup: "группа II"},
             time: {start:{h:11, m:0}, end:{h:12, m:20}}, teacher: { surname: "Бакасова П.С", img: KSTU.FIT.IVT['Бакасова П.С'].img() },
             conference: { link: KSTU.FIT.IVT['Бакасова П.С'].conference.link, platform: KSTU.FIT.IVT['Бакасова П.С'].conference.platform,
                           id: KSTU.FIT.IVT['Бакасова П.С'].conference.id, password: KSTU.FIT.IVT['Бакасова П.С'].conference.password}
@@ -735,33 +747,37 @@ let IVT_1_18 = {
                           id: KSTU.FIT.IVT['Шабданов М.А'].conference.id, password: KSTU.FIT.IVT['Шабданов М.А'].conference.password}
         }),
 
+        
          new Subject({ // Урок №3
-            groupId: 'ivt-1-18', day: 'Пятница', subject: { name: "Человеко-Машинное Взаимодействие", type: "Лб", subGroup: "группа I" },
+            groupId: 'ivt-1-18', day: 'Пятница', subject: { name: "ЭВМ и Периферийные Устройства", type: "Лб", week: "Числ"},
+            time: {start:{h:13, m:0}, end:{ h:14, m:20}}, teacher: { surname: "Мананников Н.А", img: KSTU.FIT.IVT['Мананников Н.А'].img() },
+            conference: { link: KSTU.FIT.IVT['Мананников Н.А'].conference.link, platform: KSTU.FIT.IVT['Мананников Н.А'].conference.platform,
+                          id: KSTU.FIT.IVT['Мананников Н.А'].conference.id, password: KSTU.FIT.IVT['Мананников Н.А'].conference.password}
+        }),
+
+       
+        new Subject({ // Урок №4
+            groupId: 'ivt-1-18', day: 'Пятница', subject: { name: "ЭВМ и Периферийные Устройства", type: "Лб", week: "Числ"},
+            time: {start:{h:14, m:30}, end:{h:15, m:50}}, teacher: { surname: "Мананников Н.А", img: KSTU.FIT.IVT['Мананников Н.А'].img() },
+            conference: { link: KSTU.FIT.IVT['Мананников Н.А'].conference.link, platform: KSTU.FIT.IVT['Мананников Н.А'].conference.platform,
+                          id: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.id, password: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.password}
+        }),
+
+        new Subject({ // Урок №3
+            groupId: 'ivt-1-18', day: 'Пятница', subject: { name: "Человеко-Машинное Взаимодействие", type: "Лб", week: "Знам"},
             time: {start:{h:13, m:0}, end:{h:14, m:20}}, teacher: { surname: "Момуналиева Н.Т", img: KSTU.FIT.IVT['Момуналиева Н.Т'].img() },
             conference: { link: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.link, platform: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.platform,
                           id: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.id, password: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.password}
         }),
 
         new Subject({ // Урок №4
-            groupId: 'ivt-1-18', day: 'Пятница', subject: { name: "ЭВМ и Периферийные Устройства", type: "Лб", subGroup: "группа II"},
-            time: {start:{h:13, m:0}, end:{ h:14, m:20}}, teacher: { surname: "Мананников Н.А", img: KSTU.FIT.IVT['Мананников Н.А'].img() },
-            conference: { link: KSTU.FIT.IVT['Мананников Н.А'].conference.link, platform: KSTU.FIT.IVT['Мананников Н.А'].conference.platform,
-                          id: KSTU.FIT.IVT['Мананников Н.А'].conference.id, password: KSTU.FIT.IVT['Мананников Н.А'].conference.password}
-        }),
-
-        new Subject({ // Урок №5
-            groupId: 'ivt-1-18', day: 'Пятница', subject: { name: "Человеко-Машинное Взаимодействие", type: "Лб", subGroup: "группа II"},
+            groupId: 'ivt-1-18', day: 'Пятница', subject: { name: "Человеко-Машинное Взаимодействие", type: "Лб", week: "Знам"},
             time: {start:{h:14, m:30}, end:{h:15, m:50}}, teacher: { surname: "Момуналиева Н.Т", img: KSTU.FIT.IVT['Момуналиева Н.Т'].img() },
             conference: { link: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.link, platform: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.platform,
                           id: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.id, password: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.password}
         }),
 
-        new Subject({ // Урок №6
-            groupId: 'ivt-1-18', day: 'Пятница', subject: { name: "ЭВМ и Периферийные Устройства", type: "Лб", subGroup: "группа I"},
-            time: {start:{h:14, m:30}, end:{h:15, m:50}}, teacher: { surname: "Мананников Н.А", img: KSTU.FIT.IVT['Мананников Н.А'].img() },
-            conference: { link: KSTU.FIT.IVT['Мананников Н.А'].conference.link, platform: KSTU.FIT.IVT['Мананников Н.А'].conference.platform,
-                          id: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.id, password: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.password}
-        }),
+       
     ]
 };
 
