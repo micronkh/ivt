@@ -722,7 +722,7 @@ let IVT_1_18 = {
         }),
 
         new Subject({ // Урок №4
-            groupId: 'ivt-1-18', day: 'Четверг', subject: { name: "Экология", type: "Лабораторная", week: 'Знам' },
+            groupId: 'ivt-1-18', day: 'Четверг', subject: { name: "Экология", type: "Лб", week: 'Знам' },
             time: {start:{h:16, m:0}, end:{h:17, m:20}}, teacher: { surname: "Исагалиева А.К", img: KSTU.EF.TB['Исагалиева А.К'].img() },
             conference: { link: KSTU.EF.TB['Исагалиева А.К'].conference.link, platform: KSTU.EF.TB['Исагалиева А.К'].conference.platform,
                           id: KSTU.EF.TB['Исагалиева А.К'].conference.id, password: KSTU.EF.TB['Исагалиева А.К'].conference.password}
