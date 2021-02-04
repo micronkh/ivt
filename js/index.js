@@ -395,10 +395,6 @@ class Subject {
 
     // установить индикатор в текущий или же в следующий урок type= [LIVE || NEXT]
     setIndicate(type) {
-        
-        let content = document.getElementById(this.groupId) 
-        let days = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница'];
-        let dayIndex = days.indexOf(this.day); // возвращает индекс того дня в котором находится дисциплина
 
         if (type === 'LIVE') {
             this.indicator.innerText = 'LIVE';
@@ -810,7 +806,6 @@ class SubjectController {
 
     setIndicate() {
         
-        if (new Date().getHours() < 7 || new Date().getHours() > 18) return;
 
         let dayIndex = getPresentDay();
         let dayName = SubjectController.days[dayIndex];
@@ -819,12 +814,13 @@ class SubjectController {
             let dicpiline = this.group[dayName][item];
 
             if (dicpiline.__proto__ === Subject.prototype) {
-                
-                if (dicpiline.subject.week.length > 0) {
-                    if (dicpiline.subject.week != document.getElementById('week').innerText) 
-                       return;
-                }
 
+                if (dicpiline.subject.week.length > 0) {
+                    if (dicpiline.subject.week != document.getElementById('week').innerText) {
+                        dicpiline.checkLesson = () => undefined;
+                    }
+                } 
+                
                 if (dicpiline.checkLesson('LIVE')) { dicpiline.setIndicate('LIVE')}
                 if (dicpiline.checkLesson('NEXT')) { dicpiline.setIndicate('NEXT')}
             }
