@@ -304,7 +304,7 @@ class Subject {
 
         // Блок Преподователь
         let teacherImg = createElement('img', { className: 'staff d-block', alt: this.teacher.surname, src: this.teacher.img });
-        let indicator = createElement('span', {});
+        let indicator = createElement('span', { className: 'indicator'}, );
 
         this.indicator = indicator; // сохранению ссылки для индикация элемента [LIVE || NEXT]
         let teacherWrap = createElement('div', { className: 'flex-column align-center justify-center ml-m' }, teacherImg, indicator);
@@ -313,7 +313,7 @@ class Subject {
 
 
         // Формирование блока-оболочки предмета
-        let subject = createElement('div', { className: 'flex p-1' }, partLeft, partRight);
+        let subject = createElement('div', { className: 'flex p-1 subject' }, partLeft, partRight);
         this.html = subject;
     }
 
@@ -382,11 +382,15 @@ class Subject {
     // проверка какой текущий или же следующий урок = type=[LIVE || NEXT]
     checkLesson(type) {
 
+
         let start = new Date().setHours(this.time.start.hStart, this.time.start.mStart);
         let end = new Date().setHours(this.time.end.hEnd, this.time.end.mEnd);
 
+        
         let now = new Date().setHours(new Date().getHours(), new Date().getMinutes());
-        if (type === 'NEXT') now += (80 * 60 * 1000); // текущее время + 80 минут в миллисекундах
+        if (type === 'NEXT') now += (80 * 60 * 1000);   // текущее время + 80 минут в миллисекундах
+        if (type === 'LIVE') now += (1 * 60 * 1000);    // текущее время + 1  минут в миллисекундах
+
 
         if (now >= start && now <= end) return true;
 
@@ -745,29 +749,30 @@ let IVT_1_18 = {
 
         
          new Subject({ // Урок №3
-            groupId: 'ivt-1-18', day: 'Пятница', subject: { name: "ЭВМ и Периферийные Устройства", type: "Лб", week: "Числ"},
+            groupId: 'ivt-1-18', day: 'Пятница', subject: { name: "ЭВМ и Периферийные Устройства", type: "Лабораторная",},
             time: {start:{h:13, m:0}, end:{ h:14, m:20}}, teacher: { surname: "Мананников Н.А", img: KSTU.FIT.IVT['Мананников Н.А'].img() },
             conference: { link: KSTU.FIT.IVT['Мананников Н.А'].conference.link, platform: KSTU.FIT.IVT['Мананников Н.А'].conference.platform,
                           id: KSTU.FIT.IVT['Мананников Н.А'].conference.id, password: KSTU.FIT.IVT['Мананников Н.А'].conference.password}
         }),
 
-       
-        new Subject({ // Урок №4
-            groupId: 'ivt-1-18', day: 'Пятница', subject: { name: "ЭВМ и Периферийные Устройства", type: "Лб", week: "Числ"},
-            time: {start:{h:14, m:30}, end:{h:15, m:50}}, teacher: { surname: "Мананников Н.А", img: KSTU.FIT.IVT['Мананников Н.А'].img() },
-            conference: { link: KSTU.FIT.IVT['Мананников Н.А'].conference.link, platform: KSTU.FIT.IVT['Мананников Н.А'].conference.platform,
-                          id: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.id, password: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.password}
-        }),
-
+        
         new Subject({ // Урок №3
-            groupId: 'ivt-1-18', day: 'Пятница', subject: { name: "Человеко-Машинное Взаимодействие", type: "Лб", week: "Знам"},
+            groupId: 'ivt-1-18', day: 'Пятница', subject: { name: "Человеко-Машинное Взаимодействие", type: "Лабораторная",},
             time: {start:{h:13, m:0}, end:{h:14, m:20}}, teacher: { surname: "Момуналиева Н.Т", img: KSTU.FIT.IVT['Момуналиева Н.Т'].img() },
             conference: { link: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.link, platform: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.platform,
                           id: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.id, password: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.password}
         }),
 
         new Subject({ // Урок №4
-            groupId: 'ivt-1-18', day: 'Пятница', subject: { name: "Человеко-Машинное Взаимодействие", type: "Лб", week: "Знам"},
+            groupId: 'ivt-1-18', day: 'Пятница', subject: { name: "ЭВМ и Периферийные Устройства", type: "Лабораторная",},
+            time: {start:{h:14, m:30}, end:{h:15, m:50}}, teacher: { surname: "Мананников Н.А", img: KSTU.FIT.IVT['Мананников Н.А'].img() },
+            conference: { link: KSTU.FIT.IVT['Мананников Н.А'].conference.link, platform: KSTU.FIT.IVT['Мананников Н.А'].conference.platform,
+                          id: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.id, password: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.password}
+        }),
+
+        
+        new Subject({ // Урок №4
+            groupId: 'ivt-1-18', day: 'Пятница', subject: { name: "Человеко-Машинное Взаимодействие", type: "Лабораторная",},
             time: {start:{h:14, m:30}, end:{h:15, m:50}}, teacher: { surname: "Момуналиева Н.Т", img: KSTU.FIT.IVT['Момуналиева Н.Т'].img() },
             conference: { link: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.link, platform: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.platform,
                           id: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.id, password: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.password}
@@ -821,8 +826,27 @@ class SubjectController {
                     }
                 } 
                 
+                
                 if (dicpiline.checkLesson('LIVE')) { dicpiline.setIndicate('LIVE')}
-                if (dicpiline.checkLesson('NEXT')) { dicpiline.setIndicate('NEXT')}
+
+                /* upd */
+                if (dicpiline.checkLesson('NEXT')) {
+                    dicpiline.setIndicate('NEXT')
+                } else {
+                    let currentLIVE = document.querySelector('.live-subject')
+                    
+                    if (currentLIVE) {
+                        let nextSibling = currentLIVE.closest('.subject').nextSibling;
+
+                        if (nextSibling) {
+                            let indicator = nextSibling.querySelector('.indicator');
+                            indicator.classList.add('next-subject');
+                            indicator.innerHTML = 'LIVE';
+                        }
+                    }
+                }
+
+                /* upd */
             }
         }
       
