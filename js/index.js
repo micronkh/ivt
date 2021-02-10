@@ -382,15 +382,12 @@ class Subject {
     // проверка какой текущий или же следующий урок = type=[LIVE || NEXT]
     checkLesson(type) {
 
-
         let start = new Date().setHours(this.time.start.hStart, this.time.start.mStart);
         let end = new Date().setHours(this.time.end.hEnd, this.time.end.mEnd);
 
         
         let now = new Date().setHours(new Date().getHours(), new Date().getMinutes());
         if (type === 'NEXT') now += (80 * 60 * 1000);   // текущее время + 80 минут в миллисекундах
-        if (type === 'LIVE') now += (1 * 60 * 1000);    // текущее время + 1  минут в миллисекундах
-
 
         if (now >= start && now <= end) return true;
 
@@ -826,27 +823,10 @@ class SubjectController {
                     }
                 } 
                 
-                
+            
+                if (dicpiline.checkLesson('NEXT')) { dicpiline.setIndicate('NEXT')}
                 if (dicpiline.checkLesson('LIVE')) { dicpiline.setIndicate('LIVE')}
-
-                /* upd */
-                if (dicpiline.checkLesson('NEXT')) {
-                    dicpiline.setIndicate('NEXT')
-                } else {
-                    let currentLIVE = document.querySelector('.live-subject')
-                    
-                    if (currentLIVE) {
-                        let nextSibling = currentLIVE.closest('.subject').nextSibling;
-
-                        if (nextSibling) {
-                            let indicator = nextSibling.querySelector('.indicator');
-                            indicator.classList.add('next-subject');
-                            indicator.innerHTML = 'LIVE';
-                        }
-                    }
-                }
-
-                /* upd */
+                
             }
         }
       
