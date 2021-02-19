@@ -105,6 +105,7 @@ function setTypeOfWeek() {
     }
 
     document.getElementById("week").innerText = typeOfWeek;
+    return typeOfWeek;
 }
 
 
@@ -243,11 +244,24 @@ class EmptySubject {
 
 class Subject {
 
-    constructor({groupId, day, subject: {name, type, week="", subGroup=""}, time: {start:{h: hStart, m: mStart}, end:{h: hEnd, m: mEnd}},
-                teacher: {surname, img='img/unnamed.jpg'}, conference: {link="#", platform="unknown", id="?", password="?"}}) {
+    constructor({groupId, day, subject: {name, type, week="", subGroup="", admit=false, turn},
+                time: {start:{h: hStart, m: mStart}, end:{h: hEnd, m: mEnd}},
+                teacher: {surname, img='img/unnamed.jpg'},
+                conference: {link="#", platform="unknown", id="?", password="?"}})
+        {
 
         this.groupId = groupId;
         this.day = day;
+        
+        if (admit === true) {
+            if (turn == 1 && setTypeOfWeek() == 'Числ') {subGroup = "группа I"; week = 'Числ'}
+            else if (turn == 1 && setTypeOfWeek() == 'Знам') { subGroup = "группа II"; week = 'Знам' }
+
+            if (turn == 2 && setTypeOfWeek() == 'Числ') { subGroup = "группа II"; week = 'Знам' }
+            else if (turn == 2 && setTypeOfWeek() == 'Знам') { subGroup = "группа I"; week = 'Числ' }
+        }
+
+
         this.subject = {name, type, week, subGroup};
         this.time = {start: {hStart, mStart}, end: {hEnd, mEnd}};
         this.teacher = {surname, img};
@@ -721,7 +735,7 @@ let IVT_1_18 = {
 
     'Пятница': [
         new Subject({ // Урок №1
-            groupId: 'ivt-1-18', day: 'Пятница', subject: { name: "ЭВМ и Периферийные Устройства", type: "Пр", week: 'Знам' },
+            groupId: 'ivt-1-18', day: 'Пятница', subject: { name: "ЭВМ и Периферийные Устройства", type: "Пр", week: 'Знам'},
             time: {start:{h:9, m:30}, end:{ h:10, m:50}}, teacher: { surname: "Мананников Н.А", img: KSTU.FIT.IVT['Мананников Н.А'].img() },
             conference: { link: KSTU.FIT.IVT['Мананников Н.А'].conference.link, platform: KSTU.FIT.IVT['Мананников Н.А'].conference.platform,
                           id: KSTU.FIT.IVT['Мананников Н.А'].conference.id, password: KSTU.FIT.IVT['Мананников Н.А'].conference.password}
@@ -735,7 +749,7 @@ let IVT_1_18 = {
 
         
          new Subject({ // Урок №3
-            groupId: 'ivt-1-18', day: 'Пятница', subject: { name: "ЭВМ и Периферийные Устройства", type: "Лабораторная",},
+             groupId: 'ivt-1-18', day: 'Пятница', subject: { name: "ЭВМ и Периферийные Устройства", type: "Лабораторная", admit: true, turn: 1},
             time: {start:{h:13, m:0}, end:{ h:14, m:20}}, teacher: { surname: "Мананников Н.А", img: KSTU.FIT.IVT['Мананников Н.А'].img() },
             conference: { link: KSTU.FIT.IVT['Мананников Н.А'].conference.link, platform: KSTU.FIT.IVT['Мананников Н.А'].conference.platform,
                           id: KSTU.FIT.IVT['Мананников Н.А'].conference.id, password: KSTU.FIT.IVT['Мананников Н.А'].conference.password}
@@ -743,14 +757,14 @@ let IVT_1_18 = {
 
         
         new Subject({ // Урок №3
-            groupId: 'ivt-1-18', day: 'Пятница', subject: { name: "Человеко-Машинное Взаимодействие", type: "Лабораторная",},
+            groupId: 'ivt-1-18', day: 'Пятница', subject: { name: "Человеко-Машинное Взаимодействие", type: "Лабораторная", admit: true, turn: 2},
             time: {start:{h:13, m:0}, end:{h:14, m:20}}, teacher: { surname: "Момуналиева Н.Т", img: KSTU.FIT.IVT['Момуналиева Н.Т'].img() },
             conference: { link: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.link, platform: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.platform,
                           id: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.id, password: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.password}
         }),
 
         new Subject({ // Урок №4
-            groupId: 'ivt-1-18', day: 'Пятница', subject: { name: "ЭВМ и Периферийные Устройства", type: "Лабораторная",},
+            groupId: 'ivt-1-18', day: 'Пятница', subject: { name: "ЭВМ и Периферийные Устройства", type: "Лабораторная", admit: true, turn: 1 },
             time: {start:{h:14, m:30}, end:{h:15, m:50}}, teacher: { surname: "Мананников Н.А", img: KSTU.FIT.IVT['Мананников Н.А'].img() },
             conference: { link: KSTU.FIT.IVT['Мананников Н.А'].conference.link, platform: KSTU.FIT.IVT['Мананников Н.А'].conference.platform,
                           id: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.id, password: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.password}
@@ -758,7 +772,7 @@ let IVT_1_18 = {
 
         
         new Subject({ // Урок №4
-            groupId: 'ivt-1-18', day: 'Пятница', subject: { name: "Человеко-Машинное Взаимодействие", type: "Лабораторная",},
+            groupId: 'ivt-1-18', day: 'Пятница', subject: { name: "Человеко-Машинное Взаимодействие", type: "Лабораторная", admit: true, turn: 2},
             time: {start:{h:14, m:30}, end:{h:15, m:50}}, teacher: { surname: "Момуналиева Н.Т", img: KSTU.FIT.IVT['Момуналиева Н.Т'].img() },
             conference: { link: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.link, platform: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.platform,
                           id: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.id, password: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.password}
