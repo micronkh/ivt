@@ -254,11 +254,11 @@ class Subject {
         this.day = day;
         
         if (admit === true) {
-            if (turn == 1 && setTypeOfWeek() == 'Числ') {subGroup = "группа I"; week = 'Числ'}
-            else if (turn == 1 && setTypeOfWeek() == 'Знам') { subGroup = "группа II"; week = 'Знам' }
+            if (turn == 1 && setTypeOfWeek() == 'Числ') {subGroup = "группа I";}
+            else if (turn == 1 && setTypeOfWeek() == 'Знам') { subGroup = "группа II";}
 
-            if (turn == 2 && setTypeOfWeek() == 'Числ') { subGroup = "группа II"; week = 'Знам' }
-            else if (turn == 2 && setTypeOfWeek() == 'Знам') { subGroup = "группа I"; week = 'Числ' }
+            if (turn == 2 && setTypeOfWeek() == 'Числ') { subGroup = "группа II";}
+            else if (turn == 2 && setTypeOfWeek() == 'Знам') { subGroup = "группа I";}
         }
 
 
