@@ -697,13 +697,6 @@ let IVT_1_18 = {
     ],
 
     'Четверг': [
-         new Subject({ // Урок №0
-             groupId: 'ivt-1-18', day: 'Четверг', subject: { name: "Безопасность Жизнедеятельности", type: "Пр", week: 'за 25-февраля'},
-            time: {start:{h:8, m:0}, end:{h:9, m:20}}, teacher: { surname: "Мурзаканов А.Н", img: KSTU.EF.TB['Мурзаканов А.Н'].img() },
-            conference: { link: KSTU.EF.TB['Мурзаканов А.Н'].conference.link, platform: KSTU.EF.TB['Мурзаканов А.Н'].conference.platform,
-                          id: KSTU.EF.TB['Мурзаканов А.Н'].conference.id, password: KSTU.EF.TB['Мурзаканов А.Н'].conference.password}
-        }),
-
         new Subject({ // Урок №1
             groupId: 'ivt-1-18', day: 'Четверг', subject: { name: "Безопасность Жизнедеятельности", type: "Пр", week: 'Знам' },
             time: {start:{h:8, m:0}, end:{h:9, m:20}}, teacher: { surname: "Мурзаканов А.Н", img: KSTU.EF.TB['Мурзаканов А.Н'].img() },
