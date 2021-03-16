@@ -605,11 +605,28 @@ let KSTU = {
                 gender: "woman",
                 conference: {
                     platform: "zoom",
+                    link: 'https://us04web.zoom.us/j/74662744072?pwd=MkZBb1ZiMTZtcUtPeHZCV216QnVWZz09',
+                    id: "746 6274 4072",
+                    password: "FkLc25",
+                },
+            },
+
+            ["Жапакова Б.С Абат"]: {
+                fullname: "Жапакова Бурул Сабырбековна",
+                surname: "Japakova B.S",
+                img: function () {
+                    return 'img/EF/TB/' + this.surname + '.jpg'
+                },
+                gender: "woman",
+                conference: {
+                    platform: "zoom",
                     link: 'https://us02web.zoom.us/j/82649459053?pwd=MU8rWFdnZSsvRzh3ZkZ4YWJUNGMvdz09',
                     id: "826 4945 9053",
                     password: "B59cD3",
                 },
             },
+
+            
 
             ["Мурзаканов А.Н"]: {
                 fullname: "Мурзаканов Абат Нурланбекович",
@@ -642,7 +659,13 @@ let IVT_1_18 = {
             groupId: 'ivt-1-18', day: "Вторник", subject: { name: "Безопасность Жизнедеятельности", type: "Лекция" },
             time: { start: { h: 9, m: 30 }, end: { h: 10, m: 50 } }, teacher: { surname: "Жапакова Б.С", img: KSTU.EF.TB['Жапакова Б.С'].img()},
             conference: { link: KSTU.EF.TB['Жапакова Б.С'].conference.link, platform: KSTU.EF.TB['Жапакова Б.С'].conference.platform,
-                          id: KSTU.EF.TB['Жапакова Б.С'].conference.id, id: KSTU.EF.TB['Жапакова Б.С'].conference.password}
+                          id: KSTU.EF.TB['Жапакова Б.С'].conference.id, password: KSTU.EF.TB['Жапакова Б.С'].conference.password}
+        }),
+        new Subject({ // Урок №1
+            groupId: 'ivt-1-18', day: "Вторник", subject: { name: "Безопасность Жизнедеятельности", type: "Лекция", week: "ссылка #2"},
+            time: { start: { h: 9, m: 30 }, end: { h: 10, m: 50 } }, teacher: { surname: "Жапакова Б.С", img: KSTU.EF.TB['Жапакова Б.С'].img()},
+            conference: { link: KSTU.EF.TB['Жапакова Б.С Абат'].conference.link, platform: KSTU.EF.TB['Жапакова Б.С Абат'].conference.platform,
+                          id: KSTU.EF.TB['Жапакова Б.С Абат'].conference.id, password: KSTU.EF.TB['Жапакова Б.С'].conference.password}
         }),
         new Subject({ // Урок №2
             groupId: 'ivt-1-18', day: "Вторник", subject: { name: "Компьютерная Графика", type: "Лекция" },
@@ -654,7 +677,7 @@ let IVT_1_18 = {
             groupId: 'ivt-1-18', day: "Вторник", subject: { name: "Системное Программирование", type: "Лекция" },
             time: {start: {h:13, m:0}, end: {h:14, m:20}}, teacher: { surname: "Исраилова Н.А", img: KSTU.FIT.IVT['Исраилова Н.А'].img() },
             conference: { link: KSTU.FIT.IVT['Исраилова Н.А'].conference.link, platform: KSTU.FIT.IVT['Исраилова Н.А'].conference.platform,
-                          id: KSTU.FIT.IVT['Исраилова Н.А'].conference.id, password: KSTU.FIT.IVT['Исраилова Н.А']}
+                          id: KSTU.FIT.IVT['Исраилова Н.А'].conference.id, password: KSTU.FIT.IVT['Исраилова Н.А'].conference.password}
         }),
     ],
 
@@ -663,7 +686,7 @@ let IVT_1_18 = {
             groupId: 'ivt-1-18', day: 'Среда', subject: { name: "Человеко-Машинное Взаимодействие", type: "Лекция" },
             time: {start: {h:9, m:30}, end:{h:10, m:50}}, teacher: { surname: "Момуналиева Н.Т", img: KSTU.FIT.IVT['Момуналиева Н.Т'].img() },
             conference: { link: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.link, platform: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.platform, 
-                          id: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.link, password: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.password}
+                          id: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.id, password: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.password}
         }),
         new Subject({ // Урок №2
             groupId: 'ivt-1-18', day: 'Среда', subject: { name: "Компьютерная Графика", type: "Лб", week: "Числ", subGroup: "группа I" },
@@ -680,17 +703,15 @@ let IVT_1_18 = {
         new Subject({ // Урок №2
             groupId: 'ivt-1-18', day: 'Среда', subject: { name: "Компьютерная Графика", type: "Лб", week: "Знам", subGroup: "группа II" },
             time: { start: { h: 11, m: 0 }, end: { h: 12, m: 20 } }, teacher: { surname: "Момуналиева Н.Т", img: KSTU.FIT.IVT['Момуналиева Н.Т'].img() },
-            conference: {
-                link: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.link, platform: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.platform,
-                id: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.id, password: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.password
+            conference: { link: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.link, platform: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.platform,
+                          id: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.id, password: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.password
             }
         }),
         new Subject({ // Урок №3
             groupId: 'ivt-1-18', day: 'Среда', subject: { name: "Компьютерная Графика", type: "Лб", week: "Знам", subGroup: "группа II" },
             time: { start: { h: 13, m: 0 }, end: { h: 14, m: 20 } }, teacher: { surname: "Момуналиева Н.Т", img: KSTU.FIT.IVT['Момуналиева Н.Т'].img() },
-            conference: {
-                link: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.link, platform: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.platform,
-                id: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.id, password: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.password
+            conference: { link: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.link, platform: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.platform,
+                          id: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.id, password: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.password
             }
         }),
 
@@ -785,7 +806,7 @@ let ISOP_1_18 = {
     groupId: 'isop-1-18',
 
     'Понедельник': [new EmptySubject({ groupId: 'isop-1-18', day: 'Понедельник' })],
-    'Втоник': [new EmptySubject({ groupId: 'isop-1-18', day: 'Вторник' })],
+    'Вторник': [new EmptySubject({ groupId: 'isop-1-18', day: 'Вторник' })],
     'Среда': [new EmptySubject({ groupId: 'isop-1-18', day: 'Среда' })],
     'Четверг': [new EmptySubject({ groupId: 'isop-1-18', day: 'Четверг' })],
     'Пятница': [new EmptySubject({ groupId: 'isop-1-18', day: 'Пятница' })],
@@ -808,7 +829,6 @@ class SubjectController {
 
     setIndicate() {
         
-
         let dayIndex = getPresentDay();
         let dayName = SubjectController.days[dayIndex];
 
@@ -823,7 +843,6 @@ class SubjectController {
                     }
                 } 
                 
-            
                 if (dicpiline.checkLesson('NEXT')) { dicpiline.setIndicate('NEXT')}
                 if (dicpiline.checkLesson('LIVE')) { dicpiline.setIndicate('LIVE')}
                 
