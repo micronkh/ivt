@@ -661,12 +661,6 @@ let IVT_1_18 = {
             conference: { link: KSTU.EF.TB['Жапакова Б.С'].conference.link, platform: KSTU.EF.TB['Жапакова Б.С'].conference.platform,
                           id: KSTU.EF.TB['Жапакова Б.С'].conference.id, password: KSTU.EF.TB['Жапакова Б.С'].conference.password}
         }),
-        new Subject({ // Урок №1
-            groupId: 'ivt-1-18', day: "Вторник", subject: { name: "Безопасность Жизнедеятельности", type: "Лекция", week: "ссылка #2"},
-            time: { start: { h: 9, m: 30 }, end: { h: 10, m: 50 } }, teacher: { surname: "Жапакова Б.С", img: KSTU.EF.TB['Жапакова Б.С'].img()},
-            conference: { link: KSTU.EF.TB['Жапакова Б.С Абат'].conference.link, platform: KSTU.EF.TB['Жапакова Б.С Абат'].conference.platform,
-                          id: KSTU.EF.TB['Жапакова Б.С Абат'].conference.id, password: KSTU.EF.TB['Жапакова Б.С'].conference.password}
-        }),
         new Subject({ // Урок №2
             groupId: 'ivt-1-18', day: "Вторник", subject: { name: "Компьютерная Графика", type: "Лекция" },
             time: { start: { h: 11, m: 0 }, end: { h: 12, m: 20 } }, teacher: { surname: "Момуналиева Н.Т", img: KSTU.FIT.IVT['Момуналиева Н.Т'].img() },
@@ -738,18 +732,20 @@ let IVT_1_18 = {
                           id: KSTU.FIT.IVT['Бакасова П.С'].conference.id, password: KSTU.FIT.IVT['Бакасова П.С'].conference.password}
         }),
 
-        new Subject({ // Урок №4
-            groupId: 'ivt-1-18', day: 'Четверг', subject: { name: "Экология", type: "Лб", week: 'Знам' },
-            time: {start:{h:13, m:0}, end:{h:14, m:20}}, teacher: { surname: "Исагалиева А.К", img: KSTU.EF.TB['Исагалиева А.К'].img() },
-            conference: { link: KSTU.EF.TB['Исагалиева А.К'].conference.link, platform: KSTU.EF.TB['Исагалиева А.К'].conference.platform,
-                          id: KSTU.EF.TB['Исагалиева А.К'].conference.id, password: KSTU.EF.TB['Исагалиева А.К'].conference.password}
-        }),
      
         new Subject({ // Урок №5
             groupId: 'ivt-1-18', day: 'Четверг', subject: { name: "Экология", type: "Лк", week: 'Знам' },
             time: {start:{h:14, m:30}, end:{h:15, m:50}}, teacher: { surname: "Исагалиева А.К", img: KSTU.EF.TB['Исагалиева А.К'].img() },
             conference: { link: KSTU.EF.TB['Исагалиева А.К'].conference.link, platform: KSTU.EF.TB['Исагалиева А.К'].conference.platform,
                           id: KSTU.FIT.IVT['Бакасова П.С'].conference.id, password: KSTU.FIT.IVT['Бакасова П.С'].conference.password}
+        }),
+
+        new Subject({ // Урок №4
+            groupId: 'ivt-1-18', day: 'Четверг', subject: { name: "Экология", type: "Лб", week: 'Знам' },
+            time: { start: { h: 16, m: 0 }, end: { h: 17, m: 20 } }, teacher: { surname: "Исагалиева А.К", img: KSTU.EF.TB['Исагалиева А.К'].img() },
+            conference: { link: KSTU.EF.TB['Исагалиева А.К'].conference.link, platform: KSTU.EF.TB['Исагалиева А.К'].conference.platform,
+                          id: KSTU.EF.TB['Исагалиева А.К'].conference.id, password: KSTU.EF.TB['Исагалиева А.К'].conference.password
+            }
         }),
 
     ],
