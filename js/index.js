@@ -627,7 +627,7 @@ let KSTU = {
             },
 
             
-
+            
             ["Мурзаканов А.Н"]: {
                 fullname: "Мурзаканов Абат Нурланбекович",
                 surname: "Murzakanov A.N",
@@ -635,11 +635,18 @@ let KSTU = {
                     return 'img/EF/TB/' + this.surname + '.jpg'
                 },
                 gender: "man",
+                /* старая ссылка
                 conference: {
                     platform: "zoom",
                     link: "https://us04web.zoom.us/j/73099464143?pwd=d2dCZndaYWhKa3BFVnJqU1pidG9sZz09",
                     id: "730 9946 4143",
                     password: "37UCAs",
+                }, */
+                conference: {
+                    platform: "zoom",
+                    link: "https://us02web.zoom.us/j/84132272057?pwd=TGVJVHFybGVGNGxrZEJWSGhoTlQ0dz09",
+                    id: "841 3227 2057",
+                    password: "w82FJT",
                 },
             },
         },
@@ -749,7 +756,7 @@ let IVT_1_18 = {
         }),
 
     ],
-
+                        
     'Пятница': [
         new Subject({ // Урок №1
             groupId: 'ivt-1-18', day: 'Пятница', subject: { name: "ЭВМ и Периферийные Устройства", type: "Пр", week: 'Знам',},
