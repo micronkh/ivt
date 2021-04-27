@@ -6,7 +6,7 @@ function cloneObject(obj) {
 
     for (let key in obj) {
         if (typeof obj[key] !== "object")
-            clone[key] = obj[key];               // клонировать если примитив
+            clone[key] = obj[key];                // клонировать если примитив
         else clone[key] = cloneObject(obj[key]);  // вывзвать функция рекурсивно если значения объект
     }
 
@@ -611,23 +611,6 @@ let KSTU = {
                 },
             },
 
-            ["Жапакова Б.С Абат"]: {
-                fullname: "Жапакова Бурул Сабырбековна",
-                surname: "Japakova B.S",
-                img: function () {
-                    return 'img/EF/TB/' + this.surname + '.jpg'
-                },
-                gender: "woman",
-                conference: {
-                    platform: "zoom",
-                    link: 'https://us02web.zoom.us/j/82649459053?pwd=MU8rWFdnZSsvRzh3ZkZ4YWJUNGMvdz09',
-                    id: "826 4945 9053",
-                    password: "B59cD3",
-                },
-            },
-
-            
-            
             ["Мурзаканов А.Н"]: {
                 fullname: "Мурзаканов Абат Нурланбекович",
                 surname: "Murzakanov A.N",
@@ -635,19 +618,12 @@ let KSTU = {
                     return 'img/EF/TB/' + this.surname + '.jpg'
                 },
                 gender: "man",
-                /* старая ссылка
                 conference: {
                     platform: "zoom",
                     link: "https://us04web.zoom.us/j/73099464143?pwd=d2dCZndaYWhKa3BFVnJqU1pidG9sZz09",
                     id: "730 9946 4143",
                     password: "37UCAs",
-                }, */
-                conference: {
-                    platform: "zoom",
-                    link: "https://us02web.zoom.us/j/84132272057?pwd=TGVJVHFybGVGNGxrZEJWSGhoTlQ0dz09",
-                    id: "841 3227 2057",
-                    password: "w82FJT",
-                },
+                }
             },
         },
     },
