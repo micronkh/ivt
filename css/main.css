@@ -98,6 +98,32 @@ img[class*='staff'] {
     border-bottom: 2px solid #f7df1e;
 }
 
+
+.bullhorn {
+    position: relative;
+    cursor: help;
+    font-size: 22px;
+    color: #fff;
+}
+.bullhorn::after {
+    content: '';
+    position: absolute;
+    opacity: 1;
+    top: -4px;
+    left: 30px;
+    width: 6px;
+    border-radius:50%;
+    height: 30px;
+    background: #fff;
+    animation: fade 1.5s ease-in infinite;
+}
+
+@keyframes fade {
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
 /* header [END]*/
 
 

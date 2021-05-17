@@ -620,10 +620,17 @@ let KSTU = {
                 gender: "man",
                 conference: {
                     platform: "zoom",
+                    link: "https://us02web.zoom.us/j/83710259611?pwd=VHFVeS90d1lQaFlQaWJOREV2UHJkQT09",
+                    id: "837 1025 9611",
+                    password: "P9H05n",
+                }
+                /* старая ссылка
+                conference: {
+                    platform: "zoom",
                     link: "https://us04web.zoom.us/j/73099464143?pwd=d2dCZndaYWhKa3BFVnJqU1pidG9sZz09",
                     id: "730 9946 4143",
                     password: "37UCAs",
-                }
+                }*/
             },
         },
     },

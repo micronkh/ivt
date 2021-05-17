@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+        <link rel="stylesheet" href="css/def.css"/>
+        <link rel="stylesheet" href="css/exams.css"/>
+        <title>Экзамены ИВТ-1-18</title>
+    </head>
+
+    <body>
+       
+        <div class="container-app content">
+            <div class="header flex space-between">
+                 <h2 class="highlight px-1 btn-back">
+                    <a href="index.html" class="highlight danger"> <span class="fas fa-angle-double-left"></span></a>
+                </h2>
+
+                 <h2 class="title mr-1">ИВТ-1-18</h2>
+            </div>
+           
+
+            <ul id="todo">
+
+                <li class="todo__item silver w-100">
+                    <div class="row align-center w-100">
+                        <input type="checkbox" class="option-input" data-index="0">
+                        <div class="flex align-self-center align-center w-100 space-between">
+                            <label class="todo-label highlight light">ЧМВ</label>
+                            <span class="highlight light">20-май
+                                                        <span class="highlight warning">11:00</span>
+                                                        <span class="highlight primary">2/624</span>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+
+
+                 <li class="todo__item silver w-100">
+                    <div class="row align-center w-100">
+                        <input type="checkbox" class="option-input" data-index="1">
+                        <div class="flex align-self-center align-center w-100 space-between">
+                            <label class="todo-label highlight light">Экология</label>
+                            <span class="highlight light">24-май
+                                                        <span class="highlight warning">09:30</span>
+                                                        <span class="highlight primary">2/610а</span>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="todo__item silver w-100">
+                    <div class="row align-center w-100">
+                        <input type="checkbox" class="option-input" data-index="2">
+                        <div class="flex align-self-center align-center w-100 space-between">
+                            <label class="todo-label highlight light">КГ</label>
+                             <span class="highlight light">25-май
+                                                        <span class="highlight warning">11:00</span>
+                                                        <span class="highlight primary">2/624</span>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+
+                 <li class="todo__item silver w-100">
+                    <div class="row align-center w-100">
+                        <input type="checkbox" class="option-input" data-index="3">
+                        <div class="flex align-self-center align-center w-100 space-between">
+                            <label class="todo-label highlight light">СП</label>
+                             <span class="highlight light">26-май
+                                                        <span class="highlight warning">13:00</span>
+                                                        <span class="highlight primary">2/619</span>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="todo__item silver w-100">
+                    <div class="row align-center w-100">
+                        <input type="checkbox" class="option-input" data-index="4">
+                        <div class="flex align-self-center align-center w-100 space-between">
+                            <label class="todo-label highlight light">БЖД</label>
+                             <span class="highlight light">27-май
+                                                        <span class="highlight warning">11:00</span>
+                                                        <span class="highlight primary">2/504</span>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+
+                 <li class="todo__item silver w-100">
+                    <div class="row align-center w-100">
+                        <input type="checkbox" class="option-input" data-index="5">
+                        <div class="flex align-self-center align-center w-100 space-between">
+                            <label class="todo-label highlight light">ЭВМ</label>
+                             <span class="highlight light">28-май
+                                                        <span class="highlight warning">11:00</span>
+                                                        <span class="highlight primary">2/624</span>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- End -->
+        <script>
+            document.onclick = function(event) {
+                if (event.target.classList.contains('option-input')) {
+                    let index = event.target.dataset.index;
+                    let items = document.querySelectorAll("#todo .todo__item");
+
+                    if (index) items[index].classList.toggle('cross');
+                }
+            }
+        </script>
+    </body>
+</html>
