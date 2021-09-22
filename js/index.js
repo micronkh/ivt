@@ -498,6 +498,21 @@ let KSTU = {
         IVT: {
             fullName: "Информатика и Вычислительная Техника",
 
+            ["Азимбаев Б.А"]: {
+                fullname: "Азимбаев Бакытбек Акматович",
+                surname: "Azimbaev B.A",
+                img: function () {
+                    return 'img/unnamed.jpg'
+                },
+                gender: "man",
+                conference: {
+                    platform: "unknown",
+                    link: "",
+                    id: "",
+                    password: "",
+                },
+            },
+
             ["Бакасова П.С"]: {
                 fullname: "Бакасова Пери Султановна",
                 surname: "Bakasova P.S",
@@ -510,6 +525,21 @@ let KSTU = {
                     link: "https://us04web.zoom.us/j/74759485570?pwd=RDZNVWlpTXFRazJrY29OWE9DVFk0Zz09",
                     id: "747 5948 5570",
                     password: "w0fU2d",
+                },
+            },
+
+            ["Ерёмин А.С"]: {
+                fullname: "Ерёмин Алексей Сергеевич",
+                surname: "Eremin A.S",
+                img: function () {
+                    return 'img/FIT/IVT/' + this.surname + '.jpg'
+                },
+                gender: "man",
+                conference: {
+                    platform: "zoom",
+                    link: "https://us04web.zoom.us/j/77671322932?pwd=WWUyNjV2dVc2MSt5WVl5WW1KSlNoQT09",
+                    id: "776 7132 2932",
+                    password: "VPpC2x",
                 },
             },
 
@@ -558,6 +588,51 @@ let KSTU = {
                 },
             },
 
+            ["Нуркамилова А"]: {
+                fullname: "Нуркамилова Алтынай",
+                surname: "Nurkamilova A",
+                img: function () {
+                    return 'img/unnamed.jpg'
+                },
+                gender: "woman",
+                conference: {
+                    platform: "unknown",
+                    link: '',
+                    id: "",
+                    password: "",
+                },
+            },
+
+            ["Отонбаев М.М"]: {
+                fullname: "Отонбаев Марат Медетович",
+                surname: "Otonbaev M.M",
+                img: function () {
+                    return 'img/unnamed.jpg'
+                },
+                gender: "man",
+                conference: {
+                    platform: "webex",
+                    link: "https://meet32.webex.com/meet/pr263465637",
+                    id: "",
+                    password: "",
+                },
+            },
+
+            ["Тультемирова Г.У"]: {
+                fullname: "Тультемирова Гульназ Усенбековна",
+                surname: "Tultemirova G.U",
+                img: function () {
+                    return 'img/FIT/IVT/' + this.surname + '.jpg'
+                },
+                gender: "woman",
+                conference: {
+                    platform: "zoom",
+                    link: 'https://us04web.zoom.us/j/76573152898?pwd=cGVFWWZobVlOWHJGa2xkTHpQRlFzZz09',
+                    id: "?",
+                    password: "?",
+                },
+            },
+
             ["Шабданов М.А"]: {
                 fullname: "Шабданов Мелис Адылович",
                 surname: "Shabdanov M.A",
@@ -570,6 +645,21 @@ let KSTU = {
                     link: "https://us04web.zoom.us/j/3500444631?pwd=czZRMVRMWHprejRTSlQxSnJqbHB2dz09",
                     id: "350 044 4631",
                     password: "222",
+                },
+            },
+
+            ["Шаршеева К.Т"]: {
+                fullname: "Шаршеева Кундуз Токтобековна",
+                surname: "Sharsheeva K.T",
+                img: function () {
+                    return 'img/FIT/IVT/' + this.surname + '.jpg'
+                },
+                gender: "woman",
+                conference: {
+                    platform: "zoom",
+                    link: '',
+                    id: "",
+                    password: "",
                 },
             },
         },
@@ -637,7 +727,11 @@ let KSTU = {
 };
 
 
-let IVT_1_18 = {
+
+// 5-семестр ИВТ
+
+/*
+const IVT_1_18 = {
 
     groupId: 'ivt-1-18',
 
@@ -783,6 +877,207 @@ let IVT_1_18 = {
                           id: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.id, password: KSTU.FIT.IVT['Момуналиева Н.Т'].conference.password}
         }),
     
+    ]
+};
+
+*/
+
+// 6-семестр ИВТ
+
+const IVT_1_18 = {
+
+    groupId: 'ivt-1-18',
+
+    'Понедельник': [
+
+        new Subject({ // Урок №1
+            groupId: 'ivt-1-18', day: "Понедельник", subject: { name: "Организация вычислительных процессов", type: "Лабораторная" },
+            time: { start: { h: 8, m: 0 }, end: { h: 9, m: 20 } }, teacher: { surname: "Тультемирова Г.У", img: KSTU.FIT.IVT['Тультемирова Г.У'].img() },
+            conference: {
+                link: KSTU.FIT.IVT['Тультемирова Г.У'].conference.link, platform: KSTU.FIT.IVT['Тультемирова Г.У'].conference.platform,
+                id: KSTU.FIT.IVT['Тультемирова Г.У'].conference.id, password: KSTU.FIT.IVT['Тультемирова Г.У'].conference.password
+            }
+        }),
+
+        new Subject({ // Урок №2
+            groupId: 'ivt-1-18', day: 'Понедельник', subject: { name: "Операционные системы", type: "Лабораторная" },
+            time: { start: { h: 9, m: 30 }, end: { h: 10, m: 50 } }, teacher: { surname: "Бакасова П.С", img: KSTU.FIT.IVT['Бакасова П.С'].img() },
+            conference: {
+                link: KSTU.FIT.IVT['Бакасова П.С'].conference.link, platform: KSTU.FIT.IVT['Бакасова П.С'].conference.platform,
+                id: KSTU.FIT.IVT['Бакасова П.С'].conference.id, password: KSTU.FIT.IVT['Бакасова П.С'].conference.password
+            }
+        }),
+
+        new Subject({ // Урок №3
+            groupId: 'ivt-1-18', day: 'Понедельник', subject: { name: "Моделирование", type: "Лабораторная" },
+            time: { start: { h: 11, m: 0 }, end: { h: 12, m: 20 } }, teacher: { surname: "Бакасова П.С", img: KSTU.FIT.IVT['Бакасова П.С'].img() },
+            conference: {
+                link: KSTU.FIT.IVT['Бакасова П.С'].conference.link, platform: KSTU.FIT.IVT['Бакасова П.С'].conference.platform,
+                id: KSTU.FIT.IVT['Бакасова П.С'].conference.id, password: KSTU.FIT.IVT['Бакасова П.С'].conference.password
+            }
+        }),
+
+        new Subject({ // Урок №4
+            groupId: 'ivt-1-18', day: 'Понедельник', subject: { name: "Моделирование", type: "Лб", week: "Числ"},
+            time: { start: { h: 13, m: 0 }, end: { h: 14, m: 20 } }, teacher: { surname: "Бакасова П.С", img: KSTU.FIT.IVT['Бакасова П.С'].img() },
+            conference: {
+                link: KSTU.FIT.IVT['Бакасова П.С'].conference.link, platform: KSTU.FIT.IVT['Бакасова П.С'].conference.platform,
+                id: KSTU.FIT.IVT['Бакасова П.С'].conference.id, password: KSTU.FIT.IVT['Бакасова П.С'].conference.password
+            }
+        }),
+    ],
+
+
+
+
+    'Вторник': [
+
+        new Subject({ // Урок №1
+            groupId: 'ivt-1-18', day: "Вторник", subject: { name: "Системы искусственнего интеллекта", type: "Лабораторная" },
+            time: { start: { h: 8, m: 0 }, end: { h: 9, m: 20 } }, teacher: { surname: "Шаршеева К.Т", img: KSTU.FIT.IVT['Шаршеева К.Т'].img() },
+            conference: {
+                link: KSTU.FIT.IVT['Шаршеева К.Т'].conference.link, platform: KSTU.FIT.IVT['Шаршеева К.Т'].conference.platform,
+                id: KSTU.FIT.IVT['Шаршеева К.Т'].conference.id, password: KSTU.FIT.IVT['Шаршеева К.Т'].conference.password
+            }
+        }),
+        new Subject({ // Урок №2
+            groupId: 'ivt-1-18', day: "Вторник", subject: { name: "Микропроцессоры и Микроконтроллеры", type: "Лабораторная" },
+            time: { start: { h: 11, m: 0 }, end: { h: 12, m: 20 } }, teacher: { surname: "Ерёмин А.С", img: KSTU.FIT.IVT['Ерёмин А.С'].img() },
+            conference: {
+                link: KSTU.FIT.IVT['Ерёмин А.С'].conference.link, platform: KSTU.FIT.IVT['Ерёмин А.С'].conference.platform,
+                id: KSTU.FIT.IVT['Ерёмин А.С'].conference.id, password: KSTU.FIT.IVT['Ерёмин А.С'].conference.password
+            }
+        }),
+    ],
+
+    'Среда': [
+
+        new Subject({ // Урок №1
+            groupId: 'ivt-1-18', day: "Среда", subject: { name: "Микропроцессоры и Микроконтроллеры", type: "Лекция" },
+            time: { start: { h: 8, m: 0 }, end: { h: 9, m: 20 } }, teacher: { surname: "Ерёмин А.С", img: KSTU.FIT.IVT['Ерёмин А.С'].img() },
+            conference: {
+                link: KSTU.FIT.IVT['Ерёмин А.С'].conference.link, platform: KSTU.FIT.IVT['Ерёмин А.С'].conference.platform,
+                id: KSTU.FIT.IVT['Ерёмин А.С'].conference.id, password: KSTU.FIT.IVT['Ерёмин А.С'].conference.password
+            }
+        }),
+
+        new Subject({ // Урок №2
+            groupId: 'ivt-1-18', day: "Среда", subject: { name: "Организация вычислительных процессов", type: "Лекция" },
+            time: { start: { h: 9, m: 30 }, end: { h: 10, m: 50 } }, teacher: { surname: "Тультемирова Г.У", img: KSTU.FIT.IVT['Тультемирова Г.У'].img() },
+            conference: {
+                link: KSTU.FIT.IVT['Тультемирова Г.У'].conference.link, platform: KSTU.FIT.IVT['Тультемирова Г.У'].conference.platform,
+                id: KSTU.FIT.IVT['Тультемирова Г.У'].conference.id, password: KSTU.FIT.IVT['Тультемирова Г.У'].conference.password
+            }
+        }),
+
+        new Subject({ // Урок №3
+            groupId: 'ivt-1-18', day: "Среда", subject: { name: "Сети и телекоммуникации", type: "Лекция" },
+            time: { start: { h: 11, m: 0 }, end: { h: 12, m: 20 } }, teacher: { surname: "Тультемирова Г.У", img: KSTU.FIT.IVT['Тультемирова Г.У'].img() },
+            conference: {
+                link: KSTU.FIT.IVT['Тультемирова Г.У'].conference.link, platform: KSTU.FIT.IVT['Тультемирова Г.У'].conference.platform,
+                id: KSTU.FIT.IVT['Тультемирова Г.У'].conference.id, password: KSTU.FIT.IVT['Тультемирова Г.У'].conference.password
+            }
+        }),
+
+        new Subject({ // Урок №3
+            groupId: 'ivt-1-18', day: "Среда", subject: { name: "Управление проектами", type: "Лекция" },
+            time: { start: { h: 17, m: 30 }, end: { h: 18, m: 50 } }, teacher: { surname: "Отонбаев М.М", img: KSTU.FIT.IVT['Отонбаев М.М'].img() },
+            conference: {
+                link: KSTU.FIT.IVT['Отонбаев М.М'].conference.link, platform: KSTU.FIT.IVT['Отонбаев М.М'].conference.platform,
+                id: KSTU.FIT.IVT['Отонбаев М.М'].conference.id, password: KSTU.FIT.IVT['Отонбаев М.М'].conference.password
+            }
+        }),
+
+        new Subject({ // Урок №4
+            groupId: 'ivt-1-18', day: "Среда", subject: { name: "Управление проектами", type: "Лабораторная" },
+            time: { start: { h: 19, m: 0 }, end: { h: 20, m: 20 } }, teacher: { surname: "Отонбаев М.М", img: KSTU.FIT.IVT['Отонбаев М.М'].img() },
+            conference: {
+                link: KSTU.FIT.IVT['Отонбаев М.М'].conference.link, platform: KSTU.FIT.IVT['Отонбаев М.М'].conference.platform,
+                id: KSTU.FIT.IVT['Отонбаев М.М'].conference.id, password: KSTU.FIT.IVT['Отонбаев М.М'].conference.password
+            }
+        }),
+
+    ],
+
+    'Четверг': [
+       
+        new Subject({ // Урок №1
+            groupId: 'ivt-1-18', day: 'Четверг', subject: { name: "Интерфейсы ПУ", type: "Лабораторная" },
+            time: { start: { h: 11, m: 0 }, end: { h: 12, m: 20 } }, teacher: { surname: "Нуркамилова А", img: KSTU.FIT.IVT['Нуркамилова А'].img() },
+            conference: {
+                link: KSTU.FIT.IVT['Нуркамилова А'].conference.link, platform: KSTU.FIT.IVT['Нуркамилова А'].conference.platform,
+                id: KSTU.FIT.IVT['Нуркамилова А'].conference.id, password: KSTU.FIT.IVT['Нуркамилова А'].conference.password
+            }
+        }),
+
+        new Subject({ // Урок №2
+            groupId: 'ivt-1-18', day: 'Четверг', subject: { name: "Моделирование", type: "Лекция" },
+            time: { start: { h: 13, m: 0 }, end: { h: 14, m: 20 } }, teacher: { surname: "Исраилова Н.А", img: KSTU.FIT.IVT['Исраилова Н.А'].img() },
+            conference: {
+                link: KSTU.FIT.IVT['Исраилова Н.А'].conference.link, platform: KSTU.FIT.IVT['Исраилова Н.А'].conference.platform,
+                id: KSTU.FIT.IVT['Исраилова Н.А'].conference.id, password: KSTU.FIT.IVT['Исраилова Н.А'].conference.password
+            }
+        }),
+
+        new Subject({ // Урок №3
+            groupId: 'ivt-1-18', day: 'Четверг', subject: { name: "Сети и телекоммуникации", type: "Лабораторная" },
+            time: { start: { h: 14, m: 30 }, end: { h: 15, m: 50 } }, teacher: { surname: "Азимбаев Б.А", img: KSTU.FIT.IVT['Азимбаев Б.А'].img() },
+            conference: {
+                link: KSTU.FIT.IVT['Азимбаев Б.А'].conference.link, platform: KSTU.FIT.IVT['Азимбаев Б.А'].conference.platform,
+                id: KSTU.FIT.IVT['Азимбаев Б.А'].conference.id, password: KSTU.FIT.IVT['Азимбаев Б.А'].conference.password
+            }
+        }),
+
+
+        new Subject({ // Урок №4
+            groupId: 'ivt-1-18', day: 'Четверг', subject: { name: "Сети и телекоммуникации", type: "Пр", week: 'Числ' },
+            time: { start: { h: 16, m: 0 }, end: { h: 17, m: 20 } }, teacher: { surname: "Азимбаев Б.А", img: KSTU.FIT.IVT['Азимбаев Б.А'].img() },
+            conference: {
+                link: KSTU.FIT.IVT['Азимбаев Б.А'].conference.link, platform: KSTU.FIT.IVT['Азимбаев Б.А'].conference.platform,
+                id: KSTU.FIT.IVT['Азимбаев Б.А'].conference.id, password: KSTU.FIT.IVT['Азимбаев Б.А'].conference.password
+            }
+        }),
+
+    ],
+
+    'Пятница': [
+       
+        new Subject({ // Урок №1
+            groupId: 'ivt-1-18', day: 'Пятница', subject: { name: "Операционные системы", type: "Лекция" },
+            time: { start: { h: 9, m: 30}, end: { h: 10, m: 50 } }, teacher: { surname: "Исраилова Н.А", img: KSTU.FIT.IVT['Исраилова Н.А'].img() },
+            conference: {
+                link: KSTU.FIT.IVT['Исраилова Н.А'].conference.link, platform: KSTU.FIT.IVT['Исраилова Н.А'].conference.platform,
+                id: KSTU.FIT.IVT['Исраилова Н.А'].conference.id, password: KSTU.FIT.IVT['Исраилова Н.А'].conference.password
+            }
+        }),
+
+        new Subject({ // Урок №2
+            groupId: 'ivt-1-18', day: 'Пятница', subject: { name: "Интерейсы ПУ", type: "Лекция" },
+            time: { start: { h: 11, m: 0 }, end: { h: 12, m: 20 } }, teacher: { surname: "Шабданов М.А", img: KSTU.FIT.IVT['Шабданов М.А'].img() },
+            conference: {
+                link: KSTU.FIT.IVT['Шабданов М.А'].conference.link, platform: KSTU.FIT.IVT['Шабданов М.А'].conference.platform,
+                id: KSTU.FIT.IVT['Шабданов М.А'].conference.id, password: KSTU.FIT.IVT['Шабданов М.А'].conference.password
+            }
+        }),
+
+        new Subject({ // Урок №3
+            groupId: 'ivt-1-18', day: 'Пятница', subject: { name: "Системы искусственного интеллекта", type: "Лекция" },
+            time: { start: { h: 13, m: 0 }, end: { h: 14, m: 20 } }, teacher: { surname: "Шабданов М.А", img: KSTU.FIT.IVT['Шабданов М.А'].img() },
+            conference: {
+                link: KSTU.FIT.IVT['Шабданов М.А'].conference.link, platform: KSTU.FIT.IVT['Шабданов М.А'].conference.platform,
+                id: KSTU.FIT.IVT['Шабданов М.А'].conference.id, password: KSTU.FIT.IVT['Шабданов М.А'].conference.password
+            }
+        }),
+
+        new Subject({ // Урок №4
+            groupId: 'ivt-1-18', day: 'Пятница', subject: { name: "Моделирование", type: "Пр", week: "Числ" },
+            time: { start: { h: 14, m: 30 }, end: { h: 15, m: 50 } }, teacher: { surname: "Бакасова П.С", img: KSTU.FIT.IVT['Бакасова П.С'].img() },
+            conference: {
+                link: KSTU.FIT.IVT['Бакасова П.С'].conference.link, platform: KSTU.FIT.IVT['Бакасова П.С'].conference.platform,
+                id: KSTU.FIT.IVT['Бакасова П.С'].conference.id, password: KSTU.FIT.IVT['Бакасова П.С'].conference.password
+            }
+        }),
+
     ]
 };
 
