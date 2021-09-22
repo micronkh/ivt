@@ -1052,7 +1052,7 @@ const IVT_1_18 = {
         }),
 
         new Subject({ // Урок №2
-            groupId: 'ivt-1-18', day: 'Пятница', subject: { name: "Интерейсы ПУ", type: "Лекция" },
+            groupId: 'ivt-1-18', day: 'Пятница', subject: { name: "Интерфейсы ПУ", type: "Лекция" },
             time: { start: { h: 11, m: 0 }, end: { h: 12, m: 20 } }, teacher: { surname: "Шабданов М.А", img: KSTU.FIT.IVT['Шабданов М.А'].img() },
             conference: {
                 link: KSTU.FIT.IVT['Шабданов М.А'].conference.link, platform: KSTU.FIT.IVT['Шабданов М.А'].conference.platform,
