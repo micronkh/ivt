@@ -1082,7 +1082,7 @@ const IVT_1_18 = {
 };
 
 
-let ISOP_1_18 = {
+const ISOP_1_18 = {
 
     groupId: 'isop-1-18',
 
