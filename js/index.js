@@ -521,10 +521,10 @@ let KSTU = {
                 },
                 gender: "woman",
                 conference: {
-                    platform: "zoom",
-                    link: "https://us04web.zoom.us/j/74759485570?pwd=RDZNVWlpTXFRazJrY29OWE9DVFk0Zz09",
-                    id: "747 5948 5570",
-                    password: "w0fU2d",
+                    platform: "unknown",
+                    link: "",
+                    id: "",
+                    password: "",
                 },
             },
 
@@ -552,8 +552,8 @@ let KSTU = {
                 gender: "woman",
                 conference: {
                     platform: "zoom",
-                    link: 'https://us02web.zoom.us/j/82470313329?pwd=VCtCSGYrMzVodVc0ZUV5aXVSUEE3QT09',
-                    id: "824 7031 3329",
+                    link: 'https://us02web.zoom.us/j/3260530013?pwd=SzdGNDI4TDQwRnBVM3pjREgvdFdWdz09',
+                    id: "326 053 0013",
                     password: "1111",
                 },
             },
@@ -656,7 +656,7 @@ let KSTU = {
                 },
                 gender: "woman",
                 conference: {
-                    platform: "zoom",
+                    platform: "unknown",
                     link: '',
                     id: "",
                     password: "",
