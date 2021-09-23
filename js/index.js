@@ -567,7 +567,7 @@ let KSTU = {
                 gender: "man",
                 conference: {
                     platform: "meet",
-                    link: 'https://meet.google.com/bvq-vftp-xwx',
+                    link: 'https://meet.google.com/seq-unzp-hga',
                     id: "?",
                     password: "?",
                 },
@@ -1003,10 +1003,10 @@ const IVT_1_18 = {
        
         new Subject({ // Урок №1
             groupId: 'ivt-1-18', day: 'Четверг', subject: { name: "Интерфейсы ПУ", type: "Лабораторная" },
-            time: { start: { h: 11, m: 0 }, end: { h: 12, m: 20 } }, teacher: { surname: "Нуркамилова А", img: KSTU.FIT.IVT['Нуркамилова А'].img() },
+            time: { start: { h: 11, m: 0 }, end: { h: 12, m: 20 } }, teacher: { surname: "Мананников Н.А", img: KSTU.FIT.IVT['Мананников Н.А'].img() },
             conference: {
-                link: KSTU.FIT.IVT['Нуркамилова А'].conference.link, platform: KSTU.FIT.IVT['Нуркамилова А'].conference.platform,
-                id: KSTU.FIT.IVT['Нуркамилова А'].conference.id, password: KSTU.FIT.IVT['Нуркамилова А'].conference.password
+                link: KSTU.FIT.IVT['Мананников Н.А'].conference.link, platform: KSTU.FIT.IVT['Мананников Н.А'].conference.platform,
+                id: KSTU.FIT.IVT['Мананников Н.А'].conference.id, password: KSTU.FIT.IVT['Мананников Н.А'].conference.password
             }
         }),
 
