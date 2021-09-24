@@ -607,7 +607,7 @@ let KSTU = {
                 fullname: "Отонбаев Марат Медетович",
                 surname: "Otonbaev M.M",
                 img: function () {
-                    return 'img/unnamed.jpg'
+                    return 'img/FIT/IVT/' + this.surname + '.jpg'
                 },
                 gender: "man",
                 conference: {
