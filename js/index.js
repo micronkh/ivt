@@ -891,7 +891,7 @@ const IVT_1_18 = {
     'Понедельник': [
 
         new Subject({ // Урок №1
-            groupId: 'ivt-1-18', day: "Понедельник", subject: { name: "Организация вычислительных процессов", type: "Лабораторная", week: "Знам"},
+            groupId: 'ivt-1-18', day: "Понедельник", subject: { name: "Организация вычислительных процессов", type: "Лб", week: "Знам"},
             time: { start: { h: 8, m: 0 }, end: { h: 9, m: 20 } }, teacher: { surname: "Тультемирова Г.У", img: KSTU.FIT.IVT['Тультемирова Г.У'].img() },
             conference: {
                 link: KSTU.FIT.IVT['Тультемирова Г.У'].conference.link, platform: KSTU.FIT.IVT['Тультемирова Г.У'].conference.platform,
