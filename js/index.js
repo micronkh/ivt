@@ -506,10 +506,10 @@ let KSTU = {
                 },
                 gender: "man",
                 conference: {
-                    platform: "unknown",
-                    link: "",
-                    id: "",
-                    password: "",
+                    platform: "meet",
+                    link: "https://meet.google.com/ohx-tafr-vgz",
+                    id: "?",
+                    password: "?",
                 },
             },
 
