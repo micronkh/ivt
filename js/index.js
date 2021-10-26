@@ -611,8 +611,8 @@ let KSTU = {
                 },
                 gender: "man",
                 conference: {
-                    platform: "webex",
-                    link: "https://meet32.webex.com/meet/pr263465637",
+                    platform: "turtle",
+                    link: "https://edu.24mycrm.com/",
                     id: "",
                     password: "",
                 },
